@@ -11,15 +11,26 @@ const GlobalStyles = createGlobalStyle`
       --sunset7:#fcad2f;
       --background: #d6e6e1;
    }
+   #root{
+    width: 100%;
+   }
    body{
     background-color: var(--background);
+    color: (sunset1);
     margin: 0;
     padding: 0;
     display: flex;
    }
    a {
-    color: var(--sunset5);
+    color: automatic;
     text-decoration: none;
+   }
+   ul{
+    margin: 0;
+    padding: 0;
+   }
+   li{
+    list-style: none;
    }
 `;
 export default GlobalStyles;
