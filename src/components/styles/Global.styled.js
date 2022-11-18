@@ -2,27 +2,29 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --sunset1:#002501;
-      --sunset2:#1c440a;
-      --sunset3:#147a15;
-      --sunset4:#00bc22;
-      --sunset5:#90d729;
-      --sunset6:#f1c52b;
-      --sunset7:#fcad2f;
-      --background: #d6e6e1;
+    --primary:#072144;
+    --primary2: #314867;
+    --primary-complement: #0951B2;
+    --decoration1: #006837;
+    --decoration1-2: #009144;
+    --decoration2: #3BAFCA;
+    --decoration2-2: #44CDEC;
+    --shine: #00FFFF;
+    --bright: #DAE028;
+    --normal: #FFFFFF;
    }
    #root{
     width: 100%;
    }
    body{
-    background-color: var(--background);
-    color: (sunset1);
+    background-color: var(--primary);
+    color: var(--normal);
     margin: 0;
     padding: 0;
     display: flex;
    }
    a {
-    color: automatic;
+    color: var(--bright);
     text-decoration: none;
    }
    ul{
