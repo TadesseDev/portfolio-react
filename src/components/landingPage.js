@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./partials/navBar";
 import { useState } from "react";
 import { Circle } from "./partials/decorations";
-import { Landing, PrimaryImage } from "./styles/LandingPage.styled";
+import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
 import menu from "../icon/menu/menu.png";
 import my_picture from "../images/resized.svg";
 export default function LandingPage() {
@@ -21,6 +21,9 @@ export default function LandingPage() {
         <img src={my_picture} alt="my-picture" />
         <div className="blur-img"></div>
       </PrimaryImage>
+      <Detail>
+        <h1>Tadesse Dubale</h1>
+      </Detail>
       <Circle
         moreStyle={{
           transform: "translate(-50%, -50%)",

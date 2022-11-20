@@ -73,3 +73,12 @@ export const PrimaryImage = styled.div`
     background-image: url(${javascript});
   }
 `;
+
+export const Detail = styled.div`
+  margin-top: -2vh;
+  text-align: center;
+  background-color: var(--primary);
+  h1 {
+    margin: 0;
+  }
+`;

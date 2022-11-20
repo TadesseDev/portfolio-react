@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     --bright: #DAE028;
     --normal: #FFFFFF;
     --title-font: "Aquire";
+    --main-title-font: "maginors";
    }
    #root{
     width: 100%;
@@ -27,6 +28,12 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     display: flex;
+   }
+   h1{
+    font-family: var(--main-title-font);
+    color: var(--shine);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
    }
    a {
     color: var(--normal);
