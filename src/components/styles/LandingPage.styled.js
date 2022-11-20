@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import blob from "../../images/blob.svg";
 export const Landing = styled.main`
   height: 100vh;
   .showMenu img {
@@ -13,6 +13,12 @@ export const Landing = styled.main`
 export const PrimaryImage = styled.div`
   height: 50vh;
   position: relative;
+  background-image: url(${blob});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80vw;
+  background-position-y: 19vh;
+  z-index: -1;
   img {
     height: 100%;
     margin: auto;
