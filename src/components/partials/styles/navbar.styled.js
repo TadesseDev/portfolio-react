@@ -4,13 +4,13 @@ let Navbar = styled.nav`
   position: absolute;
   right: 0;
   padding: 5vw;
-  border-left: 2px solid var(--bright);
+  border-left: 4px solid var(--bright);
   width: max-content;
   height: calc(100vh - 10vw);
   ul {
     font-family: var(--title-font);
     font-weight: lighter;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
