@@ -7,7 +7,9 @@ let Navbar = styled.nav`
   border-left: 4px solid var(--bright);
   width: max-content;
   height: calc(100vh - 10vw);
+  display: ${(props) => props.display};
   ul {
+    letter-spacing: 3px;
     font-family: var(--title-font);
     font-weight: lighter;
     font-size: 0.7rem;

@@ -9,10 +9,12 @@ import testimonials from "../../icon/menu/testimonials.png";
 import about from "../../icon/menu/about.png";
 import user from "../../icon/menu/user.png";
 import me_standing from "../../icon/menu/me-standing.png";
+import { useState } from "react";
 export default function NavBar() {
+  let [showNavBar, updateDisplay] = useState(true);
   return (
-    <Navbar>
-      <Direction icon="hide" />
+    <Navbar display={showNavBar ? "block" : "none"}>
+      <Direction icon="hide" toggle={updateDisplay} />
       <ul>
         <li>
           <img className="icon" src={home} alt="home" />
