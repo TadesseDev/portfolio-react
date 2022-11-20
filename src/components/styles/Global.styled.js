@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
+import "../../fonts/maginors-maginors-400.otf";
+import "../../fonts/AquireBold-8Ma60.otf";
+import "../../fonts/AquireLight-YzE0o.otf";
 const GlobalStyles = createGlobalStyle`
   :root {
     --primary:#072144;
@@ -12,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
     --shine: #00FFFF;
     --bright: #DAE028;
     --normal: #FFFFFF;
+    --title-font: "Aquire";
    }
    #root{
     width: 100%;
@@ -24,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
    }
    a {
-    color: var(--bright);
+    color: var(--normal);
     text-decoration: none;
    }
    ul{

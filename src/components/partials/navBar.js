@@ -1,34 +1,48 @@
 import React from "react";
 import { Navbar } from "./styles/navbar.styled.js";
-import { Logo } from "../styles/logo.styled.js";
 export default function NavBar() {
   return (
     <Navbar>
-      <Logo>Well come</Logo>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <img className="icon" src="./icons/menu/home.png" alt="home" />
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#">Skills and abilities</a>
+          <img className="icon" src="./icons/menu/skills.png" alt="home" />
+          <a href="/">Skills</a>
         </li>
         <li>
-          <a href="#">Recent work</a>
+          <img className="icon" src="./icons/menu/works.png" alt="home" />
+          <a href="/">Projects</a>
         </li>
         <li>
-          <a href="#">Find me here</a>
+          <img
+            className="icon"
+            src="./icons/menu/certificates.png"
+            alt="home"
+          />
+          <a href="/">Certificates</a>
         </li>
         <li>
-          <a href="#">Licenses and certifications</a>
+          <img
+            className="icon"
+            src="./icons/menu/testimonials.png"
+            alt="home"
+          />
+          <a href="/">Testimonials</a>
         </li>
         <li>
-          <a href="#">References/testimonials</a>
+          <img className="icon" src="./icons/menu/about.png" alt="home" />
+          <a href="/">About</a>
         </li>
         <li>
-          <a href="#">About me</a>
+          <img className="icon" src="./icons/menu/user.png" alt="home" />
+          <a href="/">Digital presence</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <img className="icon" src="./icons/menu/me-standing.png" alt="home" />
+          <a href="/">contact me</a>
         </li>
       </ul>
     </Navbar>
