@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import blob from "../../images/blob.svg";
+import xd from "../../icon/adobe_xd.svg";
+import ruby from "../../icon/ruby.svg";
+import postgresql from "../../icon/postgresql.svg";
+import javascript from "../../icon/javascript.svg";
 export const Landing = styled.main`
   height: 100vh;
   .showMenu img {
@@ -25,6 +29,8 @@ export const PrimaryImage = styled.div`
     display: block;
   }
   .blur-img {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 100px;
     background: rgb(7, 33, 68);
@@ -35,7 +41,35 @@ export const PrimaryImage = styled.div`
       rgba(7, 33, 68, 0.6194852941176471) 69%,
       rgba(7, 33, 68, 0.028448879551820738) 100%
     );
+  }
+
+  .decoration {
+    width: 10vw;
+    height: 10vw;
     position: absolute;
-    bottom: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #xd {
+    top: 15vh;
+    left: 10%;
+    background-image: url(${xd});
+  }
+  #ruby {
+    top: 15vh;
+    right: 10%;
+    background-image: url(${ruby});
+  }
+  #postgres {
+    bottom: 10vh;
+    left: 25%;
+    background-image: url(${postgresql});
+  }
+  #javascript {
+    bottom: 10vh;
+    right: 25%;
+    background-image: url(${javascript});
   }
 `;

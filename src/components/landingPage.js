@@ -14,6 +14,10 @@ export default function LandingPage() {
       </span>
       <NavBar showNavBar={showNavBar} updateDisplay={updateDisplay} />
       <PrimaryImage>
+        <div className="decoration" id="xd"></div>
+        <div className="decoration" id="postgres"></div>
+        <div className="decoration" id="javascript"></div>
+        <div className="decoration" id="ruby"></div>
         <img src={my_picture} alt="my-picture" />
         <div className="blur-img"></div>
       </PrimaryImage>
