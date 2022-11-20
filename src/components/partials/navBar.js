@@ -17,36 +17,52 @@ export default function NavBar() {
       <Direction icon="hide" toggle={updateDisplay} />
       <ul>
         <li>
-          <img className="icon" src={home} alt="home" />
-          <a href="/">Home</a>
+          <a href="/">
+            <img className="icon" src={home} alt="home" />
+            <span>Home</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={skills} alt="skills" />
-          <a href="/">Skills</a>
+          <a href="/">
+            <img className="icon" src={skills} alt="skills" />
+            <span>Skills</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={works} alt="works" />
-          <a href="/">Projects</a>
+          <a href="/">
+            <img className="icon" src={works} alt="works" />
+            <span>Projects</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={certificates} alt="certificates" />
-          <a href="/">Certificates</a>
+          <a href="/">
+            <img className="icon" src={certificates} alt="certificates" />
+            <span>Certificates</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={testimonials} alt="home" />
-          <a href="/">Testimonials</a>
+          <a href="/">
+            <img className="icon" src={testimonials} alt="home" />
+            <span>Testimonials</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={about} alt="about" />
-          <a href="/">About</a>
+          <a href="/">
+            <img className="icon" src={about} alt="about" />
+            <span>About</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={user} alt="user" />
-          <a href="/">Digital presence</a>
+          <a href="/">
+            <img className="icon" src={user} alt="user" />
+            <span>Digital presence</span>
+          </a>
         </li>
         <li>
-          <img className="icon" src={me_standing} alt="me standing" />
-          <a href="/">contact me</a>
+          <a href="/">
+            <img className="icon" src={me_standing} alt="me standing" />
+            <a span>contact me</a>
+          </a>
         </li>
       </ul>
     </Navbar>

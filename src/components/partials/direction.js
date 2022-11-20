@@ -1,4 +1,4 @@
-import hide from "../../icon/directions//hide.svg";
+import hide from "../../icon/directions/hide.png";
 import more from "../../icon/directions/more.svg";
 import DirectionContainer from "./styles/direction.styled";
 const Direction = ({ icon, toggle }) => {
