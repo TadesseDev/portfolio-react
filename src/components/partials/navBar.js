@@ -9,9 +9,7 @@ import testimonials from "../../icon/menu/testimonials.png";
 import about from "../../icon/menu/about.png";
 import user from "../../icon/menu/user.png";
 import me_standing from "../../icon/menu/me-standing.png";
-import { useState } from "react";
-export default function NavBar() {
-  let [showNavBar, updateDisplay] = useState(true);
+export default function NavBar({ showNavBar, updateDisplay }) {
   return (
     <Navbar display={showNavBar ? "block" : "none"}>
       <Direction icon="hide" toggle={updateDisplay} />
@@ -61,7 +59,7 @@ export default function NavBar() {
         <li>
           <a href="/">
             <img className="icon" src={me_standing} alt="me standing" />
-            <a span>contact me</a>
+            <span>contact me</span>
           </a>
         </li>
       </ul>

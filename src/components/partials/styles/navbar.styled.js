@@ -3,11 +3,14 @@ import styled from "styled-components";
 let Navbar = styled.nav`
   position: absolute;
   right: 0;
+  top: 0;
   padding: 5vw;
+  background-color: var(--primary-transparent);
   border-left: 4px solid var(--bright);
   width: max-content;
   height: max-content;
   min-height: calc(100vh - 10vw);
+  box-shadow: -10px 0px 50px #c0c0c078;
   display: ${(props) => props.display};
   ul {
     letter-spacing: 3px;

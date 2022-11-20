@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const LandingPage = styled.main`
-  height: 100vh;
-  max-height: 100vh;
+export const Landing = styled.main`
+  padding: 10vw;
+  height: 80vh;
+  .showMenu img {
+    width: 10vw;
+    float: right;
+  }
 `;
