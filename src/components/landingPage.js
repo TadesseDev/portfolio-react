@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./partials/navBar";
+import DownloadButton from "./partials/downloadButton";
 import { useState } from "react";
 import { Circle } from "./partials/decorations";
 import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
@@ -18,7 +19,7 @@ export default function LandingPage() {
         <div className="decoration" id="postgres"></div>
         <div className="decoration" id="javascript"></div>
         <div className="decoration" id="ruby"></div>
-        <img src={my_picture} alt="my-picture" />
+        <img src={my_picture} alt="my" />
         <div className="blur-img"></div>
       </PrimaryImage>
       <Detail>
@@ -29,6 +30,18 @@ export default function LandingPage() {
           believe in coding, I believe in making it optimized. You don't believe
           me? Lets get to the test.
         </p>
+        <div id="getResume">
+          <DownloadButton title="GET MY RESUME" moreStyle={{ zIndex: "1" }} />
+          <Circle
+            moreStyle={{
+              width: 40,
+              height: 40,
+              position: "absolute",
+              right: 0,
+              transform: "translate(20%, -80%)",
+            }}
+          />
+        </div>
       </Detail>
       <Circle
         moreStyle={{

@@ -12,6 +12,7 @@ let Navbar = styled.nav`
   min-height: calc(100vh - 10vw);
   box-shadow: -10px 0px 50px #c0c0c078;
   display: ${(props) => props.display};
+  z-index: 3;
   ul {
     letter-spacing: 3px;
     font-family: var(--title-font);

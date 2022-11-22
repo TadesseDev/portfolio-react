@@ -9,6 +9,7 @@ export const Landing = styled.main`
   .showMenu img {
     padding: 5vw;
     width: 10vw;
+    max-width: 50px;
     position: absolute;
     right: 0;
   }
@@ -46,6 +47,7 @@ export const PrimaryImage = styled.div`
   .decoration {
     width: 10vw;
     height: 10vw;
+    max-width: 50px;
     position: absolute;
     display: block;
     z-index: 1;
@@ -84,5 +86,9 @@ export const Detail = styled.div`
   }
   p {
     margin: 5vw;
+  }
+  #getResume {
+    position: relative;
+    display: inline-block;
   }
 `;

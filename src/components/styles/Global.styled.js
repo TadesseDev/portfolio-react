@@ -3,7 +3,9 @@ import { createGlobalStyle } from "styled-components";
 import "../../fonts/maginors-maginors-400.otf";
 import "../../fonts/AquireBold-8Ma60.otf";
 import "../../fonts/AquireLight-YzE0o.otf";
+import "../../fonts/SansMateo.ttf";
 const GlobalStyles = createGlobalStyle`
+
   :root {
     --primary:#072144;
     --primary2: #314867;
@@ -12,13 +14,14 @@ const GlobalStyles = createGlobalStyle`
     --decoration1: #006837;
     --decoration1-2: #009144;
     --decoration2: #3BAFCA;
-    --decoration2-2: #44CDEC;
+    --decoration2-light: #44CDEC;
     --shine: #00FFFF;
     --bright: #DAE028;
     --normal: #FFFFFF;
     --transparent: #fffff073;
     --title-font: "Aquire";
     --main-title-font: "maginors";
+    --paragraph-font: "Sans Mateo";
    }
    #root{
     width: 100%;
@@ -30,11 +33,12 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     display: flex;
    }
-   .App {
-    margin: 5vw;
+   #root {
+    margin: 2vw 5vw;
    }
    h1{
     font-family: var(--main-title-font);
+    font-weight: normal;
     color: var(--shine);
     font-size: 1.5rem;
     letter-spacing: 3px;
@@ -46,8 +50,9 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: 2px;
    }
 
-   p{
+   p {
     color: var(--transparent);
+    font-family:  var(--paragraph-font);
    }
    a {
     color: var(--normal);
