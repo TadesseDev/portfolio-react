@@ -35,6 +35,12 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     letter-spacing: 3px;
    }
+   h2{
+    font-family: var(--main-title-font);
+    color: var(--decoration2-2);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+   }
    a {
     color: var(--normal);
     text-decoration: none;

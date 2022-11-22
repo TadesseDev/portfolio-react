@@ -78,7 +78,8 @@ export const Detail = styled.div`
   margin-top: -2vh;
   text-align: center;
   background-color: var(--primary);
-  h1 {
+  h1,
+  h2 {
     margin: 0;
   }
 `;

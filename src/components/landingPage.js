@@ -23,6 +23,7 @@ export default function LandingPage() {
       </PrimaryImage>
       <Detail>
         <h1>Tadesse Dubale</h1>
+        <h2>"Truth be told"</h2>
       </Detail>
       <Circle
         moreStyle={{
