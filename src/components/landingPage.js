@@ -6,6 +6,11 @@ import { Circle } from "./partials/decorations";
 import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
 import menu from "../icon/menu/menu.png";
 import my_picture from "../images/resized.svg";
+import linkedIn from "../icon/social media/LinkedIn.svg";
+import twitter from "../icon/social media/Twitter.svg";
+import angelList from "../icon/social media/AngelList.svg";
+import gitHub from "../icon/social media/GitHub.svg";
+import hackerRank from "../icon/social media/HackerRank.svg";
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   return (
@@ -30,7 +35,11 @@ export default function LandingPage() {
           believe in coding, I believe in making it optimized. You don't believe
           me? Lets get to the test.
         </p>
-        <div id="getResume">
+        <a
+          href="https://docs.google.com/document/d/1xGXejoEeo6X-5TrkKsl6Okj21yWyGKP6dq3Qm47tKBo/edit?usp=sharing"
+          id="getResume"
+          target="blank"
+        >
           <DownloadButton title="GET MY RESUME" moreStyle={{ zIndex: "1" }} />
           <Circle
             moreStyle={{
@@ -41,8 +50,39 @@ export default function LandingPage() {
               transform: "translate(20%, -80%)",
             }}
           />
-        </div>
+        </a>
+        <ul className="social-media">
+          <li>
+            <a href="">
+              <img className="icon" src={gitHub} alt="GitHub" />
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img className="icon" src={linkedIn} alt="LinkedIn" />
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img className="icon" src={twitter} alt="Twitter" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img className="icon" src={angelList} alt="AngelList" />
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img className="icon" src={hackerRank} alt="HackerRank" />
+            </a>
+          </li>
+        </ul>
       </Detail>
+
       <Circle
         moreStyle={{
           transform: "translate(-50%, -50%)",

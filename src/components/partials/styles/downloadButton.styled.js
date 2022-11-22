@@ -9,6 +9,24 @@ export const Download = styled.span`
   padding: 15px 60px 10px 10px;
   position: relative;
   box-shadow: 10px 10px 10px #0000008c;
+  :hover {
+    #overlay {
+      width: 80%;
+      left: 0;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000087;
+      align-items: center;
+      gap: 10px;
+      img {
+        transform: rotate(-90deg);
+        display: block;
+      }
+      span {
+        display: inline;
+      }
+    }
+  }
 `;
 export const OverLay = styled.span`
   display: flex;
@@ -21,7 +39,13 @@ export const OverLay = styled.span`
   box-shadow: -5px 0 5px #00000087;
   align-items: center;
   justify-content: center;
+  transition: width 0.3s ease-out;
   img {
     height: 60%;
+    transition: transform 0.3s ease-out;
+  }
+
+  span {
+    display: none;
   }
 `;

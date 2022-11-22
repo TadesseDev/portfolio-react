@@ -80,6 +80,11 @@ export const Detail = styled.div`
   margin-top: -2vh;
   text-align: center;
   background-color: var(--primary);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   h1,
   h2 {
     margin: 0;
@@ -90,5 +95,12 @@ export const Detail = styled.div`
   #getResume {
     position: relative;
     display: inline-block;
+    max-width: max-content;
+  }
+  .social-media {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    min-width: 100%;
   }
 `;

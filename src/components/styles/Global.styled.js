@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
    }
    h2{
     font-family: var(--main-title-font);
-    color: var(--decoration2-2);
+    color: var(--decoration2-light);
     font-size: 1.2rem;
     letter-spacing: 2px;
    }

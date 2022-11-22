@@ -9,8 +9,9 @@ const DownloadButton = ({
   return (
     <Download fontSize={fontSize} style={moreStyle}>
       {title}
-      <OverLay>
+      <OverLay id="overlay">
         <img src={icon} alt="download" />
+        <span>Let's Go 😎</span>
       </OverLay>
     </Download>
   );
