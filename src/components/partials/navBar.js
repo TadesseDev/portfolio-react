@@ -11,7 +11,7 @@ import user from "../../icon/menu/user.png";
 import me_standing from "../../icon/menu/me-standing.png";
 export default function NavBar({ showNavBar, updateDisplay }) {
   return (
-    <Navbar display={showNavBar ? "block" : "none"}>
+    <Navbar display={showNavBar ? "block" : "none"} data-testid="navbar">
       <Direction icon="hide" toggle={updateDisplay} />
       <ul>
         <li>
@@ -59,7 +59,7 @@ export default function NavBar({ showNavBar, updateDisplay }) {
         <li>
           <a href="/">
             <img className="icon" src={me_standing} alt="me standing" />
-            <span>contact me</span>
+            <span>Contact me</span>
           </a>
         </li>
       </ul>
