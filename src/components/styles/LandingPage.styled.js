@@ -82,4 +82,7 @@ export const Detail = styled.div`
   h2 {
     margin: 0;
   }
+  p {
+    margin: 5vw;
+  }
 `;

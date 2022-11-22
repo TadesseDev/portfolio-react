@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
     --shine: #00FFFF;
     --bright: #DAE028;
     --normal: #FFFFFF;
+    --transparent: #fffff073;
     --title-font: "Aquire";
     --main-title-font: "maginors";
    }
@@ -29,6 +30,9 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     display: flex;
    }
+   .App {
+    margin: 5vw;
+   }
    h1{
     font-family: var(--main-title-font);
     color: var(--shine);
@@ -40,6 +44,10 @@ const GlobalStyles = createGlobalStyle`
     color: var(--decoration2-2);
     font-size: 1.2rem;
     letter-spacing: 2px;
+   }
+
+   p{
+    color: var(--transparent);
    }
    a {
     color: var(--normal);

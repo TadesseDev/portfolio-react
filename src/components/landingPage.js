@@ -24,6 +24,11 @@ export default function LandingPage() {
       <Detail>
         <h1>Tadesse Dubale</h1>
         <h2>"Truth be told"</h2>
+        <p>
+          I've been told, I'm among the top 1% of coders out there!! I don't
+          believe in coding, I believe in making it optimized. You don't believe
+          me? Lets get to the test.
+        </p>
       </Detail>
       <Circle
         moreStyle={{
