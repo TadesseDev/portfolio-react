@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 let Navbar = styled.nav`
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   padding: 5vw;
@@ -10,7 +10,8 @@ let Navbar = styled.nav`
   width: max-content;
   height: max-content;
   min-height: calc(100vh - 10vw);
-  box-shadow: -10px 0px 50px #c0c0c078;
+  box-shadow: -10px 0px 50px #050505;
+  backdrop-filter: blur(50px);
   display: ${(props) => props.display};
   z-index: 3;
   ul {
