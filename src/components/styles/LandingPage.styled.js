@@ -99,6 +99,7 @@ export const Detail = styled.div`
   }
   .social-media {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     margin: 10px;
     min-width: 100%;

@@ -53,30 +53,36 @@ export default function LandingPage() {
         </a>
         <ul className="social-media">
           <li>
-            <a href="">
+            <a href="http://github.com/tadesse-Alemayehu/" target="blank">
               <img className="icon" src={gitHub} alt="GitHub" />
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/tadesse-alemayehu-full-stack-developer/"
+              target="blank"
+            >
               <img className="icon" src={linkedIn} alt="LinkedIn" />
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a href="https://twitter.com/tadesseWebDev" target="blank">
               <img className="icon" src={twitter} alt="Twitter" />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://angel.co/u/tadesse-alemayehu" target="blank">
               <img className="icon" src={angelList} alt="AngelList" />
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a
+              href="https://www.hackerrank.com/TadesseFullStack?hr_r=1"
+              target="blank"
+            >
               <img className="icon" src={hackerRank} alt="HackerRank" />
             </a>
           </li>
@@ -85,10 +91,12 @@ export default function LandingPage() {
 
       <Circle
         moreStyle={{
-          transform: "translate(-50%, -50%)",
+          transform: "translate(-40%, -40%)",
           position: "absolute",
           top: "0",
           left: "0",
+          width: "20vw",
+          height: "20vw",
         }}
       />
     </Landing>
