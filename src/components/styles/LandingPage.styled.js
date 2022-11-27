@@ -5,6 +5,7 @@ import ruby from "../../icon/ruby.svg";
 import postgresql from "../../icon/postgresql.svg";
 import javascript from "../../icon/javascript.svg";
 export const Landing = styled.main`
+  display: none;
   height: 100vh;
   .showMenu img {
     padding: 5vw;
@@ -79,12 +80,17 @@ export const PrimaryImage = styled.div`
 export const Detail = styled.div`
   margin-top: -2vh;
   text-align: center;
-  background-color: var(--primary);
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  .heading {
+    min-width: 100%;
+    margin: 0 -5vw;
+    padding: 0 5vw;
+    background-color: var(--primary);
+  }
   h1,
   h2 {
     margin: 0;

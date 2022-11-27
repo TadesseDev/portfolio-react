@@ -28,8 +28,10 @@ export default function LandingPage() {
         <div className="blur-img"></div>
       </PrimaryImage>
       <Detail>
-        <h1>Tadesse Dubale</h1>
-        <h2>"Truth be told"</h2>
+        <div className="heading">
+          <h1>Tadesse Dubale</h1>
+          <h2>"Truth be told"</h2>
+        </div>
         <p>
           I've been told, I'm among the top 1% of coders out there!! I don't
           believe in coding, I believe in making it optimized. You don't believe
