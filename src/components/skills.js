@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { SkillsContainer, Skill } from "./styles/skills";
 import skillIcon from "../icon/skills.svg";
+import { getSkills } from "../redux/components/skills.js";
 export default function Skills() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getSkills());
+  }, []);
+  const skills = useSelector((store) => store.skills);
+  console.log(skills);
   return (
     <SkillsContainer id="skills">
       <div className="front-end">
@@ -20,7 +28,7 @@ export default function Skills() {
                 <img src="" alt="" />
               </span>
               <div>
-                <h4></h4>
+                <h4>heading four</h4>
               </div>
             </div>
           </div>
