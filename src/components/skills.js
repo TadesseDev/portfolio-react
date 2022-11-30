@@ -29,7 +29,7 @@ export default function Skills() {
         <hr />
         {Array.from(skills).map(([key = "", values = []]) => (
           <Skill key={key}>
-            <SubTitle text={key} />
+            <SubTitle text={key} icon={skillIcon} />
             {console.log(values)}
             {values.map((skill) => (
               <div key={skill.id}>
@@ -39,6 +39,10 @@ export default function Skills() {
                   </span>
                   <div>
                     <h4>{skill.name}</h4>
+                    <p>
+                      Its hard to mention every little skill that I have. But to
+                      give you an overview, here are some of my skills.
+                    </p>
                   </div>
                 </div>
               </div>
