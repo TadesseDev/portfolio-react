@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SkillsContainer, Skill } from "./styles/skills.styled";
+import { publicURL } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
 import skillIcon from "../icon/skills.svg";
@@ -10,9 +11,13 @@ export default function Skills() {
   useEffect(() => {
     dispatch(getSkills());
   }, []);
-  const skills = useSelector((store) => store.skills);
-  const skill = skills[0];
-  console.log(skills);
+  const storeSkills = useSelector((store) => store.skills);
+  const skills = new Map();
+  storeSkills.forEach((skill) => {
+    if (skills.has(skill.tech_type))
+      skills.get(skill.tech_type, skill).push(skill);
+    else skills.set(skill.tech_type, [skill]);
+  });
   return (
     <SkillsContainer id="skills">
       <div className="front-end">
@@ -22,19 +27,24 @@ export default function Skills() {
           overview, here are some of my skills.
         </p>
         <hr />
-        <Skill>
-          <SubTitle text={"Design tools"} />
-          <div>
-            <div>
-              <span>
-                <img src="" alt="" />
-              </span>
-              <div>
-                <h4>heading four</h4>
+        {Array.from(skills).map(([key = "", values = []]) => (
+          <Skill key={key}>
+            <SubTitle text={key} />
+            {console.log(values)}
+            {values.map((skill) => (
+              <div key={skill.id}>
+                <div>
+                  <span>
+                    <img src={publicURL + skill.icon} alt={skill.name} />
+                  </span>
+                  <div>
+                    <h4>{skill.name}</h4>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Skill>
+            ))}
+          </Skill>
+        ))}
       </div>
     </SkillsContainer>
   );
