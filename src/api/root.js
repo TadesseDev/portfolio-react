@@ -1,4 +1,5 @@
 import axios from "axios";
+export const publicURL = "http://localhost:4000/";
 const baseURL = "http://localhost:4000/api/v1/";
 const root = axios.create({
   baseURL,

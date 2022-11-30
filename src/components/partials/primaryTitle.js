@@ -1,12 +1,17 @@
 import React from "react";
-
 export default function primaryTitle({ icon = "", text = "" }) {
   return (
-    <h2>
+    <h2
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
+      }}
+    >
       <span className="icon">
         <img src={icon} alt="skill" />
       </span>
-      {text}
+      <span>{text}</span>
     </h2>
   );
 }

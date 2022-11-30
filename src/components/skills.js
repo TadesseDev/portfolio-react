@@ -11,10 +11,16 @@ export default function Skills() {
     dispatch(getSkills());
   }, []);
   const skills = useSelector((store) => store.skills);
+  const skill = skills[0];
+  console.log(skills);
   return (
     <SkillsContainer id="skills">
       <div className="front-end">
         <PrimaryTitle icon={skillIcon} text={"skills"} />
+        <p>
+          Its hard to mention every little skill that I have. But to give you an
+          overview, here are some of my skills.
+        </p>
         <hr />
         <Skill>
           <SubTitle text={"Design tools"} />
