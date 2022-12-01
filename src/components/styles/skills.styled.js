@@ -8,4 +8,4 @@ export const SkillsContainer = styled.div`
     width: 70vw;
   }
 `;
-export const Skill = styled.div``;
+export const SubSkills = styled.div``;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { SkillsContainer, Skill } from "./styles/skills.styled";
+import { SkillsContainer, SubSkills } from "./styles/skills.styled";
 import { publicURL } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
@@ -28,26 +28,24 @@ export default function Skills() {
         </p>
         <hr />
         {Array.from(skills).map(([key = "", values = []]) => (
-          <Skill key={key}>
+          <SubSkills key={key}>
             <SubTitle text={key} icon={skillIcon} />
             {console.log(values)}
             {values.map((skill) => (
-              <div key={skill.id}>
+              <div key={skill.id} className="skill">
+                <span>
+                  <img src={publicURL + skill.icon} alt={skill.name} />
+                </span>
                 <div>
-                  <span>
-                    <img src={publicURL + skill.icon} alt={skill.name} />
-                  </span>
-                  <div>
-                    <h4>{skill.name}</h4>
-                    <p>
-                      Its hard to mention every little skill that I have. But to
-                      give you an overview, here are some of my skills.
-                    </p>
-                  </div>
+                  <h4>{skill.name}</h4>
+                  <p>
+                    Its hard to mention every little skill that I have. But to
+                    give you an overview, here are some of my skills.
+                  </p>
                 </div>
               </div>
             ))}
-          </Skill>
+          </SubSkills>
         ))}
       </div>
     </SkillsContainer>
