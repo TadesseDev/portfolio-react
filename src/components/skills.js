@@ -33,16 +33,14 @@ export default function Skills() {
             {console.log(values)}
             {values.map((skill) => (
               <div key={skill.id} className="skill">
-                <span>
+                <span className="icon">
                   <img src={publicURL + skill.icon} alt={skill.name} />
                 </span>
-                <div>
-                  <h4>{skill.name}</h4>
-                  <p>
-                    Its hard to mention every little skill that I have. But to
-                    give you an overview, here are some of my skills.
-                  </p>
-                </div>
+                <h4 className="skill-name">{skill.name}</h4>
+                <p className="skill-description">
+                  Its hard to mention every little skill that I have. But to
+                  give you an overview, here are some of my skills.
+                </p>
               </div>
             ))}
           </SubSkills>
