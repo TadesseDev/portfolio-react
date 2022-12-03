@@ -9,7 +9,7 @@ export default function primaryTitle({ icon = "", text = "" }) {
         display: "flex",
       }}
     >
-      <span className="icon">
+      <span className="icon" style={{ margin: "10px" }}>
         <img src={icon} alt="skill" />
       </span>
       <span>{text}</span>
