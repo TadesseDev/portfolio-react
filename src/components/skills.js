@@ -10,7 +10,7 @@ export default function Skills() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSkills());
-  }, []);
+  }, [dispatch]);
   const storeSkills = useSelector((store) => store.skills);
   const skills = new Map();
   storeSkills.forEach((skill) => {
@@ -27,24 +27,26 @@ export default function Skills() {
           overview, here are some of my skills.
         </p>
         <hr />
-        {Array.from(skills).map(([key = "", values = []]) => (
-          <SubSkills key={key}>
-            <SubTitle text={key} icon={skillIcon} />
-            {console.log(values)}
-            {values.map((skill) => (
-              <div key={skill.id} className="skill">
-                <span className="icon">
-                  <img src={publicURL + skill.icon} alt={skill.name} />
-                </span>
-                <h4 className="skill-name">{skill.name}</h4>
-                <p className="skill-description">
-                  Its hard to mention every little skill that I have. But to
-                  give you an overview, here are some of my skills.
-                </p>
-              </div>
-            ))}
-          </SubSkills>
-        ))}
+        <div className="all-skills">
+          {Array.from(skills).map(([key = "", values = []]) => (
+            <SubSkills key={key}>
+              <SubTitle text={key} icon={skillIcon} />
+              {console.log(values)}
+              {values.map((skill) => (
+                <div key={skill.id} className="skill">
+                  <span className="icon">
+                    <img src={publicURL + skill.icon} alt={skill.name} />
+                  </span>
+                  <h4 className="skill-name">{skill.name}</h4>
+                  <p className="skill-description">
+                    Its hard to mention every little skill that I have. But to
+                    give you an overview, here are some of my skills.
+                  </p>
+                </div>
+              ))}
+            </SubSkills>
+          ))}
+        </div>
       </div>
     </SkillsContainer>
   );

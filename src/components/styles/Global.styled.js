@@ -71,5 +71,11 @@ const GlobalStyles = createGlobalStyle`
    li{
     list-style: none;
    }
+   .icon {
+    max-width: 50px
+   }
+   .icon img{
+    width: 100%;
+   }
 `;
 export default GlobalStyles;
