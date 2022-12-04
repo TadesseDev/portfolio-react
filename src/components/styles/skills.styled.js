@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
+  overflow: hidden;
   margin-top: 5vw;
   display: flex;
   justify-content: center;
@@ -21,11 +22,7 @@ export const SubSkills = styled.div`
   max-height: 350px;
   overflow: scroll;
   position: relative;
-  background-color: var(--primary-dark);
-  padding: 15px;
-  padding-bottom: 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ffffff69;
+  margin: 0 15px;
   .skill {
     display: grid;
     grid-template-areas:

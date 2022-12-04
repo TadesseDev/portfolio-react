@@ -68,6 +68,8 @@ export default function Skills() {
                   }}
                 />
               </SubSkills>
+
+              <hr />
             </div>
           ))}
         </div>
