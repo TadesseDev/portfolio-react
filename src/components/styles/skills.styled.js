@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
   overflow: hidden;
-  margin-top: 5vw;
+  margin: 10vh 0;
   display: flex;
   justify-content: center;
   text-align: center;
