@@ -16,6 +16,14 @@ export const SkillsContainer = styled.div`
   }
 `;
 export const SubSkills = styled.div`
+  max-height: 350px;
+  overflow: scroll;
+  position: relative;
+  background-color: var(--primary-dark);
+  padding: 15px;
+  padding-bottom: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffffff69;
   .skill {
     display: grid;
     grid-template-areas:
@@ -35,5 +43,16 @@ export const SubSkills = styled.div`
   .skill-description {
     grid-area: bottom-right;
     padding: 0 5vw;
+  }
+  .overlay {
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
   }
 `;

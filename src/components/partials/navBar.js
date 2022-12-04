@@ -12,7 +12,11 @@ import me_standing from "../../icon/menu/me-standing.png";
 export default function NavBar({ showNavBar, updateDisplay }) {
   return (
     <Navbar display={showNavBar ? "block" : "none"} data-testid="navbar">
-      <Direction icon="hide" toggle={updateDisplay} />
+      <Direction
+        icon="hide"
+        toggle={updateDisplay}
+        style={{ position: "absolute" }}
+      />
       <ul>
         <li>
           <a href="/">

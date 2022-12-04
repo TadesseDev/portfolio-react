@@ -1,7 +1,7 @@
 import hide from "../../icon/directions/hide.png";
 import more from "../../icon/directions/more.svg";
 import DirectionContainer from "./styles/direction.styled";
-const Direction = ({ icon, toggle }) => {
+const Direction = ({ icon, toggle, style = {} }) => {
   let iconMap = new Map([
     ["hide", hide],
     ["show", "./"],
@@ -12,6 +12,7 @@ const Direction = ({ icon, toggle }) => {
     <DirectionContainer
       className="direction"
       onClick={() => toggle((old) => !old)}
+      style={style}
     >
       <img src={iconMap.get(icon)} alt={icon} />
     </DirectionContainer>

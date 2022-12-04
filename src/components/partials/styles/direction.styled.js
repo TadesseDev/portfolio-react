@@ -6,7 +6,6 @@ const Direction = styled.div`
   width: 15px;
   height: 15px;
   padding: ${15 / 2}px;
-  position: absolute;
   left: 0;
   transform: translate(calc(-50% - 2px));
   img {

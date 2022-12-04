@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SkillsContainer, SubSkills } from "./styles/skills.styled";
 import { publicURL } from "../api/root";
+import Direction from "./partials/direction.js";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
 import skillIcon from "../icon/skills.svg";
@@ -41,21 +42,30 @@ export default function Skills() {
         <hr />
         <div className="all-skills">
           {Array.from(skills).map(([key = "", values = []]) => (
-            <SubSkills key={key}>
+            <>
               <SubTitle text={key} icon={iconMap.get(key)} />
-              {values.map((skill) => (
-                <div key={skill.id} className="skill">
-                  <span className="icon">
-                    <img src={publicURL + skill.icon} alt={skill.name} />
-                  </span>
-                  <h4 className="skill-name">{skill.name}</h4>
-                  <p className="skill-description">
-                    Its hard to mention every little skill that I have. But to
-                    give you an overview, here are some of my skills.
-                  </p>
+              <SubSkills key={key}>
+                {values.map((skill) => (
+                  <div key={skill.id} className="skill">
+                    <span className="icon">
+                      <img src={publicURL + skill.icon} alt={skill.name} />
+                    </span>
+                    <h4 className="skill-name">{skill.name}</h4>
+                    <p className="skill-description">
+                      Its hard to mention every little skill that I have. But to
+                      give you an overview, here are some of my skills.
+                    </p>
+                  </div>
+                ))}
+                <div className="overlay">
+                  {" "}
+                  <Direction
+                    icon="more"
+                    style={{ border: "none", padding: "0" }}
+                  />
                 </div>
-              ))}
-            </SubSkills>
+              </SubSkills>
+            </>
           ))}
         </div>
       </div>

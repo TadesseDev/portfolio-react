@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --primary:#072144;
     --primary2: #314867;
+    --primary-dark: #04152c;
     --primary-transparent: #072144c2;
     --primary-complement: #0951B2;
     --decoration1: #006837;

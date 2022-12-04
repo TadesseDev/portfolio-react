@@ -5,7 +5,6 @@ import ruby from "../../icon/ruby.svg";
 import postgresql from "../../icon/postgresql.svg";
 import javascript from "../../icon/javascript.svg";
 export const Landing = styled.main`
-  display: none;
   height: 100vh;
   .showMenu img {
     padding: 5vw;
