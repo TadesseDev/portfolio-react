@@ -42,9 +42,9 @@ export default function Skills() {
         <hr />
         <div className="all-skills">
           {Array.from(skills).map(([key = "", values = []]) => (
-            <>
+            <div key={key}>
               <SubTitle text={key} icon={iconMap.get(key)} />
-              <SubSkills key={key}>
+              <SubSkills text={key}>
                 {values.map((skill) => (
                   <div key={skill.id} className="skill">
                     <span className="icon">
@@ -57,15 +57,18 @@ export default function Skills() {
                     </p>
                   </div>
                 ))}
-                <div className="overlay">
-                  {" "}
-                  <Direction
-                    icon="more"
-                    style={{ border: "none", padding: "0" }}
-                  />
-                </div>
+                <Direction
+                  icon="more"
+                  style={{
+                    boxShadow: "0 0 6px #ffffff7a",
+                    background: "var(--primary)",
+                    position: "sticky",
+                    bottom: "5vw",
+                    left: "100%",
+                  }}
+                />
               </SubSkills>
-            </>
+            </div>
           ))}
         </div>
       </div>

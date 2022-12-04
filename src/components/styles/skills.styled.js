@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
+  margin-top: 5vw;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -10,6 +11,7 @@ export const SkillsContainer = styled.div`
   }
   hr {
     margin: 5vw 0;
+    border: 1px solid var(--shine);
   }
   .all-skills {
     margin: 5vw 0;
@@ -43,16 +45,5 @@ export const SubSkills = styled.div`
   .skill-description {
     grid-area: bottom-right;
     padding: 0 5vw;
-  }
-  .overlay {
-    height: 70px;
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
   }
 `;
