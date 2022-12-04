@@ -6,7 +6,7 @@ export const SkillsContainer = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  .front-end > p {
+  .pre > p {
     max-width: 70vw;
     margin: 0 auto;
   }
@@ -16,6 +16,29 @@ export const SkillsContainer = styled.div`
   }
   .all-skills {
     margin: 5vw 0;
+  }
+  .more {
+    backdrop-filter: blur(10px);
+    background-color: var(--transparent);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--primary);
+    p {
+      color: var(--primary);
+    }
+  }
+  button {
+    background: none;
+    border: 1px solid var(--shine);
+    margin: 10px;
+    border-radius: 10px;
+    width: 80%;
+    padding: 3vw;
+    color: var(--shine);
+  }
+  button:hover {
+    background: var(--shine);
+    color: var(--primary);
   }
 `;
 export const SubSkills = styled.div`

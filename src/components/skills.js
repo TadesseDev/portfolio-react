@@ -33,7 +33,7 @@ export default function Skills() {
   });
   return (
     <SkillsContainer id="skills">
-      <div className="front-end">
+      <div className="pre">
         <PrimaryTitle icon={skillIcon} text={"skills"} />
         <p>
           Its hard to mention every little skill that I have. But to give you an
@@ -68,10 +68,14 @@ export default function Skills() {
                   }}
                 />
               </SubSkills>
-
               <hr />
             </div>
           ))}
+        </div>
+        <div className="more">
+          <p>Any other skill?</p>
+          <strong>I might have forgot to tell you 😊</strong>
+          <button>Get in touch</button>
         </div>
       </div>
     </SkillsContainer>
