@@ -14,4 +14,13 @@ export const RecentWorkContainer = styled.div`
 export const Projects = styled.div``;
 export const Project = styled.div`
   border: 3px solid var(--bright);
+  padding: 5vw;
+  margin: 3vw;
+  button {
+    background-color: var(--decoration2);
+    border: 2px solid var(--bright);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+  }
 `;

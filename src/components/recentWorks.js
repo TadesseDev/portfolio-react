@@ -6,6 +6,7 @@ import {
 } from "./styles/recentWork.styed";
 import { getRecentWorks } from "../redux/components/recentWorks";
 import PrimaryTitle from "./partials/primaryTitle";
+import SubTitle from "./partials/subTitle";
 import meCoding from "../images/me-coding.svg";
 import { useEffect } from "react";
 export default function RecentWork() {
@@ -30,9 +31,25 @@ export default function RecentWork() {
         <p>Here are some of the project I've been working on lately</p>
       </div>
       <Projects>
-        {projects.map(({ project = {}, technologies = [] }) => (
+        {projects.map(({ project = {}, technologies = [], tests = [] }) => (
           <Project key={project.id}>
             <PrimaryTitle text={project.name} />
+            <SubTitle text="Built with" />
+            <div className="technologies">
+              {technologies.map((tech) => (
+                <button type="button" key={tech.id}>
+                  {tech.name}
+                </button>
+              ))}
+            </div>
+            <SubTitle text="Tested with" />
+            <div className="tests">
+              {tests.map((test) => (
+                <button type="button" key={test.id}>
+                  {test.name}
+                </button>
+              ))}
+            </div>
           </Project>
         ))}
       </Projects>

@@ -21,7 +21,19 @@ export default function recentWorkReducer(
 ) {
   switch (type) {
     case SET_ALL_RECENT_WORKS:
-      return payload;
+      return payload.map((project) => {
+        const tests = [];
+        const technologies = [];
+        project["technologies"].forEach((element) => {
+          if (element["tech_type"] == "Test") tests.push(element);
+          else technologies.push(element);
+        });
+        return {
+          project: project["project"],
+          technologies,
+          tests,
+        };
+      });
     default:
       return state;
   }
