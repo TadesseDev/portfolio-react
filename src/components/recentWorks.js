@@ -5,7 +5,7 @@ import {
   Project,
 } from "./styles/recentWork.styed";
 import { getRecentWorks } from "../redux/components/recentWorks";
-import SubTitle from "./partials/subTitle";
+import PrimaryTitle from "./partials/primaryTitle";
 import meCoding from "../images/me-coding.svg";
 import { useEffect } from "react";
 export default function RecentWork() {
@@ -32,7 +32,7 @@ export default function RecentWork() {
       <Projects>
         {projects.map(({ project = {}, technologies = [] }) => (
           <Project key={project.id}>
-            <SubTitle text={project.name} />
+            <PrimaryTitle text={project.name} />
           </Project>
         ))}
       </Projects>

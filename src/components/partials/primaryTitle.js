@@ -1,5 +1,5 @@
 import React from "react";
-export default function primaryTitle({ icon = "", text = "" }) {
+export default function primaryTitle({ icon = false, text = "" }) {
   return (
     <h2
       style={{
@@ -9,9 +9,7 @@ export default function primaryTitle({ icon = "", text = "" }) {
         gap: "10px",
       }}
     >
-      <span className="icon">
-        <img src={icon} alt="skill" />
-      </span>
+      <span className="icon">{icon && <img src={icon} alt="skill" />}</span>
       <span>{text}</span>
     </h2>
   );

@@ -10,7 +10,7 @@ export default function primaryTitle({ icon = "", text = "" }) {
       }}
     >
       <span className="icon" style={{ margin: "10px" }}>
-        <img src={icon} alt="skill" />
+        <span className="icon">{icon && <img src={icon} alt="skill" />}</span>
       </span>
       <span>{text}</span>
     </h3>
