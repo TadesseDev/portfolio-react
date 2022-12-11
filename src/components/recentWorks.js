@@ -50,6 +50,7 @@ export default function RecentWork() {
                 </button>
               ))}
             </div>
+            <SubTitle text="About" />
           </Project>
         ))}
       </Projects>
