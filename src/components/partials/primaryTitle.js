@@ -6,6 +6,7 @@ export default function primaryTitle({ icon = "", text = "" }) {
         justifyContent: "center",
         alignItems: "center",
         display: "flex",
+        gap: "10px",
       }}
     >
       <span className="icon">

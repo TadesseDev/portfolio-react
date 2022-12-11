@@ -13,6 +13,7 @@ import database from "../icon/database.svg";
 import test from "../icon/database.svg"; // TODO: change the icon for the test
 import { getSkills } from "../redux/components/skills.js";
 export default function Skills() {
+  const storeSkills = useSelector((store) => store.skills);
   let iconMap = new Map([
     ["Design", design],
     ["Frontend", frontend],
@@ -24,7 +25,6 @@ export default function Skills() {
   useEffect(() => {
     dispatch(getSkills());
   }, [dispatch]);
-  const storeSkills = useSelector((store) => store.skills);
   const skills = new Map();
   storeSkills.forEach((skill) => {
     if (skills.has(skill.tech_type))

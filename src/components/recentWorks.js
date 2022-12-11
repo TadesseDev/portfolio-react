@@ -1,14 +1,19 @@
-import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RecentWorkContainer } from "./styles/recentWork.styed";
+import {
+  RecentWorkContainer,
+  Projects,
+  Project,
+} from "./styles/recentWork.styed";
 import { getRecentWorks } from "../redux/components/recentWorks";
+import SubTitle from "./partials/subTitle";
 import meCoding from "../images/me-coding.svg";
+import { useEffect } from "react";
 export default function RecentWork() {
   const projects = useSelector((state) => state.recentWorks);
   const dispatch = useDispatch();
-  useState(() => {
+  useEffect(() => {
     dispatch(getRecentWorks());
-  }, []);
+  }, [dispatch]);
   projects.forEach((element) => {
     console.log(element);
   });
@@ -24,6 +29,13 @@ export default function RecentWork() {
         </span>
         <p>Here are some of the project I've been working on lately</p>
       </div>
+      <Projects>
+        {projects.map(({ project = {}, technologies = [] }) => (
+          <Project key={project.id}>
+            <SubTitle text={project.name} />
+          </Project>
+        ))}
+      </Projects>
     </RecentWorkContainer>
   );
 }

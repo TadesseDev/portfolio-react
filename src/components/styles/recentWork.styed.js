@@ -11,3 +11,7 @@ export const RecentWorkContainer = styled.div`
     width: calc(100% + 10vw);
   }
 `;
+export const Projects = styled.div``;
+export const Project = styled.div`
+  border: 3px solid var(--bright);
+`;
