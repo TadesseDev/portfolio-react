@@ -16,10 +16,10 @@ export const getSkills = () => (dispatch) => {
     });
 };
 
-export default function skillReducer(state = [], action) {
-  switch (action.type) {
+export default function skillReducer(state = [], { type = "", payload = [] }) {
+  switch (type) {
     case GET_ALL_SKILLS:
-      return action.payload;
+      return payload;
     default:
       return state;
   }

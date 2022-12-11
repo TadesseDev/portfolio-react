@@ -1,7 +1,7 @@
 import LandingPage from "./components/landingPage";
 import Skills from "./components/skills";
 import store from "./redux/store";
-import RecentWork from "./components/recentWork";
+import RecentWork from "./components/recentWorks";
 import { Provider } from "react-redux";
 function App() {
   return (

@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { RecentWorkContainer } from "./styles/recentWork.styed";
+import { getRecentWorks } from "../redux/components/recentWorks";
 import meCoding from "../images/me-coding.svg";
-export default function recentWork() {
+export default function RecentWork() {
+  const projects = useSelector((state) => state.recentWorks);
+  const dispatch = useDispatch();
+  useState(() => {
+    dispatch(getRecentWorks());
+  }, []);
+  projects.forEach((element) => {
+    console.log(element);
+  });
   return (
     <RecentWorkContainer>
       <div className="pre">
