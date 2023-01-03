@@ -57,16 +57,7 @@ export default function Skills() {
                     </p>
                   </div>
                 ))}
-                <Direction
-                  icon="more"
-                  style={{
-                    boxShadow: "0 0 6px #ffffff7a",
-                    background: "var(--primary)",
-                    position: "sticky",
-                    bottom: "5vw",
-                    left: "100%",
-                  }}
-                />
+
               </SubSkills>
               <hr />
             </div>

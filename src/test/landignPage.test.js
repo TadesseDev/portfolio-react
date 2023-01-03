@@ -6,7 +6,7 @@ beforeEach(() => {
   render(<App />);
 });
 
-test("Test menu bar text content", async () => {
+test("menu bar text content", async () => {
   screen.getByText("Home");
   screen.getByText("Skills");
   screen.getByText("Projects");
@@ -17,7 +17,7 @@ test("Test menu bar text content", async () => {
   screen.getByText("Contact me");
 });
 
-test("Test menu interaction", async () => {
+test("menu interaction", async () => {
   const navbar = await screen.findByTestId("navbar");
   expect(navbar.getAttribute("display")).toBe("none");
   const showMenu = screen.getByAltText("open menus");
@@ -28,6 +28,6 @@ test("Test menu interaction", async () => {
   expect(navbar.getAttribute("display")).toBe("none");
 });
 
-test("Test landing page text contents", async () => {
+test("landing page text contents", async () => {
   screen.getByText("Tadesse Dubale");
 });
