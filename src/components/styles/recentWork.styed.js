@@ -16,6 +16,8 @@ export const Project = styled.div`
   border: 3px solid var(--bright);
   padding: 5vw;
   margin: 3vw;
+  background: #ffffff3d;
+  backdrop-filter: blur(1px);
   button {
     background-color: var(--decoration2);
     border: 2px solid var(--bright);
