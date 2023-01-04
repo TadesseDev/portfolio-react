@@ -36,6 +36,7 @@ export default function RecentWork() {
         {projects.map(({ project = {}, technologies = [], tests = [] }) => (
           <Project key={project.id}>
             <PrimaryTitle text={project.name} />
+            <hr className="bright" />
             <div>
               <SubTitle text="Built with" />
               <div className="technologies">
@@ -46,6 +47,7 @@ export default function RecentWork() {
                 ))}
               </div>
             </div>
+            <hr className="bright" />
             <div>
               <SubTitle text="Tested with" />
               <div className="tests">
@@ -56,6 +58,7 @@ export default function RecentWork() {
                 ))}
               </div>
             </div>
+            <hr className="bright" />
             <div>
               <SubTitle text="About" />
               <div className="about">
@@ -74,6 +77,7 @@ export default function RecentWork() {
                 />
               </div>
             </div>
+            <hr className="bright" />
             <div className="links">
               <FlyButton text="Live" href={project.live_link} />
               <FlyButton text="Code" href={project.source_code} />
