@@ -23,6 +23,10 @@ const GlobalStyles = createGlobalStyle`
     --main-title-font: "maginors";
     --paragraph-font: "Sans Mateo";
    }
+   .gradientTopBottom{
+    background: rgb(233,238,96);
+background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 100%);
+   }
    #root{
     width: 100%;
    }

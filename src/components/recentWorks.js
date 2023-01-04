@@ -7,6 +7,7 @@ import {
 import { getRecentWorks } from "../redux/components/recentWorks";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
+import FlyButton from "./partials/flyButton";
 import meCoding from "../images/me-coding.svg";
 import { useEffect } from "react";
 import Direction from "./partials/direction.js";
@@ -72,6 +73,10 @@ export default function RecentWork() {
                   }}
                 />
               </div>
+            </div>
+            <div className="links">
+              <FlyButton text="Live" href={project.live_link} />
+              <FlyButton text="Code" href={project.source_code} />
             </div>
           </Project>
         ))}

@@ -25,7 +25,7 @@ export default function recentWorkReducer(
         const tests = [];
         const technologies = [];
         project["technologies"].forEach((element) => {
-          if (element["tech_type"] == "Test") tests.push(element);
+          if (element["tech_type"] === "Test") tests.push(element);
           else technologies.push(element);
         });
         return {

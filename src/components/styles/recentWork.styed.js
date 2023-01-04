@@ -35,9 +35,14 @@ export const Project = styled.div`
     overflow: hidden;
     padding: 10px;
     position: relative;
+    margin: 30px 0;
     p {
       margin: 0px;
       padding: 0px;
     }
+  }
+  .links {
+    display: flex;
+    justify-content: space-around;
   }
 `;
