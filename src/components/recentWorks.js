@@ -9,6 +9,7 @@ import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
 import meCoding from "../images/me-coding.svg";
 import { useEffect } from "react";
+import Direction from "./partials/direction.js";
 export default function RecentWork() {
   const projects = useSelector((state) => state.recentWorks);
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export default function RecentWork() {
         <p>
           I'm always Learning, Coding, Working on personal or business Projects
         </p>
-        <span className="image-container">
+        <span className="image-container" id="me-coding">
           <img src={meCoding} alt="me coding on a table " />
         </span>
         <p>Here are some of the project I've been working on lately</p>
@@ -34,23 +35,44 @@ export default function RecentWork() {
         {projects.map(({ project = {}, technologies = [], tests = [] }) => (
           <Project key={project.id}>
             <PrimaryTitle text={project.name} />
-            <SubTitle text="Built with" />
-            <div className="technologies">
-              {technologies.map((tech) => (
-                <button type="button" key={tech.id}>
-                  {tech.name}
-                </button>
-              ))}
+            <div>
+              <SubTitle text="Built with" />
+              <div className="technologies">
+                {technologies.map((tech) => (
+                  <button type="button" key={tech.id}>
+                    {tech.name}
+                  </button>
+                ))}
+              </div>
             </div>
-            <SubTitle text="Tested with" />
-            <div className="tests">
-              {tests.map((test) => (
-                <button type="button" key={test.id}>
-                  {test.name}
-                </button>
-              ))}
+            <div>
+              <SubTitle text="Tested with" />
+              <div className="tests">
+                {tests.map((test) => (
+                  <button type="button" key={test.id}>
+                    {test.name}
+                  </button>
+                ))}
+              </div>
             </div>
-            <SubTitle text="About" />
+            <div>
+              <SubTitle text="About" />
+              <div className="about">
+                <p>{project.description.slice(0, 30)}...</p>
+
+                <Direction
+                  icon="more"
+                  style={{
+                    boxShadow: "0 0 6px #ffffff7a",
+                    background: "var(--primary)",
+                    position: "absolute",
+                    top: "100%",
+                    left: "50%",
+                    transform: "translate(-50%,-50%)",
+                  }}
+                />
+              </div>
+            </div>
           </Project>
         ))}
       </Projects>

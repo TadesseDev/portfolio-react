@@ -15,7 +15,11 @@ export default function NavBar({ showNavBar, updateDisplay }) {
       <Direction
         icon="hide"
         toggle={updateDisplay}
-        style={{ position: "absolute" }}
+        style={{
+          position: "absolute",
+          transform: "translate(calc(-50% - 2px))",
+          border: "4px solid var(--bright)"
+        }}
       />
       <ul>
         <li>
