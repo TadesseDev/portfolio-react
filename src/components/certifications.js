@@ -4,6 +4,7 @@ import {
   CertificationsContainer,
   Certification,
 } from "./styles/certifications.styled";
+import PrimaryTitle from "./partials/primaryTitle";
 import { getCertifications } from "../redux/components/certifications";
 export default function Certifications() {
   const dispatch = useDispatch();
@@ -11,6 +12,7 @@ export default function Certifications() {
   const certifications = useSelector((state) => state.certifications);
   return (
     <CertificationsContainer>
+      <PrimaryTitle icon="" text={"Certifications"} />
       {certifications.map((certification) => (
         <Certification>{certification.title}</Certification>
       ))}

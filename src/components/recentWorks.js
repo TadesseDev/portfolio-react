@@ -21,7 +21,7 @@ export default function RecentWork() {
   return (
     <RecentWorkContainer>
       <div className="pre">
-        <h2>recentWork</h2>
+        <PrimaryTitle icon="" text={"Recent works"} />
         <p>
           I'm always Learning, Coding, Working on personal or business Projects
         </p>
