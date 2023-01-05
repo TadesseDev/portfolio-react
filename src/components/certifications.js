@@ -6,11 +6,14 @@ import {
 } from "./styles/certifications.styled";
 import { getCertifications } from "../redux/components/certifications";
 export default function Certifications() {
-  useDispatch()(getCertifications());
+  const dispatch = useDispatch();
+  dispatch(getCertifications());
   const certifications = useSelector((state) => state.certifications);
   return (
     <CertificationsContainer>
-      {certifications.map((certification) => ({}))}
+      {certifications.map((certification) => (
+        <Certification>{certification.title}</Certification>
+      ))}
     </CertificationsContainer>
   );
 }
