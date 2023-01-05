@@ -2,6 +2,7 @@ import LandingPage from "./components/landingPage";
 import Skills from "./components/skills";
 import store from "./redux/store";
 import RecentWork from "./components/recentWorks";
+import Certifications from "./components/certifications";
 import { Provider } from "react-redux";
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <LandingPage />
         <Skills />
         <RecentWork />
+        <Certifications />
       </div>
     </Provider>
   );

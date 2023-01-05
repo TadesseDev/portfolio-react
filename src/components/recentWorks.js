@@ -17,9 +17,7 @@ export default function RecentWork() {
   useEffect(() => {
     dispatch(getRecentWorks());
   }, [dispatch]);
-  projects.forEach((element) => {
-    console.log(element);
-  });
+
   return (
     <RecentWorkContainer>
       <div className="pre">
