@@ -1,11 +1,21 @@
 import { createGlobalStyle } from "styled-components";
 
-import "../../fonts/maginors-maginors-400.otf";
-import "../../fonts/AquireBold-8Ma60.otf";
-import "../../fonts/AquireLight-YzE0o.otf";
-import "../../fonts/SansMateo.ttf";
+import maginors from "../../fonts/maginors-maginors-400.otf";
+import Aquire from "../../fonts/AquireBold-8Ma60.otf";
+import SansMateo from "../../fonts/SansMateo.ttf";
 const GlobalStyles = createGlobalStyle`
-
+@font-face {
+  font-family: "maginors";
+  src: url(${maginors});
+}
+@font-face {
+  font-family: "Aquire";
+  src: url(${Aquire});
+}
+@font-face {
+  font-family: "SansMateo";
+  src: url(${SansMateo});
+}
   :root {
     --primary:#072144;
     --primary2: #314867;
@@ -19,9 +29,9 @@ const GlobalStyles = createGlobalStyle`
     --bright: #DAE028;
     --normal: #FFFFFF;
     --transparent: #fffff073;
-    --title-font: "Aquire";
-    --main-title-font: "maginors";
-    --paragraph-font: "Sans Mateo";
+    --main-title-font: maginors;
+    --title-font: Aquire;
+    --paragraph-font: SansMateo;
    }
    .gradientTopBottom{
     background: rgb(233,238,96);

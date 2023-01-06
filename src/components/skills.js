@@ -47,7 +47,7 @@ export default function Skills() {
                 {values.map((skill) => (
                   <div key={skill.id} className="skill">
                     <span className="icon">
-                      <img src={publicURL + skill.icon} alt={skill.name} />
+                      <img src={skill.icon} alt={skill.name} />
                     </span>
                     <h4 className="skill-name">{skill.name}</h4>
                     <p className="skill-description">
@@ -56,7 +56,6 @@ export default function Skills() {
                     </p>
                   </div>
                 ))}
-
               </SubSkills>
               <hr />
             </div>
