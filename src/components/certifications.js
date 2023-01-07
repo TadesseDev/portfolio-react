@@ -14,21 +14,13 @@ export default function Certifications() {
   let [firstHalf, setFirstHalf] = useState(true);
   let [numbers, setNumbers] = useState([0, 1, 2]);
   const dispatch = useDispatch();
-  useEffect(() => {
-    document.getElementById(`certificate_${0}`)?.classList.toggle("hide");
-  }, []);
-  useEffect(() => {
-    dispatch(getCertifications());
-  }, [dispatch]);
   const certifications = useSelector((state) => state.certifications);
 
   const nextCertificate = () => {
-    console.log(active);
     if (active > certifications.length - 1) return;
     setActive(++active);
     setNumbers((old) => old.map((num) => ++num));
     setFirstHalf(active < certifications.length / 2);
-    console.log(document.getElementById(`certificate_${active}`));
     document.getElementById(`certificate_${active--}`).classList.toggle("hide");
     document.getElementById(`certificate_${active}`).classList.toggle("hide");
   };
@@ -41,6 +33,13 @@ export default function Certifications() {
     document.getElementById(`certificate_${active}`).classList.toggle("hide");
   };
 
+  useEffect(() => {
+    dispatch(getCertifications());
+  }, [dispatch]);
+
+  useEffect(() => {
+    document.getElementById(`certificate_${0}`)?.classList.toggle("hide");
+  }, [certifications]);
   return (
     <CertificationsContainer>
       <PrimaryTitle icon="" text={"Certifications"} />
