@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SkillsContainer, SubSkills } from "./styles/skills.styled";
-import { publicURL } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
 import skillIcon from "../icon/skills.svg";

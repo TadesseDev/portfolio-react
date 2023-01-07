@@ -3,6 +3,7 @@ import Skills from "./components/skills";
 import store from "./redux/store";
 import RecentWork from "./components/recentWorks";
 import Certifications from "./components/certifications";
+import Testimonials from "./components/testimonials";
 import { Provider } from "react-redux";
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Skills />
         <RecentWork />
         <Certifications />
+        <Testimonials />
       </div>
     </Provider>
   );

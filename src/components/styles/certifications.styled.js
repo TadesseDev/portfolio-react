@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CertificationsContainer = styled.div`
   position: relative;
+  margin-bottom: 80px;
   #certificate-pagination {
     margin: 10px;
     display: flex;
@@ -13,7 +14,7 @@ export const CertificationsContainer = styled.div`
     align-items: center;
     #goto-certificate {
       margin: auto;
-      *{
+      * {
         margin: 0 1vw;
       }
     }
