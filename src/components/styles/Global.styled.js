@@ -97,5 +97,11 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
    .hide{
     display: none;
    }
+   .link-button{
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+   }
 `;
 export default GlobalStyles;

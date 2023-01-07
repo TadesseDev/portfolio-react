@@ -53,7 +53,9 @@ export default function Certifications() {
             <div>
               <p>
                 {description.slice(0, 100)}
-                <button type="button">...continue reading </button>
+                <button type="button" className="link-button">
+                  ...continue reading{" "}
+                </button>
               </p>
               <div>
                 <img src={image} alt={title /* TODO: make this lazy load */} />
@@ -71,14 +73,17 @@ export default function Certifications() {
           <Direction
             icon="show"
             style={{
-              boxShadow: "0 0 6px #ffffff7a",
+              boxShadow: "rgb(10 8 8 / 48%) 0px 0px 6px",
             }}
           />
         </span>
         <span id="goto-certificate">
           {!firstHalf && (
             <span>
-              <button type="button">first</button>...
+              <button type="button" className="link-button">
+                first
+              </button>
+              ...
             </span>
           )}
           {numbers.map((number, index) => (
@@ -86,7 +91,10 @@ export default function Certifications() {
           ))}
           {firstHalf && (
             <span>
-              ...<button type="button">last</button>
+              ...
+              <button type="button" className="link-button">
+                last
+              </button>
             </span>
           )}
         </span>
@@ -98,7 +106,7 @@ export default function Certifications() {
           <Direction
             icon="hide"
             style={{
-              boxShadow: "0 0 6px #ffffff7a",
+              boxShadow: "rgb(10 8 8 / 48%) 0px 0px 6px",
             }}
           />
         </span>
