@@ -66,7 +66,6 @@ export default function RecentWork() {
                   icon="more"
                   style={{
                     boxShadow: "0 0 6px #ffffff7a",
-                    background: "var(--primary)",
                     position: "absolute",
                     top: "100%",
                     left: "50%",

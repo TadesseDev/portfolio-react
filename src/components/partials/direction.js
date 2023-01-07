@@ -1,12 +1,14 @@
 import hide from "../../icon/directions/hide.png";
 import more from "../../icon/directions/more.png";
+import show from "../../icon/directions/show.png";
+import less from "../../icon/directions/less.png";
 import DirectionContainer from "./styles/direction.styled";
 const Direction = ({ icon, toggle = () => {}, style = {} }) => {
   let iconMap = new Map([
     ["hide", hide],
-    ["show", "./"],
+    ["show", show],
     ["more", more],
-    ["les", "./"],
+    ["les", less],
   ]);
   return (
     <DirectionContainer

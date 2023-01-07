@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   CertificationsContainer,
@@ -7,23 +7,103 @@ import {
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
 import { getCertifications } from "../redux/components/certifications";
+import { useEffect } from "react";
+import Direction from "./partials/direction.js";
 export default function Certifications() {
+  let [active, setActive] = useState(0);
+  let [firstHalf, setFirstHalf] = useState(true);
+  let [numbers, setNumbers] = useState([0, 1, 2]);
   const dispatch = useDispatch();
-  dispatch(getCertifications());
+  useEffect(() => {
+    document.getElementById(`certificate_${0}`)?.classList.toggle("hide");
+  }, []);
+  useEffect(() => {
+    dispatch(getCertifications());
+  }, [dispatch]);
   const certifications = useSelector((state) => state.certifications);
+
+  const nextCertificate = () => {
+    console.log(active);
+    if (active > certifications.length - 1) return;
+    setActive(++active);
+    setNumbers((old) => old.map((num) => ++num));
+    setFirstHalf(active < certifications.length / 2);
+    console.log(document.getElementById(`certificate_${active}`));
+    document.getElementById(`certificate_${active--}`).classList.toggle("hide");
+    document.getElementById(`certificate_${active}`).classList.toggle("hide");
+  };
+  const previousCertificate = () => {
+    if (active <= 0) return;
+    setActive(--active);
+    setNumbers((old) => old.map((num) => --num));
+    setFirstHalf(active < certifications.length / 2);
+    document.getElementById(`certificate_${active++}`).classList.toggle("hide");
+    document.getElementById(`certificate_${active}`).classList.toggle("hide");
+  };
+
   return (
     <CertificationsContainer>
       <PrimaryTitle icon="" text={"Certifications"} />
       {certifications.map(
-        ({ id, title = "", description = "", link = "", img = "" }) => (
-          <Certification key={id}>
+        (
+          { id, title = "", description = "", link = "", image = "" },
+          index
+        ) => (
+          <Certification key={id} className="hide" id={"certificate_" + index}>
             <SubTitle text={title} />
             <div>
-              <p>{ description}</p>
+              <p>
+                {description.slice(0, 100)}
+                <button type="button">...continue reading </button>
+              </p>
+              <div>
+                <img src={image} alt={title /* TODO: make this lazy load */} />
+              </div>
             </div>
           </Certification>
         )
       )}
+      <div id="certificate-pagination">
+        <span
+          id="previous-certificate"
+          onClick={previousCertificate}
+          className={active > 0 ? "" : "hide"}
+        >
+          <Direction
+            icon="show"
+            style={{
+              boxShadow: "0 0 6px #ffffff7a",
+            }}
+          />
+        </span>
+        <span id="goto-certificate">
+          {!firstHalf && (
+            <span>
+              <button type="button">first</button>...
+            </span>
+          )}
+          {numbers.map((number, index) => (
+            <span key={index}>{number}</span>
+          ))}
+          {firstHalf && (
+            <span>
+              ...<button type="button">last</button>
+            </span>
+          )}
+        </span>
+        <span
+          id="next-certificate"
+          onClick={nextCertificate}
+          className={active < certifications.length - 1 ? "" : "hide"}
+        >
+          <Direction
+            icon="hide"
+            style={{
+              boxShadow: "0 0 6px #ffffff7a",
+            }}
+          />
+        </span>
+      </div>
     </CertificationsContainer>
   );
 }

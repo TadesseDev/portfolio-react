@@ -94,5 +94,8 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
    hr.bright{
     border: 1px solid var(--bright);
    }
+   .hide{
+    display: none;
+   }
 `;
 export default GlobalStyles;
