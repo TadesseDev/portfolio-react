@@ -6,7 +6,9 @@ import twitter from "../../icon/social media/Twitter.svg";
 import angelList from "../../icon/social media/AngelList.svg";
 import gitHub from "../../icon/social media/GitHub.svg";
 import hackerRank from "../../icon/social media/HackerRank.svg";
-export default function socialMediaIcons({ links = {} }) {
+import facebook from "../../icon/social media/Facebook.svg";
+import instagram from "../../icon/social media/Instagram.svg";
+export default function socialMediaIcons({ links = {}, style = {} }) {
   let medias = new Map([
     [
       "linkedIn",
@@ -43,18 +45,28 @@ export default function socialMediaIcons({ links = {} }) {
         link: "https://www.hackerrank.com/TadesseFullStack?hr_r=1",
       },
     ],
+    [
+      "facebook",
+      {
+        icon: facebook,
+        link: "https://www.facebook.com/tadesseWebDev",
+      },
+    ],
+    [
+      "instagram",
+      {
+        icon: instagram,
+        link: "https://www.instagram.com/tadessewebdev/",
+      },
+    ],
   ]);
   console.log(medias);
   return (
-    <SocialMediasContainer>
+    <SocialMediasContainer style={{ ...style }}>
       {Object.keys(links).map((key) => (
         <li>
-          <a href={({ ...medias.get(key), ...links[key] }).link} target="blank">
-            <img
-              className="icon"
-              src={medias.get(key)?.icon}
-              alt={key}
-            />
+          <a href={{ ...medias.get(key), ...links[key] }.link} target="blank">
+            <img className="icon" src={medias.get(key)?.icon} alt={key} />
           </a>
         </li>
       ))}
