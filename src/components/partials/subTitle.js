@@ -1,12 +1,13 @@
 import React from "react";
 
-export default function primaryTitle({ icon = "", text = "" }) {
+export default function primaryTitle({ icon = "", text = "", style = {} }) {
   return (
     <h3
       style={{
         justifyContent: "center",
         alignItems: "center",
         display: "flex",
+        ...style
       }}
     >
       <span className="icon" style={{ margin: "10px" }}>
