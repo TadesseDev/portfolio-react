@@ -21,7 +21,7 @@ export const TestimonyCard = styled.div`
   border-radius: 10px;
   margin-top: calc(12.5vw + 15px);
   padding: 15px;
-  box-shadow: 0 0 10px 10px #ffffff0d;
+  box-shadow: 0 0 10px 10px #00000025;
   .testimonial-img {
     border: 5px solid var(--primary);
     display: block;

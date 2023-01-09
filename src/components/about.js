@@ -1,8 +1,19 @@
 import React from "react";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
-import AboutContainer from "./styles/about.styled";
+import AboutContainer, {
+  AboutCard,
+  CardContainer,
+} from "./styles/about.styled";
+import { medias } from "../redux/store";
 export default function about() {
+  const findMeLinks = ["instagram", "gitHub", "twitter", "linkedIn"];
+  let old = "linkedIn";
+  const handleFindMeCardIndex = (key) => {
+    document.getElementById(old).style.zIndex = "0";
+    document.getElementById(key).style.zIndex = "1";
+    old = key;
+  };
   return (
     <AboutContainer>
       <PrimaryTitle text="About" />
@@ -14,7 +25,8 @@ export default function about() {
         <span className="bright">
           "it is a matter of reading and writhing a new syntax"
         </span>
-        .
+        . <br />
+        <span className="emoji">🫠</span>
       </p>
       <p>
         Algorithm and Data Structure enthusiast. What interestl me the most is
@@ -33,7 +45,22 @@ export default function about() {
         ” .<br />
         <span className="emoji">😊</span>
       </p>
-      <SubTitle text="You can find me..."/>
+      <SubTitle text="You can find me..." />
+      <CardContainer>
+        {findMeLinks.map((key, index) => (
+          <AboutCard
+            key={key}
+            margin={index}
+            onClick={() => handleFindMeCardIndex(key)}
+            id={key}
+          >
+            <h3>{key}</h3>
+            <img src={medias.get(key)?.icon2} alt={key} />
+            <p>{medias.get(key)?.description}</p>
+            <button className="gradientTopBottom">Go</button>
+          </AboutCard>
+        ))}
+      </CardContainer>
     </AboutContainer>
   );
 }
