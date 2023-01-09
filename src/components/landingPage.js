@@ -6,11 +6,7 @@ import { Circle } from "./partials/decorations";
 import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
 import menu from "../icon/menu/menu.png";
 import my_picture from "../images/resized.svg";
-import linkedIn from "../icon/social media/LinkedIn.svg";
-import twitter from "../icon/social media/Twitter.svg";
-import angelList from "../icon/social media/AngelList.svg";
-import gitHub from "../icon/social media/GitHub.svg";
-import hackerRank from "../icon/social media/HackerRank.svg";
+import SocialMediaIcons from "./partials/socialMediaIcons";
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   return (
@@ -53,42 +49,15 @@ export default function LandingPage() {
             }}
           />
         </a>
-        <ul className="social-media">
-          <li>
-            <a href="http://github.com/tadesse-Alemayehu/" target="blank">
-              <img className="icon" src={gitHub} alt="GitHub" />
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://www.linkedin.com/in/tadesse-alemayehu-full-stack-developer/"
-              target="blank"
-            >
-              <img className="icon" src={linkedIn} alt="LinkedIn" />
-            </a>
-          </li>
-
-          <li>
-            <a href="https://twitter.com/tadesseWebDev" target="blank">
-              <img className="icon" src={twitter} alt="Twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="https://angel.co/u/tadesse-alemayehu" target="blank">
-              <img className="icon" src={angelList} alt="AngelList" />
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://www.hackerrank.com/TadesseFullStack?hr_r=1"
-              target="blank"
-            >
-              <img className="icon" src={hackerRank} alt="HackerRank" />
-            </a>
-          </li>
-        </ul>
+        <SocialMediaIcons
+          links={{
+            linkedIn: {},
+            twitter: {},
+            angelList: {},
+            gitHub: {},
+            hackerRank: {},
+          }}
+        />
       </Detail>
 
       <Circle

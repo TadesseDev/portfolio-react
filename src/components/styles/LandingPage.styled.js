@@ -102,11 +102,4 @@ export const Detail = styled.div`
     display: inline-block;
     max-width: max-content;
   }
-  .social-media {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    margin: 10px;
-    min-width: 100%;
-  }
 `;
