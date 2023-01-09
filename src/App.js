@@ -4,6 +4,7 @@ import store from "./redux/store";
 import RecentWork from "./components/recentWorks";
 import Certifications from "./components/certifications";
 import Testimonials from "./components/testimonials";
+import About from "./components/about";
 import { Provider } from "react-redux";
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <RecentWork />
         <Certifications />
         <Testimonials />
+        <About />
       </div>
     </Provider>
   );
