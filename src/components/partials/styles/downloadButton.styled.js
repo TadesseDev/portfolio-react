@@ -5,6 +5,7 @@ export const Download = styled.span`
   font-family: var(--main-title-font);
   font-size: ${(props) => props.fontSize || 1 + "rem"};
   display: inline-block;
+  color: white;
   margin: 12px;
   padding: 15px 60px 10px 10px;
   position: relative;

@@ -4,6 +4,13 @@ const TestimonialContainer = styled.div`
 `;
 export const Testimonial = styled.div`
   margin-top: 40px;
+  ul {
+    justify-content: center;
+    gap: 10px
+  }
+  .icon{
+    width: 7vw;
+  }
 `;
 export const TestimonyCard = styled.div`
   background-image: url(${(prop) => prop.backgroundImage || ""});

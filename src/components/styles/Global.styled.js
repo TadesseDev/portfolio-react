@@ -75,7 +75,7 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     font-family:  var(--paragraph-font);
    }
    a {
-    color: var(--normal);
+    color: var(--decoration2);
     text-decoration: none;
    }
    ul{
@@ -99,7 +99,7 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
    }
    .link-button{
     background: transparent;
-    color: white;
+    color: var(--decoration2);
     border: none;
     outline: none;
    }
