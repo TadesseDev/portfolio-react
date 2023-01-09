@@ -25,7 +25,6 @@ export default function Testimonials() {
           <TestimonyCard
             testimonyImage={testimony.image}
             backgroundImage={testimony.id%2===0? testimonialBlob_flip:testimonialBlob}
-            rotate={ testimony.id%2==0}
           >
             <span className="testimonial-img"></span>
             <p>

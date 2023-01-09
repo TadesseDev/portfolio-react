@@ -68,6 +68,7 @@ export default function LandingPage() {
           left: "0",
           width: "20vw",
           height: "20vw",
+          boxShadow: "0 0 10px 26px #dae02840",
         }}
       />
     </Landing>

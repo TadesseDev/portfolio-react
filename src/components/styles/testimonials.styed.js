@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const TestimonialContainer = styled.div`
-text-align: center;
+  text-align: center;
 `;
 export const Testimonial = styled.div`
   margin-top: 40px;
@@ -8,7 +8,6 @@ export const Testimonial = styled.div`
 export const TestimonyCard = styled.div`
   background-image: url(${(prop) => prop.backgroundImage || ""});
   background-size: contain;
-  background-position-x: ${(prop) => (prop.rotate ? "right" : "")};
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #ffffff3d;

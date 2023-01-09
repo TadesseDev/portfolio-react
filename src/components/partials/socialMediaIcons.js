@@ -64,7 +64,7 @@ export default function socialMediaIcons({ links = {}, style = {} }) {
   return (
     <SocialMediasContainer style={{ ...style }}>
       {Object.keys(links).map((key) => (
-        <li>
+        <li key={ key}>
           <a href={{ ...medias.get(key), ...links[key] }.link} target="blank">
             <img className="icon" src={medias.get(key)?.icon} alt={key} />
           </a>
