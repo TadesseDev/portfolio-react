@@ -12,9 +12,12 @@ const about = styled.div`
   }
 `;
 export const CardContainer = styled.div`
-position: relative;
-margin: 50px 0;
-`
+  position: relative;
+  margin: 50px 0;
+  height: 120vw;
+  min-height: 400px;
+  max-height: 500px;
+`;
 export const AboutCard = styled.div`
   width: 50vw;
   max-width: 200px;
