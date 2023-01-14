@@ -11,19 +11,43 @@ import ContactContainer, {
 export default function contact() {
   return (
     <ContactContainer>
-      <PrimaryTitle text="Contact me" />
+      <PrimaryTitle text="Contact me" style={{color: "var(--primary)"}} />
       <form action="">
         <InputField icon={user_contact}>
-          <input type="text" name="user-name" id="user-name" />
+          <img className="icon" src={user_contact} alt="User Name" />
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            placeholder="Full Name..."
+          />
         </InputField>
         <InputField icon={email}>
-          <input type="email" name="user-email" id="user-email" />
+          <img className="icon" src={email} alt="User Email" />
+          <span icon></span>
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            placeholder="Email..."
+          />
         </InputField>
         <InputField icon={phone}>
-          <input type="number" name="phone-number" id="phone-number" />
+          <img className="icon" src={phone} alt="Phone number" />
+          <input
+            type="number"
+            name="phone-number"
+            id="phone-number"
+            placeholder="Phone number..."
+          />
         </InputField>
         <TextField>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            rows="10"
+            placeholder="Your thought..."
+          ></textarea>
         </TextField>
         <button type="submit">
           <SubmitButton text="Send" />
