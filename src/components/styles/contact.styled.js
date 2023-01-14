@@ -25,6 +25,7 @@ export const InputField = styled.div`
   align-items: center;
   padding: 5px;
   margin: 15px auto;
+  background: var(--primary);
   input {
     width: 80%;
     position: absolute;
@@ -46,6 +47,7 @@ export const TextField = styled.div`
   border-radius: 10px;
   overflow: hidden;
   margin: 15px auto;
+  background: var(--primary);
   textarea {
     color: var(--bright);
     padding: 5px;
