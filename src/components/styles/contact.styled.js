@@ -24,7 +24,7 @@ export const InputField = styled.div`
   display: flex;
   align-items: center;
   padding: 5px;
-  margin: 15px;
+  margin: 15px auto;
   input {
     width: 80%;
     position: absolute;
@@ -45,7 +45,7 @@ export const TextField = styled.div`
   border: 2px solid var(--bright);
   border-radius: 10px;
   overflow: hidden;
-  margin: 15px;
+  margin: 15px auto;
   textarea {
     color: var(--bright);
     padding: 5px;
