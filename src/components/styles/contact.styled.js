@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ContactContainer = styled.div`
   margin: 0 -5vw;
-  border-radius: 50% 50% 0 0;
+  border-radius: 25% 25% 0 0;
   padding: 12vw;
   background-color: #ffffff1c;
   backdrop-filter: blur(1px);
@@ -50,8 +50,8 @@ export const TextField = styled.div`
   background: var(--primary);
   textarea {
     color: var(--bright);
-    padding: 5px;
-    width: 100%;
+    padding: 2%;
+    width: 96%;
     left: 15%;
     height: 100%;
     background: transparent;
