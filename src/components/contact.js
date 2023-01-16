@@ -21,18 +21,20 @@ export default function Contact() {
     const name = e.target.name;
     updateData((old) => ({ ...old, [name]: val }));
   };
-  const submitMessage = e => {
+  const submitMessage = (e) => {
     e.preventDefault();
     console.log(e);
     console.log(JSON.stringify(formData));
-    sendPost("messages", formData).then((res) => {
-      // TODO: Add a success message
-      console.log(res);
-    }).catch((err) => {
-      //TODO: Add a failure message
-      console.log(err);
-    })
-  }
+    sendPost("messages", formData)
+      .then((res) => {
+        // TODO: Add a success message
+        console.log(res);
+      })
+      .catch((err) => {
+        //TODO: Add a failure message
+        console.log(err);
+      });
+  };
   return (
     <ContactContainer>
       <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
@@ -65,7 +67,7 @@ export default function Contact() {
         <InputField>
           <img className="icon" src={phone} alt="Phone number" />
           <input
-            type="number"
+            type="tel"
             name="phone_number"
             id="phone-number"
             placeholder="Phone number..."

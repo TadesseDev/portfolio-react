@@ -31,17 +31,12 @@ export const InputField = styled.div`
     position: absolute;
     left: 15%;
     height: 100%;
+    min-height: 40px;
     padding: 0;
     background: transparent;
     border: none;
     outline: none;
     color: var(--bright);
-  }
-  input:-internal-autofill-selected {
-    appearance: menulist-button;
-    background-image: none !important;
-    background-color: green !important;
-    color: fieldtext !important;
   }
   .icon {
     width: 12%;

@@ -48,7 +48,7 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     display: flex;
    }
    #root {
-    margin: 2vw 5vw;
+    margin: 0 5vw;
    }
    h1{
     font-family: var(--main-title-font);
