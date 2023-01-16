@@ -5,9 +5,15 @@ export default function flyButton({
   text = "",
   href = "#",
   target = "_blank",
+  preventDefault = false,
 }) {
   return (
-    <FlyLink className="gradientTopBottom" href={href} target={target}>
+    <FlyLink
+      className="gradientTopBottom"
+      href={href}
+      target={target}
+      onClick={preventDefault ? (e) => e.preventDefault() : () => { }}
+    >
       {text}
       <IconContainer className="gradientTopBottom">
         <img src={flyIcon} alt="Open link" />
