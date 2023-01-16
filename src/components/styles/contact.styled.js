@@ -37,6 +37,12 @@ export const InputField = styled.div`
     outline: none;
     color: var(--bright);
   }
+  input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: green !important;
+    color: fieldtext !important;
+  }
   .icon {
     width: 12%;
   }

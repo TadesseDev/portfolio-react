@@ -1,5 +1,4 @@
 import axios from "axios";
-export const publicURL = "http://localhost:4000/";
 const baseURL = "http://localhost:4000/api/v1/";
 const root = axios.create({
   baseURL,
@@ -9,3 +8,8 @@ const root = axios.create({
 export function sendGet(custom) {
   return root.get(custom);
 }
+
+export function sendPost(custom, data) {
+return root.post(custom, data);
+}
+

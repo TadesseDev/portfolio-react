@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { sendPost } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import user_contact from "../icon/user_contact.svg";
 import email from "../icon/email.svg";
@@ -22,8 +23,15 @@ export default function Contact() {
   };
   const submitMessage = e => {
     e.preventDefault();
-    console.log(e)
+    console.log(e);
     console.log(JSON.stringify(formData));
+    sendPost("messages", formData).then((res) => {
+      // TODO: Add a success message
+      console.log(res);
+    }).catch((err) => {
+      //TODO: Add a failure message
+      console.log(err);
+    })
   }
   return (
     <ContactContainer>
