@@ -87,4 +87,5 @@ export const medias = new Map([
     },
   ],
 ]);
+export const address = {email: "tadalem26@gmail.com", phone: "+251921577930"}
 export default createStore(reducers, applyMiddleware(thunk, logger));

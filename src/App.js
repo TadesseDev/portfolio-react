@@ -6,6 +6,7 @@ import Certifications from "./components/certifications";
 import Testimonials from "./components/testimonials";
 import About from "./components/about";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 import { Provider } from "react-redux";
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Testimonials />
         <About />
         <Contact />
+        <Footer />
       </div>
     </Provider>
   );
