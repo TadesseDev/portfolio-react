@@ -23,7 +23,7 @@ export default function NavBar({ showNavBar, updateDisplay }) {
       />
       <ul>
         <li>
-          <a href="/">
+          <a href="#home">
             <img className="icon" src={home} alt="home" />
             <span>Home</span>
           </a>
@@ -35,37 +35,37 @@ export default function NavBar({ showNavBar, updateDisplay }) {
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#recent-works">
             <img className="icon" src={works} alt="works" />
             <span>Projects</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#certifications">
             <img className="icon" src={certificates} alt="certificates" />
             <span>Certificates</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#testimonials">
             <img className="icon" src={testimonials} alt="home" />
             <span>Testimonials</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#about">
             <img className="icon" src={about} alt="about" />
             <span>About</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#find-me">
             <img className="icon" src={user} alt="user" />
             <span>Digital presence</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#contact">
             <img className="icon" src={me_standing} alt="me standing" />
             <span>Contact me</span>
           </a>

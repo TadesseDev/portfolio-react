@@ -45,7 +45,8 @@ export default function about() {
         ” .<br />
         <span className="emoji">😊</span>
       </p>
-      <SubTitle text="You can find me..." />
+      <span id="find-me"></span>
+      <SubTitle text="You can find me..."/>
       <CardContainer>
         {findMeLinks.map((key, index) => (
           <AboutCard
