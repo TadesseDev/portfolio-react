@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     --bright: #DAE028;
     --normal: #FFFFFF;
     --transparent: #fffff073;
+    --primary-transparent: #07214473;
     --main-title-font: maginors;
     --title-font: Aquire;
     --paragraph-font: SansMateo;

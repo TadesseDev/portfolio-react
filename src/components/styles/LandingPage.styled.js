@@ -7,12 +7,16 @@ import javascript from "../../icon/javascript.svg";
 export const Landing = styled.main`
   height: 100vh;
   .showMenu img {
-    padding: 5vw;
+    margin: 3vw;
+    padding: 2vw;
     width: 10vw;
     max-width: 50px;
     position: fixed;
     right: 0;
     z-index: 1;
+    background: var(--primary-transparent);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
   }
 `;
 
