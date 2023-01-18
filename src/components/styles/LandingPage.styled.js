@@ -13,7 +13,7 @@ export const Landing = styled.main`
     max-width: 50px;
     position: fixed;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     background: var(--primary-transparent);
     backdrop-filter: blur(5px);
     border-radius: 20px;
