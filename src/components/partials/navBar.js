@@ -9,12 +9,12 @@ import testimonials from "../../icon/menu/testimonials.png";
 import about from "../../icon/menu/about.png";
 import user from "../../icon/menu/user.png";
 import me_standing from "../../icon/menu/me-standing.png";
-export default function NavBar({ showNavBar, updateDisplay }) {
+export default function NavBar({ showNavBar, toggleNavbar }) {
   return (
     <Navbar display={showNavBar ? "block" : "none"} data-testid="navbar">
       <Direction
         icon="hide"
-        toggle={updateDisplay}
+        toggle={toggleNavbar}
         style={{
           position: "absolute",
           transform: "translate(calc(-50% - 2px))",
@@ -23,49 +23,49 @@ export default function NavBar({ showNavBar, updateDisplay }) {
       />
       <ul>
         <li>
-          <a href="#home">
+          <a href="#home" onClick={toggleNavbar}>
             <img className="icon" src={home} alt="home" />
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a href="#skills">
+          <a href="#skills" onClick={toggleNavbar}>
             <img className="icon" src={skills} alt="skills" />
             <span>Skills</span>
           </a>
         </li>
         <li>
-          <a href="#recent-works">
+          <a href="#recent-works" onClick={toggleNavbar}>
             <img className="icon" src={works} alt="works" />
             <span>Projects</span>
           </a>
         </li>
         <li>
-          <a href="#certifications">
+          <a href="#certifications" onClick={toggleNavbar}>
             <img className="icon" src={certificates} alt="certificates" />
             <span>Certificates</span>
           </a>
         </li>
         <li>
-          <a href="#testimonials">
+          <a href="#testimonials" onClick={toggleNavbar}>
             <img className="icon" src={testimonials} alt="home" />
             <span>Testimonials</span>
           </a>
         </li>
         <li>
-          <a href="#about">
+          <a href="#about" onClick={toggleNavbar}>
             <img className="icon" src={about} alt="about" />
             <span>About</span>
           </a>
         </li>
         <li>
-          <a href="#find-me">
+          <a href="#find-me" onClick={toggleNavbar}>
             <img className="icon" src={user} alt="user" />
             <span>Digital presence</span>
           </a>
         </li>
         <li>
-          <a href="#contact">
+          <a href="#contact" onClick={toggleNavbar}>
             <img className="icon" src={me_standing} alt="me standing" />
             <span>Contact me</span>
           </a>

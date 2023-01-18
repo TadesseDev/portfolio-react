@@ -11,11 +11,7 @@ const Direction = ({ icon, toggle = () => {}, style = {} }) => {
     ["les", less],
   ]);
   return (
-    <DirectionContainer
-      className="direction"
-      onClick={() => toggle((old) => !old)}
-      style={style}
-    >
+    <DirectionContainer className="direction" onClick={toggle} style={style}>
       <img src={iconMap.get(icon)} alt={icon} />
     </DirectionContainer>
   );

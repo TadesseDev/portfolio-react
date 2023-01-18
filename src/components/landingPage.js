@@ -9,12 +9,15 @@ import my_picture from "../images/resized.svg";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
+  const toggleNavbar = ()=>{
+    updateDisplay((old) => !old)
+  }
   return (
     <Landing id="home">
-      <span className="showMenu" onClick={() => updateDisplay((old) => !old)}>
+      <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" />
       </span>
-      <NavBar showNavBar={showNavBar} updateDisplay={updateDisplay} />
+      <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
       <PrimaryImage>
         <div className="decoration" id="xd"></div>
         <div className="decoration" id="postgres"></div>
