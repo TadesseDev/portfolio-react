@@ -4,8 +4,8 @@ const ContactContainer = styled.div`
   margin: 0 -5vw;
   border-radius: 25% 25% 0 0;
   padding: 12vw;
-  background-color: #ffffff1c;
-  backdrop-filter: blur(1px);
+  position: relative;
+  overflow: hidden;
   button {
     padding: 0;
     border: none;

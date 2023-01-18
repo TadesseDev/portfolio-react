@@ -5,6 +5,7 @@ import user_contact from "../icon/user_contact.svg";
 import email from "../icon/email.svg";
 import phone from "../icon/phone.svg";
 import SubmitButton from "./partials/flyButton";
+import Mirror from "./partials/mirror";
 import ContactContainer, {
   InputField,
   TextField,
@@ -37,6 +38,8 @@ export default function Contact() {
   };
   return (
     <ContactContainer id="contact">
+      <Mirror style={{
+  "backgroundColor": "#ffffff1c"}} />
       <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
       <form action="" onSubmit={submitMessage}>
         <InputField>
