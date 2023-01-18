@@ -11,7 +11,6 @@ let Navbar = styled.nav`
   height: max-content;
   min-height: calc(100vh - 10vw);
   box-shadow: -10px 0px 50px #050505;
-  backdrop-filter: blur(50px);
   display: ${(props) => props.display};
   z-index: 3;
   ul {
