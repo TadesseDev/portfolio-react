@@ -10,8 +10,9 @@ export const Landing = styled.main`
     padding: 5vw;
     width: 10vw;
     max-width: 50px;
-    position: absolute;
+    position: fixed;
     right: 0;
+    z-index: 1;
   }
 `;
 
