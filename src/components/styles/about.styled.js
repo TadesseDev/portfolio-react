@@ -24,8 +24,9 @@ export const AboutCard = styled.div`
   border: 3px solid var(--bright);
   color: var(--bright);
   border-radius: 10px;
-  backdrop-filter: blur(10px);
-  background-color: #00000010;
+  ${'' /* backdrop-filter: blur(10px); */}
+  ${'' /* background-color: #00000010; */}
+  overflow: hidden;
   position: absolute;
   padding: 10px;
   z-index: 0;

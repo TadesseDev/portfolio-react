@@ -1,6 +1,7 @@
 import React from "react";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
+import Mirror from "./partials/mirror";
 import AboutContainer, {
   AboutCard,
   CardContainer,
@@ -55,6 +56,7 @@ export default function about() {
             onClick={() => handleFindMeCardIndex(key)}
             id={key}
           >
+            <Mirror />
             <h3>{key}</h3>
             <img src={medias.get(key)?.icon2} alt={key} />
             <p>{medias.get(key)?.description}</p>
