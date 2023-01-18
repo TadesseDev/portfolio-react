@@ -17,7 +17,7 @@ export default function Testimonials() {
     dispatch(getTestimonials());
   }, [dispatch]);
   return (
-    <TestimonialContainer>
+    <TestimonialContainer id="testimonials">
       <PrimaryTitle text="Testimonials" />
       {testimonials.map((testimony) => (
         <Testimonial key={testimony.id}>
@@ -47,9 +47,9 @@ export default function Testimonials() {
           </TestimonyCard>
           <SocialMediaIcons
             links={{
-              linkedIn: {link: testimony.linkedin },
-              twitter: {link: testimony.twitter },
-              gitHub: {link: testimony.github },
+              linkedIn: { link: testimony.linkedin },
+              twitter: { link: testimony.twitter },
+              gitHub: { link: testimony.github },
             }}
           />
           <hr />

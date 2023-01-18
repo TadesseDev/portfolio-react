@@ -18,7 +18,7 @@ export default function NavBar({ showNavBar, updateDisplay }) {
         style={{
           position: "absolute",
           transform: "translate(calc(-50% - 2px))",
-          border: "4px solid var(--bright)"
+          border: "4px solid var(--bright)",
         }}
       />
       <ul>
@@ -29,7 +29,7 @@ export default function NavBar({ showNavBar, updateDisplay }) {
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#skills">
             <img className="icon" src={skills} alt="skills" />
             <span>Skills</span>
           </a>

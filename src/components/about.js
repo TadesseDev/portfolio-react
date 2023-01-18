@@ -15,7 +15,7 @@ export default function about() {
     old = key;
   };
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <PrimaryTitle text="About" />
       <p>
         learning a language is not the the point, Understand the fundamental of

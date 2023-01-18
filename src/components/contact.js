@@ -36,7 +36,7 @@ export default function Contact() {
       });
   };
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
       <form action="" onSubmit={submitMessage}>
         <InputField>

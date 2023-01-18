@@ -19,7 +19,7 @@ export default function RecentWork() {
   }, [dispatch]);
 
   return (
-    <RecentWorkContainer>
+    <RecentWorkContainer id="recent-works">
       <div className="pre">
         <PrimaryTitle icon="" text={"Recent works"} />
         <p>

@@ -10,7 +10,7 @@ import SocialMediaIcons from "./partials/socialMediaIcons";
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   return (
-    <Landing>
+    <Landing id="home">
       <span className="showMenu" onClick={() => updateDisplay((old) => !old)}>
         <img src={menu} alt="open menus" />
       </span>

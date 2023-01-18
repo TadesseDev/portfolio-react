@@ -5,7 +5,7 @@ import SocialMediaIcons from "./partials/socialMediaIcons";
 
 export default function Footer() {
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <div className="links">
         <a href="#">Skills</a>
         <a href="#">Projects</a>

@@ -41,7 +41,7 @@ export default function Certifications() {
     document.getElementById(`certificate_${0}`)?.classList.toggle("hide");
   }, [certifications]);
   return (
-    <CertificationsContainer>
+    <CertificationsContainer id="certifications">
       <PrimaryTitle icon="" text={"Certifications"} />
       {certifications.map(
         (
