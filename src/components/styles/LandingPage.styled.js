@@ -14,6 +14,8 @@ export const Landing = styled.main`
     position: fixed;
     right: 0;
     z-index: 2;
+    background-color: var(--primary-transparent);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
   }
 `;
