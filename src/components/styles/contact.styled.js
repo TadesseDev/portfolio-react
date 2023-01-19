@@ -26,6 +26,10 @@ export const InputField = styled.div`
   padding: 5px;
   margin: 15px auto;
   background: var(--primary);
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
   input {
     width: 80%;
     position: absolute;
