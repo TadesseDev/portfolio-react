@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
+import { InformationContext } from "../context/informationContext";
 import Mirror from "./partials/mirror";
 import AboutContainer, {
   AboutCard,
   CardContainer,
 } from "./styles/about.styled";
-import { medias } from "../redux/store";
-export default function about() {
+export default function About() {
+  const { medias } = useContext(InformationContext);
   const findMeLinks = ["instagram", "gitHub", "twitter", "linkedIn"];
   let old = "linkedIn";
   const handleFindMeCardIndex = (key) => {

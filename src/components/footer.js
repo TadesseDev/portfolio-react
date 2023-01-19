@@ -1,9 +1,10 @@
-import React from "react";
-import { address } from "../redux/store";
+import React, { useContext } from "react";
+import { InformationContext } from "../context/informationContext";
 import FooterContainer from "./styles/footer.styled";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 
 export default function Footer() {
+  const { address } = useContext(InformationContext);
   return (
     <FooterContainer id="footer">
       <div className="links">

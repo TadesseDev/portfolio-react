@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import SocialMediasContainer from "./styles/socialMediaIcons.styled";
-import { medias } from '../../redux/store'
-export default function socialMediaIcons({ links = {}, style = {} }) {
-
+import { InformationContext } from "../../context/informationContext";
+export default function SocialMediaIcons({ links = {}, style = {} }) {
+  const { medias } = useContext(InformationContext);
   return (
     <SocialMediasContainer style={{ ...style }}>
       {Object.keys(links).map((key) => (

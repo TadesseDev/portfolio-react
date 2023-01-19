@@ -8,19 +8,22 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import { Provider } from "react-redux";
+import {medias, address, InformationContext } from "./context/informationContext";
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <LandingPage />
-        <Skills />
-        <RecentWork />
-        <Certifications />
-        <Testimonials />
-        <About />
-        <Contact />
-        <Footer />
-      </div>
+      <InformationContext.Provider value={{ medias, address }}>
+        <div className="App">
+          <LandingPage />
+          <Skills />
+          <RecentWork />
+          <Certifications />
+          <Testimonials />
+          <About />
+          <Contact />
+          <Footer />
+        </div>
+      </InformationContext.Provider>
     </Provider>
   );
 }
