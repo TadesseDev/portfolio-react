@@ -6,6 +6,7 @@ const ContactContainer = styled.div`
   padding: 12vw;
   position: relative;
   overflow: hidden;
+  z-index: 1;
   button {
     padding: 0;
     border: none;

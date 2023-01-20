@@ -39,7 +39,9 @@ export default function Contact() {
   return (
     <ContactContainer id="contact">
       <Mirror style={{
-  "backgroundColor": "#ffffff1c"}} />
+        "backgroundColor": "#ffffff1c",
+        backdropFilter: "blur(5px)",
+      }} />
       <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
       <form action="" onSubmit={submitMessage}>
         <InputField>
