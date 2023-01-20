@@ -8,6 +8,7 @@ import design from "../icon/design.svg";
 import frontend from "../icon/frontend.svg";
 import backend from "../icon/backend.svg";
 import database from "../icon/database.svg";
+import Mirror from "./partials/mirror";
 import test from "../icon/database.svg"; // TODO: change the icon for the test
 import { getSkills } from "../redux/components/skills.js";
 export default function Skills() {
@@ -61,6 +62,7 @@ export default function Skills() {
           ))}
         </div>
         <div className="more">
+          <Mirror />
           <p>Any other skill?</p>
           <strong>I might have forgot to tell you 😊</strong>
           <button>Get in touch</button>

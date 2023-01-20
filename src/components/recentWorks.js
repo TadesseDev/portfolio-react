@@ -11,6 +11,7 @@ import FlyButton from "./partials/flyButton";
 import meCoding from "../images/me-coding.svg";
 import { useEffect } from "react";
 import Direction from "./partials/direction.js";
+import Mirror from "./partials/mirror";
 export default function RecentWork() {
   const projects = useSelector((state) => state.recentWorks);
   const dispatch = useDispatch();
@@ -33,6 +34,10 @@ export default function RecentWork() {
       <Projects>
         {projects.map(({ project = {}, technologies = [], tests = [] }) => (
           <Project key={project.id}>
+            <Mirror style={{
+                  "backgroundColor": "#fdfeff14",
+                  "backdropFilter": "blur(5px)",
+            }} />
             <PrimaryTitle text={project.name} />
             <hr className="bright" />
             <div>

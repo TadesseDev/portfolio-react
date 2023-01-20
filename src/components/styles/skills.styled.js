@@ -18,10 +18,10 @@ export const SkillsContainer = styled.div`
     margin: 5vw 0;
   }
   .more {
-    backdrop-filter: blur(10px);
-    background-color: var(--transparent);
+    position: relative;
     border-radius: 10px;
     padding: 10px;
+    z-index: 1;
     color: var(--primary);
     p {
       color: var(--primary);

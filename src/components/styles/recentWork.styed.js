@@ -13,12 +13,13 @@ export const RecentWorkContainer = styled.div`
 `;
 export const Projects = styled.div``;
 export const Project = styled.div`
+position: relative;
   padding: 5vw;
   margin: 3vw;
   margin-top: 50px;
-  border-radius: 5px;
-  background: #ffffff3d;
-  box-shadow: 0 0 10px 10px #ffffff0d;
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
   button {
     background-color: var(--decoration2);
     border: 2px solid var(--bright);
