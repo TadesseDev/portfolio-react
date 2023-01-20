@@ -32,23 +32,36 @@ Desktop
 
 1. Open [main branch](https://github.com/Tadesse-Alemayehu/portfolio-react/)
 2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
+
+  ```bash
+    cd # you folder location
+  ```
+
 3. Type "pwd" to see your working directory.
+
   ```bash
     pwd
   ```
+
 4. [clone repository](git@github.com:Tadesse-Alemayehu/porfolio)(git clone "branch-link")
+
   ```bash
     git clone https://github.com/Tadesse-Alemayehu/portfolio-react/
   ```
-6. Run "npm install" to install required packages.
+
+5. Run "npm install" to install required packages.
+
  ```bash
     npm install
   ```
-7. Run
+
+6. Run
+
   ```bash
     npm start
   ```
-8. Enjoy 😎
+
+7. Enjoy 😎
 
 ## Authors
 
