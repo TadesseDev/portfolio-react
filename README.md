@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are React and Ruby on rails 🙌 See me live: <https://tadesse-alemayehu.github.io/Portfolio/>).
 
-## Available Scripts
+# Screenshot's
 
-In the project directory, you can run:
+Mobile
 
-### `npm start`
+![portfolio-mobile](https://user-images.githubusercontent.com/69077061/213710307-cc1438ab-58c5-4c4e-9d48-9a0e71776949.PNG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Desktop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React
+- Ruby on Rails
+- PostgreSQL
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Test with
 
-### `npm run build`
+- jest(test/development-dependency)
+- React test library
+- Rspec
+- Capybara
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Coming soon]() 🙂
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+> This is an open source project. I hope you manage to design something similar bas on this one.
+> You can also have the Figma template, Just sent me an email putting `I'm looking for the figma template of your react portfolio` in the about section of your email.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Open [main branch](https://github.com/Tadesse-Alemayehu/portfolio-react/)
+2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```bash
+    cd # you folder location
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Type "pwd" to see your working directory.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```bash
+    pwd
+  ```
 
-## Learn More
+4. [clone repository](git@github.com:Tadesse-Alemayehu/porfolio)(git clone "branch-link")
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ```bash
+    git clone https://github.com/Tadesse-Alemayehu/portfolio-react/
+  ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Run "npm install" to install required packages.
 
-### Code Splitting
+ ```bash
+    npm install
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. Run
 
-### Analyzing the Bundle Size
+  ```bash
+    npm start
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+7. Enjoy 😎
 
-### Making a Progressive Web App
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+👤 **Tadesse Alemayehu**
 
-### Advanced Configuration
+- GitHub: [@githubhandle](https://github.com/Tadesse-Alemayehu)
+- Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Show your support
 
-### Deployment
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Submit an issue
 
-### `npm run build` fails to minify
+[Issue page](https://github.com/Tadesse-Alemayehu/portfolio-react/issues)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+
+- You! 🙏🏼 yes you... for visiting.
+
+## 📝 License
+
+LICENCED UNDER [MIT License](LICENSE)
