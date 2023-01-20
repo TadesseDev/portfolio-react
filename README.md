@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are JavaScript, CSS3 and HTML5 🙌 See me live: https://tadesse-alemayehu.github.io/Portfolio/).
 
-## Available Scripts
+# Screenshot's
+Mobile 
 
-In the project directory, you can run:
+![portfolio  mobile](https://user-images.githubusercontent.com/69077061/156462564-c8e97efd-eff7-4e1e-8f34-97965c4da8c6.PNG)
 
-### `npm start`
+Desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![portfolio-about-me](https://user-images.githubusercontent.com/69077061/156462694-3af14ebc-4766-4449-ade9-d17ff465fea7.PNG)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- HTML
+- CSS
+- JavaScript
+- jest(test/development-dependency)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `npm run build`
+[Go live](https://tadesse-alemayehu.github.io/Portfolio/) 🙂
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open [main branch](https://github.com/Tadesse-Alemayehu/porfolio)
+2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
+3. Type "pwd" to see your working directory.
+4. [clone repository](git@github.com:Tadesse-Alemayehu/porfolio)(git clone "branch-link")
+5. Run "npm install" to install required packages
+6. Run "index.html" with a live server or any web browser
+7. Enjoy 😎
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Authors
 
-### `npm run eject`
+👤 **Tadesse Alemayehu**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- GitHub: [@githubhandle](https://github.com/Tadesse-Alemayehu)
+- Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Show your support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Give a ⭐️ if you like this project!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Submit an issue
 
-## Learn More
+[Issue page](https://github.com/Tadesse-Alemayehu/portfolio/issues)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Microverse for amusing learning resources.
+- Microverse code reviewers.
+- You! 🙏🏼 yes you... for visiting.
 
-### Code Splitting
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+LICENCED UNDER [MIT License](LICENSE)
