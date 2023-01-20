@@ -17,6 +17,7 @@ position: relative;
   padding: 5vw;
   margin: 3vw;
   margin-top: 50px;
+      box-shadow: 0 0 10px 5px #0000001c;
   z-index: 1;
   border-radius: 15px;
   overflow: hidden;
