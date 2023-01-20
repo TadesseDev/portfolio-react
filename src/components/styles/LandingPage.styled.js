@@ -31,6 +31,7 @@ export const PrimaryImage = styled.div`
   z-index: -1;
   img {
     height: 100%;
+    max-width: 100%;
     margin: auto;
     display: block;
   }
