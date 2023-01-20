@@ -67,7 +67,7 @@ export const SubSkills = styled.div`
     grid-area: bottom-right;
     padding: 0 5vw;
   }
-
+  overflow-x: hidden;
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -75,6 +75,7 @@ export const SubSkills = styled.div`
   ::-webkit-scrollbar-track {
     border-radius: 8px;
     background-color: var(--primary);
+    border: 1px solid var(--decoration2);
   }
 
   ::-webkit-scrollbar-thumb {
