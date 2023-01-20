@@ -56,8 +56,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse for amusing learning resources.
-- Microverse code reviewers.
 - You! 🙏🏼 yes you... for visiting.
 
 ## 📝 License
