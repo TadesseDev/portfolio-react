@@ -22,9 +22,10 @@ export const SkillsContainer = styled.div`
     border-radius: 10px;
     padding: 10px;
     z-index: 1;
-    color: var(--primary);
+    overflow: hidden;
+    color: var(--shine);
     p {
-      color: var(--primary);
+      color: var(--shine);
     }
   }
   button {

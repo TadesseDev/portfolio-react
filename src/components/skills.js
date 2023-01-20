@@ -62,10 +62,17 @@ export default function Skills() {
           ))}
         </div>
         <div className="more">
-          <Mirror />
+          <Mirror
+            style={{
+              backgroundColor: "#fdfeff14",
+              backdropFilter: "blur(5px)",
+            }}
+          />
           <p>Any other skill?</p>
           <strong>I might have forgot to tell you 😊</strong>
-          <button>Get in touch</button>
+          <button>
+            <a href="#contact">Get in touch</a>
+          </button>
         </div>
       </div>
     </SkillsContainer>
