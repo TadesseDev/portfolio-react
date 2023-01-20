@@ -70,9 +70,9 @@ export default function Skills() {
           />
           <p>Any other skill?</p>
           <strong>I might have forgot to tell you 😊</strong>
-          <button>
-            <a href="#contact">Get in touch</a>
-          </button>
+           <a href="#contact"><button>
+           Get in touch
+          </button></a>
         </div>
       </div>
     </SkillsContainer>
