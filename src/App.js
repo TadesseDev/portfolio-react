@@ -9,7 +9,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import background_1 from "./images/background_1.svg";
 import background_2 from "./images/background_2.svg";
-import BackgroundDecoration from "./components/partials/backgroundDecoration";
+import { AppDecorations } from "./components/partials/backgroundDecoration";
 import { Provider } from "react-redux";
 import {
   medias,
@@ -63,7 +63,6 @@ function App() {
     }
   });
   observer.observe(rootNode, config);
-
   return (
     <Provider store={store}>
       <InformationContext.Provider value={{ medias, address }}>
@@ -76,12 +75,7 @@ function App() {
           <About />
           <Contact />
           <Footer />
-          <BackgroundDecoration className="root-decoration " />
-          <BackgroundDecoration className="root-decoration " />
-          <BackgroundDecoration className="root-decoration " />
-          <BackgroundDecoration className="root-decoration" />
-          <BackgroundDecoration className="root-decoration" />
-          <BackgroundDecoration className="root-decoration" />
+          {AppDecorations(60).map(decoration => decoration)}
         </div>
       </InformationContext.Provider>
     </Provider>

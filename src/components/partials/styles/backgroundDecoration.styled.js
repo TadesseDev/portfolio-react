@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.div`
   width: 10px;
   height: 10px;
-  border: 5px solid var(--primary2);
+  border: 15px solid var(--primary2);
   opacity: 0;
   border-style: dotted;
   position: absolute;

@@ -10,3 +10,11 @@ export default function BackgroundDecoration({ style = {} , className=''}) {
     ></DecorationContainer>
   );
 }
+
+export function AppDecorations(number = 0 ) {
+  const decorations = []
+  for (let i = 0; i < number; i++) {
+    decorations.push(<BackgroundDecoration className="root-decoration " />);
+  }
+  return decorations;
+}
