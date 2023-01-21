@@ -10,7 +10,7 @@ export default styled.div`
   z-index: -2;
   animation-name: border-rotate;
   animation-iteration-count: infinite;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-direction: alternate;
   animation-timing-function: linear;
   top: ${Math.floor(Math.random() * 100)}%;
@@ -47,6 +47,12 @@ export default styled.div`
       height: 35px;
       transform: rotate(270deg);
       opacity: 0.4;
+    }
+    75% {
+      width: 48px;
+      height: 48px;
+      transform: rotate(360deg);
+      opacity: 0.5;
     }
     100% {
       width: 50px;

@@ -33,7 +33,8 @@ function App() {
 */
 
   const observer = new MutationObserver(() => {
-    if (Math.abs(rootHeight - rootNode.scrollHeight) > 50) {
+    // Re-calculate the decorations if the dom encounter a major update
+    if (Math.abs(rootHeight - rootNode.scrollHeight) > 500) {
       for (let i = 0; i < rootHeight / window.innerHeight; i++) {
         vh += 100;
         if (top) {

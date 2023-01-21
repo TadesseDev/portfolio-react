@@ -17,7 +17,7 @@ position: relative;
   padding: 5vw;
   margin: 3vw;
   margin-top: 50px;
-      box-shadow: 0 0 10px 5px #0000001c;
+  box-shadow: 0 0 10px 5px #0000001c;
   z-index: 1;
   border-radius: 15px;
   overflow: hidden;
@@ -36,6 +36,8 @@ position: relative;
     padding: 10px;
     position: relative;
     margin: 30px 0;
+    box-shadow: 0px 0px 10px 10px #00000021;
+    border-radius: 5px;
     p {
       margin: 0px;
       padding: 0px;
