@@ -41,6 +41,8 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
    #root{
     width: 100%;
     padding: 0 5vw;
+        overflow: hidden;
+    position: relative;
    }
    body{
     background-color: var(--primary);

@@ -9,6 +9,7 @@ import frontend from "../icon/frontend.svg";
 import backend from "../icon/backend.svg";
 import database from "../icon/database.svg";
 import Mirror from "./partials/mirror";
+import BackgroundDecoration from "./partials/backgroundDecoration";
 import test from "../icon/database.svg"; // TODO: change the icon for the test
 import { getSkills } from "../redux/components/skills.js";
 export default function Skills() {
@@ -31,16 +32,6 @@ export default function Skills() {
     else skills.set(skill.tech_type, [skill]);
   });
 
-  const skillNode = document.getElementById("skills");
-  const config = { attributes: false, childList: true, subtree: true };
-  const skillObserver = new MutationObserver(() => {
-    const decorations = document.getElementsByClassName("background-decoration");
-    for (let decoration of decorations) {
-      decoration.style.top = `${Math.floor(Math.random() * 100)}%`;
-      decoration.style.left = `${Math.floor(Math.random() * 100)}%`;
-    }
-  });
-  skillNode&&skillObserver.observe(skillNode, config);
   return (
     <SkillsContainer id="skills">
       <div className="pre">
@@ -86,7 +77,7 @@ export default function Skills() {
           </a>
         </div>
       </div>
-
+      {/*
       <div className="background-decoration v"></div>
       <div className="background-decoration circle"></div>
       <div className="background-decoration"></div>
@@ -104,7 +95,7 @@ export default function Skills() {
       <div className="background-decoration"></div>
       <div className="background-decoration circle"></div>
       <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div>
+      <div className="background-decoration circle"></div> */}
     </SkillsContainer>
   );
 }

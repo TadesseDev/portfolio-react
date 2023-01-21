@@ -9,6 +9,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import background_1 from "./images/background_1.svg";
 import background_2 from "./images/background_2.svg";
+import BackgroundDecoration from "./components/partials/backgroundDecoration";
 import { Provider } from "react-redux";
 import {
   medias,
@@ -30,6 +31,7 @@ function App() {
   - it make sure half of the decoration image is on the top and the other half is on the bottom
   - it make sure the decoration image is always on the right and left side of the page
 */
+
   const observer = new MutationObserver(() => {
     if (Math.abs(rootHeight - rootNode.scrollHeight) > 50) {
       for (let i = 0; i < rootHeight / window.innerHeight; i++) {
@@ -43,6 +45,12 @@ function App() {
         }
         top = !top;
       }
+      rootHeight = rootNode.scrollHeight;
+      const decorations = document.getElementsByClassName("root-decoration");
+      for (let decoration of decorations) {
+        decoration.style.top = `${Math.floor(Math.random() * rootHeight)}px`;
+        decoration.style.left = `${Math.floor(Math.random() * 100)}%`;
+      }
       rootNode.setAttribute(
         "style",
         `
@@ -52,7 +60,6 @@ function App() {
     background-repeat: no-repeat;
       `
       );
-      rootHeight = rootNode.scrollHeight;
     }
   });
   observer.observe(rootNode, config);
@@ -69,6 +76,12 @@ function App() {
           <About />
           <Contact />
           <Footer />
+          <BackgroundDecoration className="root-decoration " />
+          <BackgroundDecoration className="root-decoration " />
+          <BackgroundDecoration className="root-decoration " />
+          <BackgroundDecoration className="root-decoration" />
+          <BackgroundDecoration className="root-decoration" />
+          <BackgroundDecoration className="root-decoration" />
         </div>
       </InformationContext.Provider>
     </Provider>

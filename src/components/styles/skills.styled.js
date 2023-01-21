@@ -43,53 +43,7 @@ export const SkillsContainer = styled.div`
     color: var(--primary);
   }
 
-  .background-decoration {
-    width: 10px;
-    height: 10px;
-    border: 5px solid var(--primary2);
-    opacity: 0;
-    border-style: dotted dotted solid solid;
-    position: absolute;
-    z-index: -2;
-    animation-name: border-rotate;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-  }
-  .background-decoration.circle {
-    border-radius: 50%;
-  }
-  .background-decoration.v {
-    border-style: dotted dotted none none;
-  }
-
-  @keyframes border-rotate {
-    0% {
-      width: 15px;
-      height: 15px;
-      transform: rotate(90deg);
-      opacity: 0.01;
-    }
-    25% {
-      width: 25px;
-      height: 25px;
-      transform: rotate(180deg);
-      opacity: 0.3;
-    }
-    50% {
-      width: 35px;
-      height: 35px;
-      transform: rotate(270deg);
-      opacity: 0.4;
-    }
-    100% {
-      width: 50px;
-      height: 50px;
-      transform: rotate(360deg);
-      opacity: 0.5;
-    }
-  }
+  
 `;
 export const SubSkills = styled.div`
   max-height: 350px;
