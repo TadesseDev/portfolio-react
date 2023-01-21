@@ -48,7 +48,7 @@ export default function About() {
         <span className="emoji">😊</span>
       </p>
       <span id="find-me"></span>
-      <SubTitle text="You can find me..."/>
+      <SubTitle text="You can find me..." />
       <CardContainer>
         {findMeLinks.map((key, index) => (
           <AboutCard
@@ -61,7 +61,9 @@ export default function About() {
             <h3>{key}</h3>
             <img src={medias.get(key)?.icon2} alt={key} />
             <p>{medias.get(key)?.description}</p>
-            <button className="gradientTopBottom">Go</button>
+            <a href={medias.get(key)?.link} target="_black">
+              <button className="gradientTopBottom">Go</button>
+            </a>
           </AboutCard>
         ))}
       </CardContainer>
