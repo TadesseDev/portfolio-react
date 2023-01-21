@@ -75,7 +75,10 @@ function App() {
           <About />
           <Contact />
           <Footer />
-          {AppDecorations(60).map(decoration => decoration)}
+          {AppDecorations({
+            number: 20,
+            className: "root-decoration",
+          }).map((decoration) => decoration)}
         </div>
       </InformationContext.Provider>
     </Provider>

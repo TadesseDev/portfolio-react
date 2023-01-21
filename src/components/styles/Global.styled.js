@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import backgroundImage from "../../images/background_1.svg";
 import maginors from "../../fonts/maginors-maginors-400.otf";
 import Aquire from "../../fonts/AquireBold-8Ma60.otf";
 import SansMateo from "../../fonts/SansMateo.ttf";

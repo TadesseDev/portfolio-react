@@ -9,7 +9,6 @@ import frontend from "../icon/frontend.svg";
 import backend from "../icon/backend.svg";
 import database from "../icon/database.svg";
 import Mirror from "./partials/mirror";
-import BackgroundDecoration from "./partials/backgroundDecoration";
 import test from "../icon/database.svg"; // TODO: change the icon for the test
 import { getSkills } from "../redux/components/skills.js";
 export default function Skills() {
@@ -77,25 +76,6 @@ export default function Skills() {
           </a>
         </div>
       </div>
-      {/*
-      <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration"></div>
-      <div className="background-decoration circle"></div>
-      <div className="background-decoration v"></div>
-      <div className="background-decoration circle"></div> */}
     </SkillsContainer>
   );
 }
