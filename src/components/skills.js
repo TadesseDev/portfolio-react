@@ -30,6 +30,17 @@ export default function Skills() {
       skills.get(skill.tech_type, skill).push(skill);
     else skills.set(skill.tech_type, [skill]);
   });
+
+  const skillNode = document.getElementById("skills");
+  const config = { attributes: false, childList: true, subtree: true };
+  const skillObserver = new MutationObserver(() => {
+    const decorations = document.getElementsByClassName("background-decoration");
+    for (let decoration of decorations) {
+      decoration.style.top = `${Math.floor(Math.random() * 100)}%`;
+      decoration.style.left = `${Math.floor(Math.random() * 100)}%`;
+    }
+  });
+  skillNode&&skillObserver.observe(skillNode, config);
   return (
     <SkillsContainer id="skills">
       <div className="pre">
@@ -70,11 +81,30 @@ export default function Skills() {
           />
           <p>Any other skill?</p>
           <strong>I might have forgot to tell you 😊</strong>
-           <a href="#contact"><button>
-           Get in touch
-          </button></a>
+          <a href="#contact">
+            <button>Get in touch</button>
+          </a>
         </div>
       </div>
+
+      <div className="background-decoration v"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration v"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration v"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration v"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration v"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration"></div>
+      <div className="background-decoration circle"></div>
+      <div className="background-decoration v"></div>
+      <div className="background-decoration circle"></div>
     </SkillsContainer>
   );
 }
