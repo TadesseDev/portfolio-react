@@ -31,16 +31,17 @@ position: relative;
   .about {
     background: var(--primary);
     border: 2px solid var(--bright);
-    height: 30px
-    overflow: hidden;
     padding: 10px;
+    padding-bottom: 20px;
     position: relative;
     margin: 30px 0;
     box-shadow: 0px 0px 10px 10px #00000021;
     border-radius: 5px;
     p {
+    max-height: 20px;
       margin: 0px;
       padding: 0px;
+      overflow: hidden;
     }
   }
   .links {
