@@ -30,6 +30,7 @@ export default function Skills() {
       skills.get(skill.tech_type, skill).push(skill);
     else skills.set(skill.tech_type, [skill]);
   });
+
   return (
     <SkillsContainer id="skills">
       <div className="pre">
@@ -70,9 +71,9 @@ export default function Skills() {
           />
           <p>Any other skill?</p>
           <strong>I might have forgot to tell you 😊</strong>
-           <a href="#contact"><button>
-           Get in touch
-          </button></a>
+          <a href="#contact">
+            <button>Get in touch</button>
+          </a>
         </div>
       </div>
     </SkillsContainer>

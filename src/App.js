@@ -9,6 +9,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import background_1 from "./images/background_1.svg";
 import background_2 from "./images/background_2.svg";
+import { AppDecorations } from "./components/partials/backgroundDecoration";
 import { Provider } from "react-redux";
 import {
   medias,
@@ -21,17 +22,19 @@ function App() {
   let rootHeight = rootNode?.scrollHeight;
   let vh = 85;
   let top = false;
-  const backgrounds = [`url(${background_1})`];
-  const positions = [`0 ${vh}vh`];
+  const backgrounds = [`url(${background_2})`, `url(${background_1})`];
+  const positions = [`100% -15vh`, `0 ${vh}vh`];
 
   /*
-  This aint a simple objects
+  This ain't a simple objects
   - it make sure the is always exactly two decoration image on a single page
   - it make sure half of the decoration image is on the top and the other half is on the bottom
   - it make sure the decoration image is always on the right and left side of the page
 */
+
   const observer = new MutationObserver(() => {
-    if (Math.abs(rootHeight - rootNode.scrollHeight) > 50) {
+    // Re-calculate the decorations if the dom encounter a major update
+    if (Math.abs(rootHeight - rootNode.scrollHeight) > 500) {
       for (let i = 0; i < rootHeight / window.innerHeight; i++) {
         vh += 100;
         if (top) {
@@ -43,6 +46,12 @@ function App() {
         }
         top = !top;
       }
+      rootHeight = rootNode.scrollHeight;
+      const decorations = document.getElementsByClassName("root-decoration");
+      for (let decoration of decorations) {
+        decoration.style.top = `${Math.floor(Math.random() * rootHeight)}px`;
+        decoration.style.left = `${Math.floor(Math.random() * 100)}%`;
+      }
       rootNode.setAttribute(
         "style",
         `
@@ -52,11 +61,9 @@ function App() {
     background-repeat: no-repeat;
       `
       );
-      rootHeight = rootNode.scrollHeight;
     }
   });
   observer.observe(rootNode, config);
-
   return (
     <Provider store={store}>
       <InformationContext.Provider value={{ medias, address }}>
@@ -69,6 +76,10 @@ function App() {
           <About />
           <Contact />
           <Footer />
+          {AppDecorations({
+            number: 20,
+            className: "root-decoration",
+          }).map((decoration) => decoration)}
         </div>
       </InformationContext.Provider>
     </Provider>

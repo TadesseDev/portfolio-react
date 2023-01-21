@@ -18,7 +18,6 @@ export default function RecentWork() {
   useEffect(() => {
     dispatch(getRecentWorks());
   }, [dispatch]);
-
   return (
     <RecentWorkContainer id="recent-works">
       <div className="pre">
@@ -34,10 +33,12 @@ export default function RecentWork() {
       <Projects>
         {projects.map(({ project = {}, technologies = [], tests = [] }) => (
           <Project key={project.id}>
-            <Mirror style={{
-                  "backgroundColor": "#fdfeff14",
-                  "backdropFilter": "blur(5px)",
-            }} />
+            <Mirror
+              style={{
+                backgroundColor: "#fdfeff14",
+                backdropFilter: "blur(5px)",
+              }}
+            />
             <PrimaryTitle text={project.name} />
             <hr className="bright" />
             <div>
@@ -65,17 +66,50 @@ export default function RecentWork() {
             <div>
               <SubTitle text="About" />
               <div className="about">
-                <p>{project.description.slice(0, 30)}...</p>
+                <p className="text-container">{project.description}</p>
 
                 <Direction
                   icon="more"
                   style={{
-                    boxShadow: "0 0 6px #ffffff7a",
                     position: "absolute",
                     top: "100%",
                     left: "50%",
                     transform: "translate(-50%,-50%)",
                   }}
+                  toggle={(e) => {
+                    const parent = e.target.parentNode.parentNode;
+                    const more = parent.getElementsByClassName("more")[0];
+                    const less = parent.getElementsByClassName("less")[0];
+                    const textContainer =
+                      parent.getElementsByClassName("text-container")[0];
+
+                    textContainer.style.maxHeight = "max-content";
+                    less.style.display = "block";
+                    more.style.display = "none";
+                  }}
+                  className="more"
+                />
+                <Direction
+                  icon="less"
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: "50%",
+                    transform: "translate(-50%,-50%)",
+                    display: "none",
+                  }}
+                  toggle={(e) => {
+                    const parent = e.target.parentNode.parentNode;
+                    const more = parent.getElementsByClassName("more")[0];
+                    const less = parent.getElementsByClassName("less")[0];
+                    const textContainer =
+                      parent.getElementsByClassName("text-container")[0];
+
+                    textContainer.style.maxHeight = "20px";
+                    less.style.display = "none";
+                    more.style.display = "block";
+                  }}
+                  className="less"
                 />
               </div>
             </div>
