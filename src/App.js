@@ -21,8 +21,8 @@ function App() {
   let rootHeight = rootNode?.scrollHeight;
   let vh = 85;
   let top = false;
-  const backgrounds = [`url(${background_1})`];
-  const positions = [`0 ${vh}vh`];
+  const backgrounds = [`url(${background_2})`, `url(${background_1})`];
+  const positions = [`100% -15vh`, `0 ${vh}vh`];
 
   /*
   This aint a simple objects

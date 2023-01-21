@@ -67,4 +67,20 @@ export const SubSkills = styled.div`
     grid-area: bottom-right;
     padding: 0 5vw;
   }
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: var(--primary);
+    border: 1px solid var(--decoration2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    background-color: var(--decoration2);
+  }
 `;
