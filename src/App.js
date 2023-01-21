@@ -26,7 +26,7 @@ function App() {
   const positions = [`100% -15vh`, `0 ${vh}vh`];
 
   /*
-  This aint a simple objects
+  This ain't a simple objects
   - it make sure the is always exactly two decoration image on a single page
   - it make sure half of the decoration image is on the top and the other half is on the bottom
   - it make sure the decoration image is always on the right and left side of the page
