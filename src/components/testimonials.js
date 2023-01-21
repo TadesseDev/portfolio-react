@@ -39,9 +39,47 @@ export default function Testimonials() {
             <a href={"mailto: " + testimony.email}>{testimony.email}</a>
 
             <p>
-              {testimony.testimony.slice(0, 200)}
-              <button type="button" className="link-button">
+              <span className="text-content">
+                {testimony.testimony.slice(0, 200)}
+              </span>
+              <button
+                type="button"
+                className="link-button more"
+                onClick={(e) => {
+                  const textContainer =
+                    e.target.parentNode.getElementsByClassName(
+                      "text-content"
+                    )[0];
+                  const more =
+                    e.target.parentNode.getElementsByClassName("more")[0];
+                  const less =
+                    e.target.parentNode.getElementsByClassName("less")[0];
+                  textContainer.textContent = testimony.testimony;
+                  more.style.display = "none";
+                  less.style.display = "inline";
+                }}
+              >
                 ...continue reading{" "}
+              </button>
+              <button
+                type="button"
+                className="link-button less"
+                style={{ display: "none" }}
+                onClick={(e) => {
+                  const textContainer =
+                    e.target.parentNode.getElementsByClassName(
+                      "text-content"
+                    )[0];
+                  const more =
+                    e.target.parentNode.getElementsByClassName("more")[0];
+                  const less =
+                    e.target.parentNode.getElementsByClassName("less")[0];
+                  textContainer.textContent = testimony.testimony.slice(0, 200);
+                  more.style.display = "inline";
+                  less.style.display = "none";
+                }}
+              >
+                ...less{" "}
               </button>
             </p>
           </TestimonyCard>
