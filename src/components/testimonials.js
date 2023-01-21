@@ -36,14 +36,14 @@ export default function Testimonials() {
             }
           >
             <span className="testimonial-img"></span>
-            <a href={"mailto: " + testimony.email}>{testimony.email}</a>
+            <a href={"mailto:" + testimony.email}>{testimony.email}</a>
 
             <p>
               <span className="text-content">
                 {testimony.testimony.slice(0, 200)}
               </span>
               <button
-                type="button"
+                type="submit"
                 className="link-button more"
                 onClick={(e) => {
                   const textContainer =
@@ -59,12 +59,12 @@ export default function Testimonials() {
                   less.style.display = "inline";
                 }}
               >
-                ...continue reading{" "}
+                ...more
               </button>
               <button
-                type="button"
+                type="submit"
                 className="link-button less"
-                style={{ display: "none" }}
+                style={{ display: "none"}}
                 onClick={(e) => {
                   const textContainer =
                     e.target.parentNode.getElementsByClassName(

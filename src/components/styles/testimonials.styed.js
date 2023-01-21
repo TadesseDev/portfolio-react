@@ -6,9 +6,9 @@ export const Testimonial = styled.div`
   margin-top: 40px;
   ul {
     justify-content: center;
-    gap: 10px
+    gap: 10px;
   }
-  .icon{
+  .icon {
     width: 7vw;
   }
 `;
@@ -22,6 +22,9 @@ export const TestimonyCard = styled.div`
   margin-top: calc(12.5vw + 15px);
   padding: 15px;
   box-shadow: 0 0 10px 10px #00000025;
+  button {
+    cursor: pointer;
+  }
   .testimonial-img {
     border: 5px solid var(--primary);
     display: block;
