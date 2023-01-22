@@ -29,9 +29,6 @@ export const PrimaryImage = styled.div`
   background-size: 80vw;
   background-position-y: 19vh;
   z-index: -1;
-  span{
-    width:100%;
-  }
   img {
     height: 100%;
     max-width: 100%;

@@ -29,6 +29,8 @@ export default function LandingPage() {
           src={my_picture}
           alt="my"
           effect="blur"
+          className="img"
+          wrapperProps={{ style: { display: "inline", width: "100%" } }}
         />
         <div className="blur-img"></div>
       </PrimaryImage>

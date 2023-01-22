@@ -5,15 +5,15 @@ import SansMateo from "../../fonts/SansMateo.ttf";
 const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: "maginors";
-  src: url(${maginors});
+  src: url(${maginors});font-display: swap;
 }
 @font-face {
   font-family: "Aquire";
-  src: url(${Aquire});
+  src: url(${Aquire});font-display: swap;
 }
 @font-face {
   font-family: "SansMateo";
-  src: url(${SansMateo});
+  src: url(${SansMateo});font-display: swap;
 }
   :root {
     --primary:#072144;
