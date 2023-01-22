@@ -9,6 +9,7 @@ import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
 import menu from "../icon/menu/menu.png";
 import my_picture from "../images/resized.svg";
 import SocialMediaIcons from "./partials/socialMediaIcons";
+import Loader from './partials/loader'
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
@@ -16,6 +17,17 @@ export default function LandingPage() {
   };
   return (
     <Landing id="home">
+      <Loader
+        style={{
+          position: "absolute",
+          top: "0",
+          zIndex: "-2",
+          opacity: "0.1",
+          width: "100vw",
+          height: "100vw",
+        }}
+        timing={5}
+      />
       <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" />
       </span>
@@ -31,6 +43,7 @@ export default function LandingPage() {
           effect="blur"
           className="img"
           wrapperProps={{ style: { display: "inline", width: "100%" } }}
+          placeholder=<Loader />
         />
         <div className="blur-img"></div>
       </PrimaryImage>
