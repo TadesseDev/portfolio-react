@@ -34,7 +34,25 @@ export default function Certifications() {
     document.getElementById(`certificate_${active++}`).classList.toggle("hide");
     document.getElementById(`certificate_${active}`).classList.toggle("hide");
   };
-
+  const switchTo = (target) => {
+    let swt = 0;
+    if (target === "first") {
+      setNumbers([0, 1, 2]);
+      setFirstHalf(true);
+      setActive(0);
+    } else {
+      setNumbers([
+        certifications.length - 3,
+        certifications.length - 2,
+        certifications.length - 1,
+      ]);
+      setFirstHalf(false);
+      setActive(certifications.length - 1);
+      swt = certifications.length - 1;
+    }
+    document.getElementById(`certificate_${active}`).classList.toggle("hide");
+    document.getElementById(`certificate_${swt}`).classList.toggle("hide");
+  };
   useEffect(() => {
     dispatch(getCertifications());
   }, [dispatch]);
@@ -89,7 +107,11 @@ export default function Certifications() {
         <span id="goto-certificate">
           {!firstHalf && (
             <span>
-              <button type="button" className="link-button">
+              <button
+                type="button"
+                className="link-button"
+                onClick={() => switchTo("first")}
+              >
                 first
               </button>
               ...
@@ -101,7 +123,11 @@ export default function Certifications() {
           {firstHalf && (
             <span>
               ...
-              <button type="button" className="link-button">
+              <button
+                type="button"
+                className="link-button"
+                onClick={() => switchTo("last")}
+              >
                 last
               </button>
             </span>
