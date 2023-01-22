@@ -1,4 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
   RecentWorkContainer,
   Projects,
@@ -26,7 +29,11 @@ export default function RecentWork() {
           I'm always Learning, Coding, Working on personal or business Projects
         </p>
         <span className="image-container" id="me-coding">
-          <img src={meCoding} alt="me coding on a table " />
+          <LazyLoadImage
+            src={meCoding}
+            alt="me coding on a table "
+            effect="blur"
+          />
         </span>
         <p>Here are some of the project I've been working on lately</p>
       </div>

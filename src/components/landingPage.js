@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import NavBar from "./partials/navBar";
 import DownloadButton from "./partials/downloadButton";
 import { useState } from "react";
@@ -9,9 +11,9 @@ import my_picture from "../images/resized.svg";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
-  const toggleNavbar = ()=>{
-    updateDisplay((old) => !old)
-  }
+  const toggleNavbar = () => {
+    updateDisplay((old) => !old);
+  };
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
@@ -23,7 +25,11 @@ export default function LandingPage() {
         <div className="decoration" id="postgres"></div>
         <div className="decoration" id="javascript"></div>
         <div className="decoration" id="ruby"></div>
-        <img src={my_picture} alt="my" />
+        <LazyLoadImage
+          src={my_picture}
+          alt="my"
+          effect="blur"
+        />
         <div className="blur-img"></div>
       </PrimaryImage>
       <Detail>
