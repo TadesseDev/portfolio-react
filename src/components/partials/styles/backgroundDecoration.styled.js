@@ -16,7 +16,6 @@ export default styled.div`
   top: ${Math.floor(Math.random() * 100)}%;
   left: ${Math.floor(Math.random() * 100)}%;
   border-radius: 50%;
-
   &.half-dot-circle {
     border-radius: 50%;
     border-style: dotted dotted solid solid;
