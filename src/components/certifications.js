@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
   CertificationsContainer,
@@ -58,7 +60,14 @@ export default function Certifications() {
                 </button>
               </p>
               <div>
-                <img src={image} alt={title /* TODO: make this lazy load */} />
+                {
+                  <LazyLoadImage
+                    effect="blur"
+                    src={image}
+                    alt={title /* TODO: make this lazy load */}
+                    min-height="250px"
+                  />
+                }
               </div>
             </div>
           </Certification>
