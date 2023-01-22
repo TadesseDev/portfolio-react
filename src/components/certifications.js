@@ -118,7 +118,7 @@ export default function Certifications() {
             </span>
           )}
           {numbers.map((number, index) => (
-            <span key={index}>{number}</span>
+            <span key={index} style={index == 1 ? { color: "var(--bright)" } : {color: "var(--shine)"}}>{number}</span>
           ))}
           {firstHalf && (
             <span>
