@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import CommonFunctionContext from "../context/commonFunctionsContext";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,7 +12,11 @@ import SubTitle from "./partials/subTitle";
 import { getCertifications } from "../redux/components/certifications";
 import { useEffect } from "react";
 import Direction from "./partials/direction.js";
+import { notInitialized } from "react-redux/es/utils/useSyncExternalStore";
 export default function Certifications() {
+  const { showMoreContent, showLessContent } = useContext(
+    CommonFunctionContext
+  );
   let [active, setActive] = useState(0);
   let [firstHalf, setFirstHalf] = useState(true);
   let [numbers, setNumbers] = useState([0, 1, 2]);
@@ -71,15 +76,39 @@ export default function Certifications() {
           <Certification key={id} className="hide" id={"certificate_" + index}>
             <SubTitle text={title} />
             <div>
-              <p>
-                <span>{description.slice(0, 100)}</span>
-                <button
-                  type="button"
-                  className="link-button"
-                >
-                  ...continue reading
-                </button>
-              </p>
+              <div className="certification-description">
+                <p className="text-container">{description}</p>
+                <Direction
+                  icon="more"
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: "50%",
+                    transform: "translate(-50%,-50%)",
+                    border: "2px solid var(--shine)",
+                  }}
+                  toggle={(e) =>
+                    showMoreContent(e, e.target.parentNode.parentNode)
+                  }
+                  className="more"
+                />
+                <Direction
+                  icon="less"
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: "50%",
+                    transform: "translate(-50%,-50%)",
+                    border: "2px solid var(--shine)",
+                    display: "none",
+                  }}
+                  toggle={(e) =>
+                    showLessContent(e, e.target.parentNode.parentNode,40)
+                  }
+                  className="less"
+                />
+              </div>
+
               <div>
                 {
                   <LazyLoadImage

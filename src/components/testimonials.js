@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import CommonFunctionContext from "../context/commonFunctionsContext";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { useDispatch, useSelector } from "react-redux";
 import { getTestimonials } from "../redux/components/testimonials";
@@ -12,6 +13,10 @@ import TestimonialContainer, {
 import testimonialBlob from "../images/testimonial-blob.svg";
 import testimonialBlob_flip from "../images/testimonial-blob-flip.svg";
 export default function Testimonials() {
+
+  const { showMoreContent, showLessContent } = useContext(
+    CommonFunctionContext
+  );
   const testimonials = useSelector((state) => state.testimonials);
   const dispatch = useDispatch();
   useEffect(() => {

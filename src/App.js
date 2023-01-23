@@ -78,9 +78,9 @@ function App() {
             value={{ showMoreContent, showLessContent }}
           >
             <RecentWork />
+            <Certifications />
+            <Testimonials />
           </CommonFunctionsContext.Provider>
-          <Certifications />
-          <Testimonials />
           <About />
           <Contact />
           <Footer />

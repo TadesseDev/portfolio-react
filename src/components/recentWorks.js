@@ -87,7 +87,9 @@ export default function RecentWork() {
                     left: "50%",
                     transform: "translate(-50%,-50%)",
                   }}
-                  toggle={showMoreContent}
+                  toggle={(e) =>
+                    showMoreContent(e, e.target.parentNode.parentNode)
+                  }
                   className="more"
                 />
                 <Direction
@@ -99,7 +101,9 @@ export default function RecentWork() {
                     transform: "translate(-50%,-50%)",
                     display: "none",
                   }}
-                  toggle={showLessContent}
+                  toggle={(e) =>
+                    showLessContent(e, e.target.parentNode.parentNode)
+                  }
                   className="less"
                 />
               </div>

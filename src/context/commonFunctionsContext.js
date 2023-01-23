@@ -1,6 +1,7 @@
 import { createContext } from "react";
-export const showMoreContent = (e) => {
-  const parent = e.target.parentNode.parentNode;
+export const showMoreContent = (e, parentNode) => {
+  const parent = parentNode;
+  console.log(parentNode);
   const more = parent.getElementsByClassName("more")[0];
   const less = parent.getElementsByClassName("less")[0];
   const textContainer = parent.getElementsByClassName("text-container")[0];
@@ -9,13 +10,13 @@ export const showMoreContent = (e) => {
   less.style.display = "block";
   more.style.display = "none";
 };
-export const showLessContent = (e) => {
-  const parent = e.target.parentNode.parentNode;
+export const showLessContent = (e, parentNode, height=20) => {
+  const parent = parentNode;
   const more = parent.getElementsByClassName("more")[0];
   const less = parent.getElementsByClassName("less")[0];
   const textContainer = parent.getElementsByClassName("text-container")[0];
 
-  textContainer.style.maxHeight = "20px";
+  textContainer.style.maxHeight = height+"px";
   less.style.display = "none";
   more.style.display = "block";
 };
