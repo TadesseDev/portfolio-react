@@ -42,9 +42,9 @@ export default function Certifications() {
       setActive(0);
     } else {
       setNumbers([
-        certifications.length - 3,
-        certifications.length - 2,
         certifications.length - 1,
+        certifications.length,
+        certifications.length + 1,
       ]);
       setFirstHalf(false);
       setActive(certifications.length - 1);
@@ -62,7 +62,7 @@ export default function Certifications() {
   }, [certifications]);
   return (
     <CertificationsContainer id="certifications">
-      <PrimaryTitle icon="" text={"Certifications"} />
+      <PrimaryTitle icon="" text={"Certifications"} />{" "}
       {certifications.map(
         (
           { id, title = "", description = "", link = "", image = "" },
@@ -118,7 +118,16 @@ export default function Certifications() {
             </span>
           )}
           {numbers.map((number, index) => (
-            <span key={index} style={index == 1 ? { color: "var(--bright)" } : {color: "var(--shine)"}}>{number}</span>
+            <span
+              key={index}
+              style={
+                index == 1
+                  ? { color: "var(--bright)" }
+                  : { color: "var(--shine)" }
+              }
+            >
+              {number}
+            </span>
           ))}
           {firstHalf && (
             <span>
