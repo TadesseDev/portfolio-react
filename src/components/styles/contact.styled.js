@@ -7,6 +7,8 @@ const ContactContainer = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
   button {
     padding: 0;
     border: none;

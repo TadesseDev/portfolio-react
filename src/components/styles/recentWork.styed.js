@@ -13,7 +13,7 @@ export const RecentWorkContainer = styled.div`
 `;
 export const Projects = styled.div``;
 export const Project = styled.div`
-position: relative;
+  position: relative;
   padding: 5vw;
   margin: 3vw;
   margin-top: 50px;
@@ -21,6 +21,8 @@ position: relative;
   z-index: 1;
   border-radius: 15px;
   overflow: hidden;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
   button {
     background-color: var(--decoration2);
     border: 2px solid var(--bright);
@@ -38,7 +40,7 @@ position: relative;
     box-shadow: 0px 0px 10px 10px #00000021;
     border-radius: 5px;
     p {
-    max-height: 20px;
+      max-height: 20px;
       margin: 0px;
       padding: 0px;
       overflow: hidden;

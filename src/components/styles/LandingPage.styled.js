@@ -29,6 +29,9 @@ export const PrimaryImage = styled.div`
   background-size: 80vw;
   background-position-y: 19vh;
   z-index: -1;
+  animation-name: fade-in-opacity;
+  animation-duration: 1s;
+  animation-timing-function: linear;
   img {
     height: 100%;
     max-width: 100%;

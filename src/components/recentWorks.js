@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { InView } from "react-intersection-observer";
 import CommonFunctionContext from "../context/commonFunctionsContext";
 import { useDispatch, useSelector } from "react-redux";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -43,77 +44,87 @@ export default function RecentWork() {
       </div>
       <Projects>
         {projects.map(({ project = {}, technologies = [], tests = [] }) => (
-          <Project key={project.id}>
-            <Mirror
-              style={{
-                backgroundColor: "#fdfeff14",
-                backdropFilter: "blur(5px)",
-              }}
-            />
-            <PrimaryTitle text={project.name} />
-            <hr className="bright" />
-            <div>
-              <SubTitle text="Built with" />
-              <div className="technologies">
-                {technologies.map((tech) => (
-                  <button type="button" key={tech.id}>
-                    {tech.name}
-                  </button>
-                ))}
+          <InView
+            onChange={(inView, entry) => {
+              inView
+                ? (entry.target.firstChild.style.animationName =
+                    "fade-in-opacity")
+                : (entry.target.firstChild.style.animationName = "");
+            }}
+            key={project.id}
+          >
+            <Project key={project.id}>
+              <Mirror
+                style={{
+                  backgroundColor: "#fdfeff14",
+                  backdropFilter: "blur(5px)",
+                }}
+              />
+              <PrimaryTitle text={project.name} />
+              <hr className="bright" />
+              <div>
+                <SubTitle text="Built with" />
+                <div className="technologies">
+                  {technologies.map((tech) => (
+                    <button type="button" key={tech.id}>
+                      {tech.name}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-            <hr className="bright" />
-            <div>
-              <SubTitle text="Tested with" />
-              <div className="tests">
-                {tests.map((test) => (
-                  <button type="button" key={test.id}>
-                    {test.name}
-                  </button>
-                ))}
+              <hr className="bright" />
+              <div>
+                <SubTitle text="Tested with" />
+                <div className="tests">
+                  {tests.map((test) => (
+                    <button type="button" key={test.id}>
+                      {test.name}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-            <hr className="bright" />
-            <div>
-              <SubTitle text="About" />
-              <div className="about">
-                <p className="text-container">{project.description}</p>
+              <hr className="bright" />
+              <div>
+                <SubTitle text="About" />
+                <div className="about">
+                  <p className="text-container">{project.description}</p>
 
-                <Direction
-                  icon="more"
-                  style={{
-                    position: "absolute",
-                    top: "100%",
-                    left: "50%",
-                    transform: "translate(-50%,-50%)",
-                  }}
-                  toggle={(e) =>
-                    showMoreContent(e, e.target.parentNode.parentNode)
-                  }
-                  className="more"
-                />
-                <Direction
-                  icon="less"
-                  style={{
-                    position: "absolute",
-                    top: "100%",
-                    left: "50%",
-                    transform: "translate(-50%,-50%)",
-                    display: "none",
-                  }}
-                  toggle={(e) =>
-                    showLessContent(e, e.target.parentNode.parentNode)
-                  }
-                  className="less"
-                />
+                  <Direction
+                    icon="more"
+                    style={{
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      transform: "translate(-50%,-50%)",
+                    }}
+                    toggle={(e) =>
+                      showMoreContent(e, e.target.parentNode.parentNode)
+                    }
+                    className="more"
+                  />
+                  <Direction
+                    icon="less"
+                    style={{
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      transform: "translate(-50%,-50%)",
+                      display: "none",
+                    }}
+                    toggle={(e) =>
+                      showLessContent(e, e.target.parentNode.parentNode)
+                    }
+                    className="less"
+                  />
+                </div>
               </div>
-            </div>
-            <hr className="bright" />
-            <div className="links">
-              <FlyButton text="Live" href={project.live_link} />
-              <FlyButton text="Code" href={project.source_code} />
-            </div>
-          </Project>
+              <hr className="bright" />
+              <div className="links">
+                <FlyButton text="Live" href={project.live_link} />
+                <FlyButton text="Code" href={project.source_code} />
+              </div>
+            </Project>
+          </InView>
         ))}
       </Projects>
     </RecentWorkContainer>

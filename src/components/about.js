@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { InView } from "react-intersection-observer";
 import PrimaryTitle from "./partials/primaryTitle";
 import SubTitle from "./partials/subTitle";
 import { InformationContext } from "../context/informationContext";
@@ -49,24 +50,32 @@ export default function About() {
       </p>
       <span id="find-me"></span>
       <SubTitle text="You can find me..." />
-      <CardContainer>
-        {findMeLinks.map((key, index) => (
-          <AboutCard
-            key={key}
-            margin={index}
-            onClick={() => handleFindMeCardIndex(key)}
-            id={key}
-          >
-            <Mirror />
-            <h3>{key}</h3>
-            <img src={medias.get(key)?.icon2} alt={key} />
-            <p>{medias.get(key)?.description}</p>
-            <a href={medias.get(key)?.link} target="_black">
-              <button className="gradientTopBottom">Go</button>
-            </a>
-          </AboutCard>
-        ))}
-      </CardContainer>
+      <InView
+        onChange={(inView, entry) => {
+          inView
+            ? (entry.target.firstChild.style.animationName = "fade-in-opacity")
+            : (entry.target.firstChild.style.animationName = "");
+        }}
+      >
+        <CardContainer>
+          {findMeLinks.map((key, index) => (
+            <AboutCard
+              key={key}
+              margin={index}
+              onClick={() => handleFindMeCardIndex(key)}
+              id={key}
+            >
+              <Mirror />
+              <h3>{key}</h3>
+              <img src={medias.get(key)?.icon2} alt={key} />
+              <p>{medias.get(key)?.description}</p>
+              <a href={medias.get(key)?.link} target="_black">
+                <button className="gradientTopBottom">Go</button>
+              </a>
+            </AboutCard>
+          ))}
+        </CardContainer>
+      </InView>
     </AboutContainer>
   );
 }

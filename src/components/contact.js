@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { InView } from "react-intersection-observer";
 import { sendPost } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import user_contact from "../icon/user_contact.svg";
@@ -24,8 +25,6 @@ export default function Contact() {
   };
   const submitMessage = (e) => {
     e.preventDefault();
-    console.log(e);
-    console.log(JSON.stringify(formData));
     sendPost("messages", formData)
       .then((res) => {
         // TODO: Add a success message
@@ -37,6 +36,13 @@ export default function Contact() {
       });
   };
   return (
+          <InView
+        onChange={(inView, entry) => {
+          inView
+            ? (entry.target.firstChild.style.animationName = "fade-in-opacity")
+            : (entry.target.firstChild.style.animationName = "");
+        }}
+      >
     <ContactContainer id="contact">
       <Mirror style={{
         "backgroundColor": "#ffffff1c",
@@ -101,6 +107,7 @@ export default function Contact() {
           <SubmitButton text="Send" preventDefault={true} />
         </button>
       </form>
-    </ContactContainer>
+      </ContactContainer>
+    </InView>
   );
 }

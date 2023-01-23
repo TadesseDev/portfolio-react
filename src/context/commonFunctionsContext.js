@@ -1,7 +1,6 @@
 import { createContext } from "react";
 export const showMoreContent = (e, parentNode) => {
   const parent = parentNode;
-  console.log(parentNode);
   const more = parent.getElementsByClassName("more")[0];
   const less = parent.getElementsByClassName("less")[0];
   const textContainer = parent.getElementsByClassName("text-container")[0];

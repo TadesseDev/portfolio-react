@@ -17,8 +17,14 @@ export const CardContainer = styled.div`
   height: 120vw;
   min-height: 400px;
   max-height: 500px;
+
+  animation-duration: 1s;
+  animation-timing-function: linear;
+
 `;
 export const AboutCard = styled.div`
+  --margin-top: ${(prop) => prop.margin * 15}vw;
+  --margin-left: ${(prop) => prop.margin * 10}vw;
   width: 50vw;
   max-width: 200px;
   border: 3px solid var(--bright);
@@ -28,8 +34,8 @@ export const AboutCard = styled.div`
   position: absolute;
   padding: 10px;
   z-index: 0;
-  margin-top: ${(prop) => prop.margin * 15}vw;
-  margin-left: ${(prop) => prop.margin * 10}vw;
+  margin-top: var(--margin-top);
+  margin-left: var(--margin-left);
   button {
     padding: 5vw;
     border-radius: 50%;

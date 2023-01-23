@@ -22,6 +22,8 @@ export const TestimonyCard = styled.div`
   margin-top: calc(12.5vw + 15px);
   padding: 15px;
   box-shadow: 0 0 10px 10px #00000025;
+  animation-duration: 1s;
+  animation-timing-function: linear;
   button {
     cursor: pointer;
   }
