@@ -16,6 +16,10 @@ import {
   address,
   InformationContext,
 } from "./context/informationContext";
+import CommonFunctionsContext, {
+  showMoreContent,
+  showLessContent,
+} from "./context/commonFunctionsContext";
 function App() {
   const rootNode = document.getElementById("root");
   const config = { attributes: true, childList: true, subtree: true };
@@ -70,7 +74,11 @@ function App() {
         <div className="App">
           <LandingPage />
           <Skills />
-          <RecentWork />
+          <CommonFunctionsContext.Provider
+            value={{ showMoreContent, showLessContent }}
+          >
+            <RecentWork />
+          </CommonFunctionsContext.Provider>
           <Certifications />
           <Testimonials />
           <About />

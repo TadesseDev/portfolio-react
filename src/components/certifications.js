@@ -72,9 +72,12 @@ export default function Certifications() {
             <SubTitle text={title} />
             <div>
               <p>
-                {description.slice(0, 100)}
-                <button type="button" className="link-button">
-                  ...continue reading{" "}
+                <span>{description.slice(0, 100)}</span>
+                <button
+                  type="button"
+                  className="link-button"
+                >
+                  ...continue reading
                 </button>
               </p>
               <div>

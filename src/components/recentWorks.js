@@ -1,5 +1,6 @@
+import { useContext } from "react";
+import CommonFunctionContext from "../context/commonFunctionsContext";
 import { useDispatch, useSelector } from "react-redux";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import {
@@ -16,6 +17,9 @@ import { useEffect } from "react";
 import Direction from "./partials/direction.js";
 import Mirror from "./partials/mirror";
 export default function RecentWork() {
+  const { showMoreContent, showLessContent } = useContext(
+    CommonFunctionContext
+  );
   const projects = useSelector((state) => state.recentWorks);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -83,17 +87,7 @@ export default function RecentWork() {
                     left: "50%",
                     transform: "translate(-50%,-50%)",
                   }}
-                  toggle={(e) => {
-                    const parent = e.target.parentNode.parentNode;
-                    const more = parent.getElementsByClassName("more")[0];
-                    const less = parent.getElementsByClassName("less")[0];
-                    const textContainer =
-                      parent.getElementsByClassName("text-container")[0];
-
-                    textContainer.style.maxHeight = "max-content";
-                    less.style.display = "block";
-                    more.style.display = "none";
-                  }}
+                  toggle={showMoreContent}
                   className="more"
                 />
                 <Direction
@@ -105,17 +99,7 @@ export default function RecentWork() {
                     transform: "translate(-50%,-50%)",
                     display: "none",
                   }}
-                  toggle={(e) => {
-                    const parent = e.target.parentNode.parentNode;
-                    const more = parent.getElementsByClassName("more")[0];
-                    const less = parent.getElementsByClassName("less")[0];
-                    const textContainer =
-                      parent.getElementsByClassName("text-container")[0];
-
-                    textContainer.style.maxHeight = "20px";
-                    less.style.display = "none";
-                    more.style.display = "block";
-                  }}
+                  toggle={showLessContent}
                   className="less"
                 />
               </div>
