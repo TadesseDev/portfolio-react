@@ -11,12 +11,23 @@ export const Testimonial = styled.div`
   .icon {
     width: 7vw;
   }
+  h3.title{
+     font-size: 0.7rem;
+              color: var(--bright);
+              margin: 0;
+  }
+   @media (min-width: 480px) {
+    h3.title {
+      font-size: 1rem;
+    }
+  }
 `;
 export const TestimonyCard = styled.div`
   background-image: url(${(prop) => prop.backgroundImage || ""});
   background-size: contain;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: auto;
   background-color: #ffffff3d;
   border-radius: 10px;
   margin-top: calc(12.5vw + 15px);
@@ -41,6 +52,9 @@ export const TestimonyCard = styled.div`
   }
   img {
     width: 100%;
+  }
+  @media (min-width: 480px) {
+    max-width: 500px;
   }
 `;
 

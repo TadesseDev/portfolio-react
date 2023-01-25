@@ -86,6 +86,7 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     list-style: none;
    }
    .icon {
+    width: 10vw;
     max-width: 50px
    }
    .icon img{
@@ -110,6 +111,22 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     }
     100% {
       opacity: 1;
+    }
+  }
+    /*media queries*/
+
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2,h3{
+            font-size: 2rem;
+    }
+    p{
+      font-size: 1.4rem;
+    }
+    .icon {
+    max-width: 60px;
     }
   }
 `;

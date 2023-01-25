@@ -10,7 +10,9 @@ export default function primaryTitle({ icon = false, text = "", style = {} }) {
         ...style,
       }}
     >
-      <span className="icon">{icon && <img src={icon} alt="skill" />}</span>
+      <span className="icon" style={{ display: icon ? "default" : "none" }}>
+        {icon && <img src={icon} alt="skill" />}
+      </span>
       <span>{text}</span>
     </h2>
   );
