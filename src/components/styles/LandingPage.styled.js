@@ -18,6 +18,12 @@ export const Landing = styled.main`
     backdrop-filter: blur(10px);
     border-radius: 20px;
   }
+  .primary-image-container{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin: 0 -5vw;
+}
 `;
 
 export const PrimaryImage = styled.div`

@@ -17,36 +17,38 @@ export default function LandingPage() {
   };
   return (
     <Landing id="home">
-      <Loader
-        style={{
-          position: "absolute",
-          top: "0",
-          zIndex: "-2",
-          opacity: "0.1",
-          width: "100vw",
-          height: "100vw",
-        }}
-        timing={5}
-      />
       <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" />
       </span>
       <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
-      <PrimaryImage>
-        <div className="decoration" id="xd"></div>
-        <div className="decoration" id="postgres"></div>
-        <div className="decoration" id="javascript"></div>
-        <div className="decoration" id="ruby"></div>
-        <LazyLoadImage
-          src={my_picture}
-          alt="my"
-          effect="blur"
-          className="img"
-          wrapperProps={{ style: { display: "inline", width: "100%" } }}
-          placeholder=<Loader />
+      <div className="primary-image-container">
+        <Loader
+          style={{
+            position: "absolute",
+            top: "0",
+            zIndex: "-2",
+            opacity: "0.1",
+            width: "100vw",
+            height: "100vw",
+          }}
+          timing={5}
         />
-        <div className="blur-img"></div>
-      </PrimaryImage>
+        <PrimaryImage>
+          <div className="decoration" id="xd"></div>
+          <div className="decoration" id="postgres"></div>
+          <div className="decoration" id="javascript"></div>
+          <div className="decoration" id="ruby"></div>
+          <LazyLoadImage
+            src={my_picture}
+            alt="my"
+            effect="blur"
+            className="img"
+            wrapperProps={{ style: { display: "inline", width: "100%" } }}
+            placeholder=<Loader />
+          />
+          <div className="blur-img"></div>
+        </PrimaryImage>
+      </div>
       <Detail>
         <div className="heading">
           <h1>Tadesse Dubale</h1>
