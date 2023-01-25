@@ -36,8 +36,8 @@ export default function Skills() {
       <div className="pre">
         <PrimaryTitle icon={skillIcon} text={"skills"} />
         <p>
-          Its hard to mention every little skill that I have. But to give you an
-          overview, here are some of my skills.
+          Well, It's almost impossible to tell you everything I know. But to
+          give you a glimpse, here are some of my skills.
         </p>
         <hr />
         <div className="all-skills">
@@ -51,10 +51,7 @@ export default function Skills() {
                       <img src={skill.icon} alt={skill.name} />
                     </span>
                     <h4 className="skill-name">{skill.name}</h4>
-                    <p className="skill-description">
-                      Its hard to mention every little skill that I have. But to
-                      give you an overview, here are some of my skills.
-                    </p>
+                    <p className="skill-description">{skill.description}</p>
                   </div>
                 ))}
               </SubSkills>

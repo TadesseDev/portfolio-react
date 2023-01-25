@@ -67,6 +67,7 @@ export const SubSkills = styled.div`
   .skill-description {
     grid-area: bottom-right;
     padding: 0 5vw;
+    text-align: left;
   }
   overflow-x: hidden;
   ::-webkit-scrollbar {
