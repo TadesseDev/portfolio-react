@@ -34,6 +34,6 @@ export const CertificationsContainer = styled.div`
 `;
 export const Certification = styled.div`
   img {
-    max-width: 100%;
+    max-width: min(100%, 700px);
   }
 `;

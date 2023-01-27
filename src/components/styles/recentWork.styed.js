@@ -7,13 +7,12 @@ export const RecentWorkContainer = styled.div`
   margin: 10vh 0;
   text-align: center;
   #me-coding span {
-    min-width: 80vw;
+    min-width: min(80vw, 600px);
   }
   #me-coding img {
     margin-left: -5vw;
     width: calc(100% + 10vw);
   }
-
 `;
 export const Projects = styled.div`
   display: flex;
