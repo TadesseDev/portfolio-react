@@ -42,7 +42,7 @@ export default function Skills() {
         <hr />
         <div className="all-skills">
           {Array.from(skills).map(([key = "", values = []]) => (
-            <div key={key}>
+            <div key={key} className="skill-container">
               <SubTitle text={key} icon={iconMap.get(key)} />
               <SubSkills text={key}>
                 {values.map((skill) => (

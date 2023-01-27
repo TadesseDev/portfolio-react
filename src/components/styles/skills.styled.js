@@ -42,6 +42,17 @@ export const SkillsContainer = styled.div`
     background: var(--shine);
     color: var(--primary);
   }
+
+  @media (min-width: 768px) {
+    .skill-container {
+      display: grid;
+      grid-template-columns: 25% 70%;
+      justify-content: space-between;
+    }
+    hr {
+      grid-column: span 2;
+    }
+  }
 `;
 export const SubSkills = styled.div`
   max-height: 350px;
