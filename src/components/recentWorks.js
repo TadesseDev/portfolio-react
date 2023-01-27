@@ -52,6 +52,7 @@ export default function RecentWork() {
                 : (entry.target.firstChild.style.animationName = "");
             }}
             key={project.id}
+            style={{ display: "inline" }}
           >
             <Project key={project.id}>
               <Mirror

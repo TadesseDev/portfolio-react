@@ -6,18 +6,23 @@ export const RecentWorkContainer = styled.div`
   }
   margin: 10vh 0;
   text-align: center;
-  #me-coding span{
+  #me-coding span {
     min-width: 80vw;
   }
   #me-coding img {
     margin-left: -5vw;
     width: calc(100% + 10vw);
   }
+
 `;
-export const Projects = styled.div``;
+export const Projects = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 export const Project = styled.div`
   position: relative;
-  padding: 5vw;
+  padding: 40px;
   margin: 3vw;
   margin-top: 50px;
   box-shadow: 0 0 10px 5px #0000001c;
@@ -26,6 +31,7 @@ export const Project = styled.div`
   overflow: hidden;
   animation-duration: 0.5s;
   animation-timing-function: linear;
+  max-width: 400px;
   button {
     background-color: var(--decoration2);
     border: 2px solid var(--bright);
@@ -52,5 +58,33 @@ export const Project = styled.div`
   .links {
     display: flex;
     justify-content: space-around;
+  }
+  @media (min-width: 768px) {
+    max-width: calc(40vw - 40px - 2vw);
+    padding: 20px;
+    margin: 1vw;
+    h2 {
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    .links a {
+      padding-left: 0.9375rem;
+      padding-right: 1.875rem;
+      height: 1.5625rem;
+      font-size: 1rem;
+    }
+    .gradientTopBottom {
+      width: 25px;
+      height: 25px;
+    }
+    .about {
+      padding: 5px;
+      padding-bottom: 20px;
+      p{
+        font-size: 1rem;
+      }
+    }
   }
 `;

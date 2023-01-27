@@ -13,7 +13,6 @@ export const FlyLink = styled.a`
 
   box-shadow: 0px 10px 30px #000000a3;
   @media (min-width: 480px) {
-    padding-left: 1.9375rem;
     padding-right: 2.875rem;
     height: 2.5625rem;
     padding-left: 1.5rem;
