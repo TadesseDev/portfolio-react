@@ -46,16 +46,23 @@ export const SkillsContainer = styled.div`
   @media (min-width: 768px) {
     .skill-container {
       display: grid;
-      grid-template-columns: 25% 70%;
+      grid-template-columns: 25% min(70%, 600px);
       justify-content: space-between;
     }
     hr {
       grid-column: span 2;
+      min-width: 100%;
+    }
+    h3 {
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid var(--bright)
     }
   }
 `;
 export const SubSkills = styled.div`
   max-height: 350px;
+  max-width: 600px;
   overflow: scroll;
   position: relative;
   margin: 0 15px;
