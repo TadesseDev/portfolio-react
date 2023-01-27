@@ -22,6 +22,8 @@ export const SkillsContainer = styled.div`
     position: relative;
     border-radius: 10px;
     padding: 10px;
+    max-width: 500px;
+    margin: 0 auto;
     z-index: 1;
     overflow: hidden;
     color: var(--shine);
@@ -44,10 +46,17 @@ export const SkillsContainer = styled.div`
   }
 
   @media (min-width: 768px) {
+
     .skill-container {
       display: grid;
       grid-template-columns: 25% min(70%, 600px);
       justify-content: space-between;
+      .icon{
+        max-width: 50px;
+      }
+      h3{
+        font-size: 1.5rem;
+      }
     }
     hr {
       grid-column: span 2;
@@ -56,7 +65,7 @@ export const SkillsContainer = styled.div`
     h3 {
       display: flex;
       flex-direction: column;
-      border-right: 2px solid var(--bright)
+      border-right: 2px solid var(--shine)
     }
   }
 `;
