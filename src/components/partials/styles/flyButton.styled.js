@@ -12,6 +12,13 @@ export const FlyLink = styled.a`
   color: var(--primary);
 
   box-shadow: 0px 10px 30px #000000a3;
+  @media (min-width: 480px) {
+    padding-left: 1.9375rem;
+    padding-right: 2.875rem;
+    height: 2.5625rem;
+    padding-left: 1.5rem;
+    font-size: 1.25rem;
+  }
 `;
 export const IconContainer = styled.span`
   position: absolute;
@@ -27,5 +34,9 @@ export const IconContainer = styled.span`
   align-items: center;
   img {
     width: 80%;
+  }
+  @media (min-width: 480px) {
+    width: 45px;
+    height: 45px;
   }
 `;

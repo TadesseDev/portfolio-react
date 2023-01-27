@@ -47,5 +47,11 @@ export const AboutCard = styled.div`
   h3 {
     color: var(--bright);
   }
+  @media (min-width: 480px) {
+    --margin-top: 0;
+    --margin-left: ${(prop) => prop.margin * 17}vw;
+    position: absolute;
+    top: 0;
+  }
 `;
 export default about;

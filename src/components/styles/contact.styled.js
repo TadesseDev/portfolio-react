@@ -17,10 +17,13 @@ const ContactContainer = styled.div`
     display: block;
     outline: none;
   }
+  form{
+    max-width: 500px;
+    margin: auto;
+  }
 `;
 export const InputField = styled.div`
   position: relative;
-  max-width: 300px;
   border: 2px solid var(--bright);
   border-radius: 50px;
   overflow: hidden;
@@ -50,7 +53,6 @@ export const InputField = styled.div`
   }
 `;
 export const TextField = styled.div`
-  max-width: 300px;
   border: 2px solid var(--bright);
   border-radius: 10px;
   overflow: hidden;
