@@ -42,9 +42,11 @@ export const TestimonyCard = styled.div`
     border: 5px solid var(--primary);
     display: block;
     margin: auto;
-    margin-top: calc(-12.5vw + -15px);
+    margin-top: calc(max(-12.5vw, -75px) + -15px);
     width: 25vw;
     height: 25vw;
+    max-width: 150px;
+    max-height: 150px;
     background-image: url(${(prop) => prop.testimonyImage || ""});
     background-size: contain;
     background-position: center;
