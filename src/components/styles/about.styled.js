@@ -17,10 +17,17 @@ export const CardContainer = styled.div`
   height: 120vw;
   min-height: 400px;
   max-height: 500px;
-
   animation-duration: 1s;
   animation-timing-function: linear;
-
+  @media (min-width: 480px) {
+    min-height: unset;
+    max-height: unset;
+    margin-left: 100px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 19%);
+    overflow: visible;
+  }
 `;
 export const AboutCard = styled.div`
   --margin-top: ${(prop) => prop.margin * 15}vw;
@@ -48,10 +55,18 @@ export const AboutCard = styled.div`
     color: var(--bright);
   }
   @media (min-width: 480px) {
-    --margin-top: 0;
-    --margin-left: ${(prop) => prop.margin * 17}vw;
-    position: absolute;
-    top: 0;
+    width: sum(25vw,100px);
+    min-width: 200px;
+    height: 400px;
+    position: relative;
+    margin: 0;
+    justify-self: center;
+    &:nth-child(2) {
+      margin-top: 100px;
+    }
+    &:nth-child(3) {
+      margin-top: 100px;
+    }
   }
 `;
 export default about;
