@@ -35,6 +35,7 @@ export const SkillsContainer = styled.div`
     background: none;
     border: 1px solid var(--shine);
     margin: 10px;
+    font-size: 1.5rem;
     border-radius: 10px;
     width: 80%;
     padding: 3vw;
@@ -46,15 +47,14 @@ export const SkillsContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-
     .skill-container {
       display: grid;
       grid-template-columns: 25% min(70%, 600px);
       justify-content: space-between;
-      .icon{
+      .icon {
         max-width: 50px;
       }
-      h3{
+      h3 {
         font-size: 1.5rem;
       }
     }
@@ -65,8 +65,11 @@ export const SkillsContainer = styled.div`
     h3 {
       display: flex;
       flex-direction: column;
-      border-right: 2px solid var(--shine)
+      border-right: 2px solid var(--shine);
     }
+      button {
+        font-size: 2rem;
+      }
   }
 `;
 export const SubSkills = styled.div`

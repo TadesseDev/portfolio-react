@@ -3,6 +3,8 @@ const about = styled.div`
   text-align: center;
   p {
     color: white;
+    max-width: 500px;
+    margin: auto;
   }
   .bright {
     color: var(--bright);
@@ -44,7 +46,8 @@ export const AboutCard = styled.div`
   margin-top: var(--margin-top);
   margin-left: var(--margin-left);
   button {
-    padding: 5vw;
+    padding: min(5vw, 25px);
+    font-weight: bold;
     border-radius: 50%;
     border: none;
     outline: none;
@@ -55,7 +58,7 @@ export const AboutCard = styled.div`
     color: var(--bright);
   }
   @media (min-width: 480px) {
-    width: sum(25vw,100px);
+    width: sum(25vw, 100px);
     min-width: 200px;
     height: 400px;
     position: relative;
