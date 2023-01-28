@@ -1,6 +1,14 @@
 import styled from "styled-components";
 const TestimonialContainer = styled.div`
   text-align: center;
+  @media (min-width: 760px) {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 15px));
+    justify-content: space-between;
+    h2 {
+      grid-column: span 2;
+    }
+  }
 `;
 export const Testimonial = styled.div`
   margin-top: 40px;
@@ -11,12 +19,12 @@ export const Testimonial = styled.div`
   .icon {
     width: 7vw;
   }
-  h3.title{
-     font-size: 0.7rem;
-              color: var(--bright);
-              margin: 0;
+  h3.title {
+    font-size: 0.7rem;
+    color: var(--bright);
+    margin: 0;
   }
-   @media (min-width: 480px) {
+  @media (min-width: 480px) {
     h3.title {
       font-size: 1rem;
     }

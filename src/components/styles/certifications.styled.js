@@ -31,6 +31,14 @@ export const CertificationsContainer = styled.div`
       }
     }
   }
+  @media (min-width: 768px) {
+    #goto-certificate {
+      margin: auto;
+      * {
+        font-size: 1.5rem;
+      }
+    }
+  }
 `;
 export const Certification = styled.div`
   img {
