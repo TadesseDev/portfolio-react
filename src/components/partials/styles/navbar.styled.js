@@ -41,6 +41,39 @@ let Navbar = styled.nav`
       padding-bottom: 5px;
     }
   }
+
+  @media (min-width: 1024px) {
+    display: block;
+    min-height: max-content;
+    background-color: transparent;
+    left: 0;
+    min-width: calc(100vw - 40px);
+    padding: 20px;
+    margin: 0;
+    padding: 20px;
+    border: 0;
+    box-shadow: none;
+    ul {
+      flex-direction: row;
+      min-height: max-content;
+      width: calc(100% - 20%);
+      padding: 0 10%;
+      justify-content: flex-start;
+    }
+
+    li {
+      padding-bottom: 0;
+      padding: 0 10px;
+    }
+
+    li:last-child {
+      margin-left: auto;
+    }
+
+    .mirror {
+      display: none;
+    }
+  }
 `;
 
 export { Navbar };

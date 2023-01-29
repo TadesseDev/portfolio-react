@@ -24,6 +24,14 @@ export const Landing = styled.main`
     width: 100vw;
     margin: 0 -5vw;
 }
+@media (min-width: 1024px) {
+  .showMenu{
+    display: none;
+  }
+  .direction{
+    display: none;
+  }
+}
 `;
 
 export const PrimaryImage = styled.div`
