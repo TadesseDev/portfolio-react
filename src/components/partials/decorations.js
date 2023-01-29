@@ -3,10 +3,11 @@ const Circle = ({
   width = 100,
   color = "bright",
   moreStyle = {},
+  className = {}
 }) => {
   return (
     <div
-      className="decoration"
+      className={"decoration "+className}
       style={{
         borderRadius: "50%",
         backgroundColor: `var(--${color})`,

@@ -18,20 +18,34 @@ export const Landing = styled.main`
     backdrop-filter: blur(10px);
     border-radius: 20px;
   }
-  .primary-image-container{
+
+  .sun {
+    transform: translate(-40%, -40%);
+  }
+  .primary-image-container {
     position: relative;
     overflow: hidden;
     width: 100vw;
     margin: 0 -5vw;
-}
-@media (min-width: 1024px) {
-  .showMenu{
-    display: none;
   }
-  .direction{
-    display: none;
+  @media (min-width: 1024px) {
+    position: relative;
+    .primary-image-container {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      max-width: 50vw;
+    }
+    .sun {
+      transform: translate(-70%, -70%);
+    }
+    .showMenu {
+      display: none;
+    }
+    .direction {
+      display: none;
+    }
   }
-}
 `;
 
 export const PrimaryImage = styled.div`
@@ -97,6 +111,19 @@ export const PrimaryImage = styled.div`
     right: 25%;
     background-image: url(${javascript});
   }
+
+  @media (min-width: 1024px) {
+     #xd,
+    #ruby,
+    #postgres,
+    #javascript {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
 `;
 
 export const Detail = styled.div`
@@ -124,5 +151,14 @@ export const Detail = styled.div`
     position: relative;
     display: inline-block;
     max-width: max-content;
+  }
+  @media (min-width: 1024px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 50vw;
+    .heading {
+      background: transparent;
+    }
   }
 `;

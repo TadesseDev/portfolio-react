@@ -88,7 +88,6 @@ export default function LandingPage() {
 
       <Circle
         moreStyle={{
-          transform: "translate(-40%, -40%)",
           position: "absolute",
           top: "0",
           left: "0",
@@ -96,6 +95,7 @@ export default function LandingPage() {
           height: "20vw",
           boxShadow: "0 0 10px 26px #dae02840",
         }}
+        className="sun"
       />
     </Landing>
   );
