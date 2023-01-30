@@ -23,7 +23,7 @@ export default function LandingPage() {
       </span>
       <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
       <div id="decoration-text">
-        <h1>From Design to Deployment</h1>
+        <h1>From analysis to Deployment</h1>
       </div>
       <div className="primary-image-container">
         <Loader

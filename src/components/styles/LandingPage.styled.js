@@ -18,7 +18,6 @@ export const Landing = styled.main`
     backdrop-filter: blur(10px);
     border-radius: 20px;
   }
-
   .sun {
     transform: translate(-40%, -40%);
   }
@@ -31,8 +30,9 @@ export const Landing = styled.main`
   #decoration-text {
     position: absolute;
     top: 100%;
+    display: none;
     margin-left: -5vw;
-    transform: translate(-10vw, -250%) rotate(-50deg);
+    transform: translate(-12vw, -250%) rotate(-50deg);
     z-index: -2;
     h1 {
       font-size: 10vh;
@@ -42,6 +42,9 @@ export const Landing = styled.main`
   }
   @media (min-width: 1024px) {
     position: relative;
+    #decoration-text {
+      display: block;
+    }
     .primary-image-container {
       position: absolute;
       left: 0;

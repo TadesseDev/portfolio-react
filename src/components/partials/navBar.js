@@ -63,7 +63,7 @@ export default function NavBar({ showNavBar, toggleNavbar }) {
         <li>
           <a href="#find-me" onClick={toggleNavbar}>
             <img className="icon" src={user} alt="user" />
-            <span>Digital presence</span>
+            <span>social media</span>
           </a>
         </li>
         <li>

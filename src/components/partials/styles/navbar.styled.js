@@ -59,17 +59,34 @@ let Navbar = styled.nav`
       width: calc(100% - 20%);
       padding: 0 10%;
       justify-content: flex-start;
+      .icon {
+        max-width: 20px;
+        margin: auto;
+      }
     }
 
     li {
       padding-bottom: 0;
       padding: 0 10px;
+      a {
+        display: flex;
+        gap: 5px;
+        flex-direction: inherit;
+        font-size: 0.7rem;
+        font-family: var(--paragraph-font);
+        &:hover {
+          border-bottom: 2px solid var(--bright);
+        }
+      }
     }
 
     li:last-child {
       margin-left: auto;
+      a {
+        display: block;
+        color: var(--bright);
+      }
     }
-
     .mirror {
       display: none;
     }
