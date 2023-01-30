@@ -85,6 +85,7 @@ export const PrimaryImage = styled.div`
     width: 10vw;
     height: 10vw;
     max-width: 50px;
+    max-height: 50px;
     position: absolute;
     display: block;
     z-index: 1;
@@ -121,13 +122,28 @@ export const PrimaryImage = styled.div`
       width: 25vw;
       max-width: 500px;
     }
+    .decoration {
+      max-width: 50px;
+      max-height: 40px;
+    }
+    .decoration-container {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      z-index: 1;
+      width: 40%;
+      transform: translateY(-100%);
+      justify-content: center;
+    }
     #xd,
     #ruby,
     #postgres,
     #javascript {
-      bottom: 0;
+      position: relative;
+      top: 0;
       left: 0;
-      margin: 0;
+      margin-left: 4vw;
+      margin-bottom: 15px;
       padding: 0;
     }
   }
@@ -167,22 +183,22 @@ export const Detail = styled.div`
     min-height: 70vh;
     .heading {
       background: transparent;
-      h1{
+      h1 {
         font-size: 2rem;
       }
-      button{
+      button {
         display: none;
       }
       h2 {
         font-size: 1.5rem;
       }
     }
-    .icon{
+    .icon {
       max-width: 40px;
     }
-    ul{
+    ul {
       justify-content: center;
-      li{
+      li {
         margin: 15px;
       }
     }

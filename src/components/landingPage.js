@@ -35,10 +35,12 @@ export default function LandingPage() {
           timing={5}
         />
         <PrimaryImage>
-          <div className="decoration" id="xd"></div>
-          <div className="decoration" id="postgres"></div>
-          <div className="decoration" id="javascript"></div>
-          <div className="decoration" id="ruby"></div>
+          <span className="decoration-container">
+            <div className="decoration" id="xd"></div>
+            <div className="decoration" id="postgres"></div>
+            <div className="decoration" id="javascript"></div>
+            <div className="decoration" id="ruby"></div>
+          </span>
           <LazyLoadImage
             src={my_picture}
             alt="my"
