@@ -34,14 +34,7 @@ export const Landing = styled.main`
       position: absolute;
       left: 0;
       bottom: 0;
-      max-width: 62.5vw;
-      .blur-img {
-        display: none;
-      }
-      img {
-        margin-left: 100%;
-        transform: translateX(-100%);
-      }
+      max-width: 100%;
     }
     .sun {
       transform: translate(-70%, -70%);
@@ -121,7 +114,7 @@ export const PrimaryImage = styled.div`
 
   @media (min-width: 1024px) {
     height: auto;
-    background-position: 100% 0;
+    background-position: 50% 0;
     background-size: 28vw;
     img {
       height: auto;
