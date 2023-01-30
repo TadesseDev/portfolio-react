@@ -28,6 +28,18 @@ export const Landing = styled.main`
     width: 100vw;
     margin: 0 -5vw;
   }
+  #decoration-text {
+    position: absolute;
+    top: 100%;
+    margin-left: -5vw;
+    transform: translate(-10vw, -250%) rotate(-50deg);
+    z-index: -2;
+    h1 {
+      font-size: 10vh;
+      font-family: "DancingScript", cursive;
+      color: var(--transparent);
+    }
+  }
   @media (min-width: 1024px) {
     position: relative;
     .primary-image-container {
@@ -116,11 +128,11 @@ export const PrimaryImage = styled.div`
   @media (min-width: 1024px) {
     height: auto;
     background-position: 50% 0;
-    background-size: 28vw;
+    background-size: 34vw;
     img {
       height: auto;
-      width: 25vw;
-      max-width: 500px;
+      width: 35vw;
+      max-width: 400px;
     }
     .decoration {
       max-width: 50px;

@@ -22,6 +22,9 @@ export default function LandingPage() {
         <img src={menu} alt="open menus" />
       </span>
       <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+      <div id="decoration-text">
+        <h1>From Design to Deployment</h1>
+      </div>
       <div className="primary-image-container">
         <Loader
           style={{

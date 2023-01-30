@@ -2,7 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import maginors from "../../fonts/maginors-maginors-400.otf";
 import Aquire from "../../fonts/AquireBold-8Ma60.otf";
 import SansMateo from "../../fonts/SansMateo.ttf";
+import DancingScript from "../../fonts/DancingScript-VariableFont_wght.ttf";
 const GlobalStyles = createGlobalStyle`
+@font-face {
+  font-family: "DancingScript";
+  src: url(${DancingScript});font-display: swap;
+}
 @font-face {
   font-family: "maginors";
   src: url(${maginors});font-display: swap;
