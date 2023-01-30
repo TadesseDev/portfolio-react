@@ -125,7 +125,6 @@ export const PrimaryImage = styled.div`
     #ruby,
     #postgres,
     #javascript {
-      top: 0;
       bottom: 0;
       left: 0;
       margin: 0;
@@ -165,8 +164,27 @@ export const Detail = styled.div`
     right: 0;
     bottom: 0;
     max-width: 38.5vw;
+    min-height: 70vh;
     .heading {
       background: transparent;
+      h1{
+        font-size: 2rem;
+      }
+      button{
+        display: none;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    .icon{
+      max-width: 40px;
+    }
+    ul{
+      justify-content: center;
+      li{
+        margin: 15px;
+      }
     }
   }
 `;
