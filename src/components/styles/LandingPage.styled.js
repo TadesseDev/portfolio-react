@@ -34,7 +34,14 @@ export const Landing = styled.main`
       position: absolute;
       left: 0;
       bottom: 0;
-      max-width: 50vw;
+      max-width: 62.5vw;
+      .blur-img {
+        display: none;
+      }
+      img {
+        margin-left: 100%;
+        transform: translateX(-100%);
+      }
     }
     .sun {
       transform: translate(-70%, -70%);
@@ -113,7 +120,15 @@ export const PrimaryImage = styled.div`
   }
 
   @media (min-width: 1024px) {
-     #xd,
+    height: auto;
+    background-position: 100% 0;
+    background-size: 28vw;
+    img {
+      height: auto;
+      width: 25vw;
+      max-width: 500px;
+    }
+    #xd,
     #ruby,
     #postgres,
     #javascript {
@@ -156,7 +171,7 @@ export const Detail = styled.div`
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 50vw;
+    max-width: 38.5vw;
     .heading {
       background: transparent;
     }

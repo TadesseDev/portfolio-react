@@ -8,6 +8,7 @@ import { Circle } from "./partials/decorations";
 import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
 import menu from "../icon/menu/menu.png";
 import my_picture from "../images/resized.svg";
+import my_picture_desktop from "../images/desktop-me.png";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import Loader from './partials/loader'
 export default function LandingPage() {
@@ -40,6 +41,15 @@ export default function LandingPage() {
           <div className="decoration" id="ruby"></div>
           <LazyLoadImage
             src={my_picture}
+            alt="my"
+            effect="blur"
+            className="img"
+            wrapperProps={{ style: { display: "inline", width: "100%" } }}
+            style={{ display: "none" }}
+            placeholder=<Loader />
+          />
+          <LazyLoadImage
+            src={my_picture_desktop}
             alt="my"
             effect="blur"
             className="img"
