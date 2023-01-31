@@ -40,8 +40,9 @@ export const Landing = styled.main`
       color: var(--transparent);
     }
   }
-  #testimonial-decoration {
+  #decoration-links {
     position: absolute;
+    display: none;
     top: 30%;
     width: 100px;
     height: 100px;
@@ -114,7 +115,9 @@ export const Landing = styled.main`
     #decoration-text {
       display: block;
     }
-    .primary-image-container {
+    #decoration-links{
+      display: block;
+    } .primary-image-container {
       position: absolute;
       left: 0;
       bottom: 0;

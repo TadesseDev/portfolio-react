@@ -111,7 +111,7 @@ export default function LandingPage() {
         }}
         className="sun"
       />
-      <div id="testimonial-decoration">
+      <div id="decoration-links">
         <a href="#testimonials" id="decoration-0" className="active">
           Affidavit
         </a>
