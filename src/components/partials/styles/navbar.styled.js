@@ -46,25 +46,30 @@ let Navbar = styled.nav`
     display: block;
     min-height: max-content;
     background-color: transparent;
-    left: 0;
     min-width: calc(100vw - 40px);
     padding: 20px;
     margin: 0;
     padding: 20px;
     border: 0;
     box-shadow: none;
+
     ul {
-      flex-direction: row;
-      min-height: max-content;
-      width: calc(100% - 20%);
-      padding: 0 10%;
       justify-content: flex-start;
       .icon {
         max-width: 20px;
         margin: auto;
       }
-    }
+      flex-direction: column;
+      min-height: max-content;
+      width: max-content;
+      padding: 0 10%;
+      align-items: baseline;
 
+      span {
+        display: none;
+      }
+    }
+    
     li {
       padding-bottom: 0;
       padding: 0 10px;
@@ -87,9 +92,11 @@ let Navbar = styled.nav`
         color: var(--bright);
       }
     }
-    .mirror {
-      display: none;
-    }
+    min-width: max-content;
+    position: fixed;
+    left: 100vw;
+    top: 50%;
+    transform: translate(-100%, -50%);
   }
 `;
 

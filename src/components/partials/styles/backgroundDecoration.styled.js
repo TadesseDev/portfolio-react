@@ -10,7 +10,7 @@ export default styled.div`
   z-index: -2;
   animation-name: border-rotate;
   animation-iteration-count: infinite;
-  animation-duration: 10s;
+  animation-duration: 200s;
   animation-direction: alternate;
   animation-timing-function: linear;
   top: ${Math.floor(Math.random() * 100)}%;

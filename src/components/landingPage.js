@@ -1,4 +1,5 @@
 import React from "react";
+import { InView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import NavBar from "./partials/navBar";
@@ -12,6 +13,7 @@ import my_picture_desktop from "../images/desktop-me.png";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import Loader from "./partials/loader";
 export default function LandingPage() {
+  
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
     updateDisplay((old) => !old);
@@ -21,7 +23,16 @@ export default function LandingPage() {
       <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" />
       </span>
-      <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+        <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+
+      <InView
+        onChange={(inView, entry) => {console.log(inView)
+          inView?
+          (entry.target.parentNode.getElementsByTagName("nav")[0].classList.remove("hidden")):
+          (entry.target.parentNode.getElementsByTagName("nav")[0].classList.add("hidden"))}
+        }
+      >
+      </InView>
       <div id="decoration-text">
         <h1>From analysis to Deployment</h1>
       </div>

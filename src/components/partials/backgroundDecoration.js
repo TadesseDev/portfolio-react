@@ -18,7 +18,7 @@ export function AppDecorations({number = 0, className="" }) {
       <BackgroundDecoration
         className={className}
         key={i}
-        style={{ animationDelay: Math.floor(Math.random() * 5)+"s" }}
+        style={{ animationDelay: Math.floor(Math.random() * 10)+"s" }}
       />
     );
   }

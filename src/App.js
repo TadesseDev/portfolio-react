@@ -53,7 +53,9 @@ function App() {
       rootHeight = rootNode.scrollHeight;
       const decorations = document.getElementsByClassName("root-decoration");
       for (let decoration of decorations) {
-        decoration.style.top = `${Math.floor(Math.random() * rootHeight)}px`;
+        decoration.style.top = `${Math.floor(
+          Math.random() * (rootHeight - 300)
+        )}px`;
         decoration.style.left = `${Math.floor(Math.random() * 100)}%`;
       }
       rootNode.setAttribute(
