@@ -32,12 +32,81 @@ export const Landing = styled.main`
     top: 100%;
     display: none;
     margin-left: -5vw;
-    transform: translate(-12vw, -250%) rotate(-50deg);
+    transform: translate(-10vw, -250%) rotate(-50deg);
     z-index: -2;
     h1 {
       font-size: 10vh;
       font-family: "DancingScript", cursive;
       color: var(--transparent);
+    }
+  }
+  #testimonial-decoration {
+    position: absolute;
+    top: 30%;
+    width: 100px;
+    height: 100px;
+    a {
+      position: absolute;
+      display: flex;
+      z-index: 2;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 40%;
+      height: 40%;
+      font-family: var(--title-font);
+      font-size: 0.3rem;
+      margin: 0 5px;
+      background-color: red;
+      color: var(--primary);
+      border: 5px solid var(--primary);
+    }
+    a:nth-child(1) {
+      background: var(--shine);
+      width: 100%;
+      height: 100%;
+      font-size: 1rem;
+      z-index: 1;
+    }
+    a:nth-child(2) {
+      left: 80%;
+      background: red;
+    }
+    a:nth-child(3) {
+      top: 80%;
+      background: var(--bright);
+    }
+    a:nth-child(4) {
+      top: 100%;
+      left: 130%;
+      width: 20%;
+      height: 20%;
+      background: red;
+    }
+    a:nth-child(5) {
+      top: 80%;
+      z-index: 0;
+      left: 60%;
+      width: 60%;
+      height: 60%;
+      background: var(--bright);
+    }
+    a:hover {
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      font-size: 1rem;
+      transition: width 0.3s, height 0.3s;
+      transition: font-size 0.3s;
+      transition-timing-function: ease-out;
+      transform: translate(-50%, -50%);
+    }
+    a:nth-child(1):hover {
+      z-index: 3;
+      transform: translate(0, 0);
+    }
+    a:nth-child(5):hover {
+      transform: translate(-25%, -25%);
     }
   }
   @media (min-width: 1024px) {

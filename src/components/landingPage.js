@@ -10,7 +10,7 @@ import menu from "../icon/menu/menu.png";
 import my_picture from "../images/resized.svg";
 import my_picture_desktop from "../images/desktop-me.png";
 import SocialMediaIcons from "./partials/socialMediaIcons";
-import Loader from './partials/loader'
+import Loader from "./partials/loader";
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
@@ -100,7 +100,6 @@ export default function LandingPage() {
           }}
         />
       </Detail>
-
       <Circle
         moreStyle={{
           position: "absolute",
@@ -112,6 +111,23 @@ export default function LandingPage() {
         }}
         className="sun"
       />
+      <div id="testimonial-decoration">
+        <a href="#testimonials" id="decoration-0" className="active">
+          Affidavit
+        </a>
+        <a href="#skills" id="decoration-1">
+          Skills
+        </a>
+        <a href="#about" id="decoration-2">
+          About
+        </a>
+        <a href="#contact" id="decoration-3">
+          Contact
+        </a>
+        <a href="#find-me" id="decoration-4">
+          more
+        </a>
+      </div>
     </Landing>
   );
 }
