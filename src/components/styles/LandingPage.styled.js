@@ -263,8 +263,11 @@ export const Detail = styled.div`
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 38.5vw;
+    max-width: 35.5vw;
     min-height: 70vh;
+    p{
+      margin-right: 0;
+    }
     .heading {
       background: transparent;
       h1 {
