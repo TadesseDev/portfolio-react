@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import skillBackground from "../../images/tech-card.svg";
 export const SkillsContainer = styled.div`
   overflow: hidden;
   margin: 10vh 0;
@@ -126,14 +126,18 @@ export const SubSkills = styled.div`
   }
   @media (min-width: 1024px) {
     max-width: unset;
+    max-height: unset;
     display: flex;
     flex-wrap: wrap;
     .skill {
       width: 250px;
       height: 400px;
-      border: 1px solid white;
       gap: 0;
       overflow: hidden;
+      
+      background-image: url(${skillBackground});
+      background-position: center;
+      background-size: cover;
     }
     .skill-description {
       padding: 0;
@@ -142,6 +146,10 @@ export const SubSkills = styled.div`
       &::-webkit-scrollbar {
         display: none;
       }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 `;
