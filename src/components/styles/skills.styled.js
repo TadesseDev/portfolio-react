@@ -72,6 +72,13 @@ export const SkillsContainer = styled.div`
       font-family: var(--title-font);
     }
   }
+  @media (min-width: 1024px) {
+    .skill-container {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      justify-content: space-between;
+    }
+  }
 `;
 export const SubSkills = styled.div`
   max-height: 350px;
@@ -116,5 +123,25 @@ export const SubSkills = styled.div`
     border: 1px solid transparent;
     background-clip: content-box;
     background-color: var(--decoration2);
+  }
+  @media (min-width: 1024px) {
+    max-width: unset;
+    display: flex;
+    flex-wrap: wrap;
+    .skill {
+      width: 250px;
+      height: 400px;
+      border: 1px solid white;
+      gap: 0;
+      overflow: hidden;
+    }
+    .skill-description {
+      padding: 0;
+      max-height: 75%;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 `;
