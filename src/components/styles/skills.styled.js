@@ -67,9 +67,10 @@ export const SkillsContainer = styled.div`
       flex-direction: column;
       border-right: 2px solid var(--shine);
     }
-      button {
-        font-size: 2rem;
-      }
+    button {
+      font-size: 2rem;
+      font-family: var(--title-font);
+    }
   }
 `;
 export const SubSkills = styled.div`
