@@ -127,17 +127,19 @@ export const SubSkills = styled.div`
   @media (min-width: 1024px) {
     max-width: unset;
     max-height: unset;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+
     .skill {
       width: 250px;
       height: 400px;
       gap: 0;
       overflow: hidden;
-      
+      position: relative;
       background-image: url(${skillBackground});
       background-position: center;
       background-size: cover;
+      z-index: 1;
     }
     .skill-description {
       padding: 0;
