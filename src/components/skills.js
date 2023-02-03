@@ -52,13 +52,7 @@ export default function Skills() {
                     </span>
                     <h4 className="skill-name">{skill.name}</h4>
                     <p className="skill-description">{skill.description}</p>
-                    <Mirror
-                      style={{
-                        backgroundColor: "var(--primary-transparent)",
-                        backdropFilter: "blur(5px)",
-                        
-                      }}
-                    />
+
                   </div>
                 ))}
               </SubSkills>

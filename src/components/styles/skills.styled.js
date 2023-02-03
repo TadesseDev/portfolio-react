@@ -79,6 +79,9 @@ export const SkillsContainer = styled.div`
       justify-content: space-between;
     }
   }
+  .pre{
+    width: 100%;
+  }
 `;
 export const SubSkills = styled.div`
   max-height: 350px;
@@ -129,17 +132,42 @@ export const SubSkills = styled.div`
     max-height: unset;
     display: grid;
     grid-template-columns: repeat(auto-fill, 150px);
-
+    row-gap: 10px;
+    margin-left: 150px;
+    overflow: visible;
     .skill {
       width: 250px;
-      height: 400px;
+      height: 250px;
       gap: 0;
-      overflow: hidden;
+      overflow: visible;
       position: relative;
       background-image: url(${skillBackground});
       background-position: center;
       background-size: cover;
       z-index: 1;
+      justify-self: flex-end;
+      h4 {
+        color: var(--primary);
+        margin: 0;
+        padding: 5px;
+        max-width: 100%;
+        font-family: var(--title-font);
+        font-size: 1.5rem;
+        text-align: center;
+        margin-left: -40px;
+      }
+      p {
+        color: white;
+        margin: 0;
+        margin-bottom: auto;
+        padding: 10px;
+        font-size: 1rem;
+      }
+      .icon {
+        transform: translateX(-50%);
+        grid-row: span 2;
+        margin-right: -20px;
+      }
     }
     .skill-description {
       padding: 0;
