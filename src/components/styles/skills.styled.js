@@ -55,7 +55,7 @@ export const SkillsContainer = styled.div`
         max-width: 50px;
       }
       h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
     }
     hr {
@@ -72,10 +72,10 @@ export const SkillsContainer = styled.div`
       font-family: var(--title-font);
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 764px) {
     .skill-container {
       display: grid;
-      grid-template-columns: 20% 80%;
+      grid-template-columns: 15% 85%;
       justify-content: space-between;
     }
   }
@@ -127,17 +127,18 @@ export const SubSkills = styled.div`
     background-clip: content-box;
     background-color: var(--decoration2);
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 764px) {
     max-width: unset;
     max-height: unset;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 150px);
-    row-gap: 10px;
-    margin-left: 150px;
     overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    gap: 2px;
+    justify-content: center;
     .skill {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 300px;
       gap: 0;
       overflow: visible;
       position: relative;
@@ -145,7 +146,6 @@ export const SubSkills = styled.div`
       background-position: center;
       background-size: cover;
       z-index: 1;
-      justify-self: flex-end;
       h4 {
         color: var(--primary);
         margin: 0;
@@ -160,7 +160,7 @@ export const SubSkills = styled.div`
         color: white;
         margin: 0;
         margin-bottom: auto;
-        padding: 10px;
+        padding-right: 10px;
         font-size: 1rem;
       }
       .icon {
@@ -171,7 +171,7 @@ export const SubSkills = styled.div`
     }
     .skill-description {
       padding: 0;
-      max-height: 75%;
+      max-height: 70%;
       overflow: scroll;
       &::-webkit-scrollbar {
         display: none;
