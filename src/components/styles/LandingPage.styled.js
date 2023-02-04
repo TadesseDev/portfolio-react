@@ -5,7 +5,8 @@ import ruby from "../../icon/ruby.svg";
 import postgresql from "../../icon/postgresql.svg";
 import javascript from "../../icon/javascript.svg";
 export const Landing = styled.main`
-  height: 100vh;
+  height: max-content;
+  min-height: 100vh;
   .showMenu img {
     margin: 3vw;
     padding: 2vw;
@@ -115,9 +116,10 @@ export const Landing = styled.main`
     #decoration-text {
       display: block;
     }
-    #decoration-links{
+    #decoration-links {
       display: block;
-    } .primary-image-container {
+    }
+    .primary-image-container {
       position: absolute;
       left: 0;
       bottom: 0;
