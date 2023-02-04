@@ -27,7 +27,7 @@ export const SkillsContainer = styled.div`
     z-index: 1;
     overflow: hidden;
     color: var(--shine);
-    p {
+    h2 {
       color: var(--shine);
     }
   }
@@ -37,7 +37,6 @@ export const SkillsContainer = styled.div`
     margin: 10px;
     font-size: 1.5rem;
     border-radius: 10px;
-    width: 80%;
     padding: 3vw;
     color: var(--shine);
   }
@@ -46,7 +45,7 @@ export const SkillsContainer = styled.div`
     color: var(--primary);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 764px) {
     .skill-container {
       display: grid;
       grid-template-columns: 25% min(70%, 600px);
@@ -67,6 +66,12 @@ export const SkillsContainer = styled.div`
       flex-direction: column;
       border-right: 2px solid var(--shine);
     }
+    .more {
+      max-width: unset;
+      .mirror {
+      display: none;
+    }
+    }
     button {
       font-size: 2rem;
       font-family: var(--title-font);
@@ -79,7 +84,7 @@ export const SkillsContainer = styled.div`
       justify-content: space-between;
     }
   }
-  .pre{
+  .pre {
     width: 100%;
   }
 `;

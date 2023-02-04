@@ -4,8 +4,8 @@ const findRheIndex = (index) => {
   while (index>3) {
     const temp = arr[2];
     arr[2] = arr[1] + arr[2];
-    arr[0] = arr[1];
     arr[1] = temp;
+    arr[0] = arr[1];
     index--;
   }
   return arr[2];

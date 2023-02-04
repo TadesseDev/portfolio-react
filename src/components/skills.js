@@ -66,9 +66,10 @@ export default function Skills() {
               backgroundColor: "#fdfeff14",
               backdropFilter: "blur(5px)",
             }}
+            className="mirror"
           />
-          <p>Any other skill?</p>
-          <strong>I might have forgot to tell you 😊</strong>
+          <h2>Are you wondering about specific technology?</h2>
+          <p>This is not all of me...😊</p>
           <a href="#contact">
             <button>Get in touch</button>
           </a>
