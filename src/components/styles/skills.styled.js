@@ -48,7 +48,7 @@ export const SkillsContainer = styled.div`
   @media (min-width: 764px) {
     .skill-container {
       display: grid;
-      grid-template-columns: 25% min(70%, 600px);
+      grid-template-columns: 15% 85%;
       justify-content: space-between;
       .icon {
         max-width: 50px;
@@ -69,21 +69,15 @@ export const SkillsContainer = styled.div`
     .more {
       max-width: unset;
       .mirror {
-      display: none;
-    }
+        display: none;
+      }
     }
     button {
       font-size: 2rem;
       font-family: var(--title-font);
     }
   }
-  @media (min-width: 764px) {
-    .skill-container {
-      display: grid;
-      grid-template-columns: 15% 85%;
-      justify-content: space-between;
-    }
-  }
+
   .pre {
     width: 100%;
   }
