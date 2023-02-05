@@ -59,7 +59,7 @@ export const Project = styled.div`
     justify-content: space-around;
   }
   @media (min-width: 768px) {
-    max-width: calc(40vw - 40px - 2vw);
+    max-width: min(calc(40vw - 40px - 2vw), 300px);
     padding: 20px;
     margin: 1vw;
     h2 {
@@ -81,9 +81,11 @@ export const Project = styled.div`
     .about {
       padding: 5px;
       padding-bottom: 20px;
-      p{
+      p {
         font-size: 1rem;
       }
     }
+  }
+  @media (min-width: 1024px) {
   }
 `;
