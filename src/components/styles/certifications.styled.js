@@ -39,6 +39,16 @@ export const CertificationsContainer = styled.div`
       }
     }
   }
+  @media (min-width: 1024px) {
+    .certification-description {
+      border-bottom: none;
+      .more,.less{
+        display: none;
+      } p {
+        max-height: max-content;
+      }
+    }
+  }
 `;
 export const Certification = styled.div`
   img {
