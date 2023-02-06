@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "https://portfolio-backend-h2ot.onrender.com/api/v1/";
+const baseURL = "https://portfoliox-backend-h2ot.onrender.com/api/v1/";
 const root = axios.create({
   baseURL,
   headers: { "Content-Type": "application/json", Accept: "application/json" },

@@ -25,15 +25,34 @@ export default function Contact() {
     updateData((old) => ({ ...old, [name]: val }));
   };
   const submitMessage = (e) => {
+    const loaderContainer = document.querySelector("#submit-form");
+    const loader = document.querySelector("#submit-form .loader");
+
+    const loaderText = loaderContainer.querySelector("h2");
+    loader.querySelectorAll("div").forEach((div) => {
+      div.style.animationName = "loader";
+    });
+    loaderContainer.style.display = "flex";
     e.preventDefault();
     sendPost("messages", formData)
       .then((res) => {
-        // TODO: Add a success message
-        console.log(res);
+        loaderText.style.color = "green";
+        loaderText.textContent = "I got it ✅";
       })
       .catch((err) => {
-        //TODO: Add a failure message
-        console.log(err);
+        loaderText.style.color = "red";
+        loaderText.textContent = "Something went wrong ❌";
+      })
+      .finally((res) => {
+        loader.querySelectorAll("div").forEach((div) => {
+          div.style.animationName = "";
+        });
+        setTimeout(() => {
+          loaderContainer.style.display = "none";
+          loaderText.style.color = "var(--bright)";
+          loaderText.textContent = "Submitting...";
+        }, 2000);
+        console.log("finally");
       });
   };
   return (
@@ -44,6 +63,7 @@ export default function Contact() {
           : (entry.target.firstChild.style.animationName = "");
       }}
       style={{ position: "relative", overflow: "visible" }}
+      className="contact"
     >
       <ContactContainer id="contact">
         <div className="top"></div>
@@ -118,11 +138,20 @@ export default function Contact() {
           </div>
         </form>
         <div className="bottom"></div>
+        <div id="submit-form">
+          <h2 className="status-text">Submitting...</h2>
+          <div className="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </ContactContainer>
       <BackgroundDecoration
         style={{ top: "-5vw", left: "-20%", zIndex: "-3" }}
       />
-        <BackgroundDecoration style={{ top: "60%", left: "60%", zIndex: "-3" }} />
+      <BackgroundDecoration style={{ top: "60%", left: "60%", zIndex: "-3" }} />
     </InView>
   );
 }
