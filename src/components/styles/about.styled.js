@@ -12,6 +12,16 @@ const about = styled.div`
   .emoji {
     font-size: 2rem;
   }
+  @media (min-width: 1024px) {
+    .about-texts {
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+      gap: 5px;
+
+    }
+
+  }
 `;
 export const CardContainer = styled.div`
   position: relative;

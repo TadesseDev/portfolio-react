@@ -17,9 +17,52 @@ const ContactContainer = styled.div`
     display: block;
     outline: none;
   }
-  form{
+  form {
     max-width: 500px;
     margin: auto;
+  }
+
+  @media (min-width: 1024px) {
+    overflow: visible;
+    .input-fields,
+    .message-fields {
+      min-width: 300px;
+    }
+    border-radius: 0;
+    margin: 100px auto;
+    padding: 50px 100px;
+    width: max-content;
+    h2{
+      color: var(--bright);
+    }
+    form {
+      max-width: unset;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 50% 50%;
+    }
+    .top,
+    .bottom {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      z-index: -2;
+      border-radius: 10px;
+      animation-name: rotate-clockwise;
+      animation-duration: 30s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .top {
+      background-color: var(--bright);
+      top: -50px;
+      left: -50px;
+    }
+    .bottom {
+      background-color: var(--shine);
+      top: calc(100% - 50px);
+      left: calc(100% - 50px);
+    }
   }
 `;
 export const InputField = styled.div`

@@ -109,13 +109,20 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     border: none;
     outline: none;
    }
-
-     @keyframes fade-in-opacity {
+   @keyframes fade-in-opacity {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 1;
+    }
+  }
+  @keyframes rotate-clockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
     /*media queries*/

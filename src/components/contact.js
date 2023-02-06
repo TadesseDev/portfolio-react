@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InView } from "react-intersection-observer";
-import { sendPost } from "../api/root";
+ import { sendPost } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import user_contact from "../icon/user_contact.svg";
 import email from "../icon/email.svg";
@@ -36,77 +36,86 @@ export default function Contact() {
       });
   };
   return (
-          <InView
-        onChange={(inView, entry) => {
-          inView
-            ? (entry.target.firstChild.style.animationName = "fade-in-opacity")
-            : (entry.target.firstChild.style.animationName = "");
-        }}
-      >
-    <ContactContainer id="contact">
-      <Mirror style={{
-        "backgroundColor": "#ffffff1c",
-        backdropFilter: "blur(5px)",
-      }} />
-      <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
-      <form action="" onSubmit={submitMessage}>
-        <InputField>
-          <img className="icon" src={user_contact} alt="User Name" />
-          <input
-            type="text"
-            name="full_name"
-            id="user-name"
-            placeholder="Full Name..."
-            required={true}
-            value={formData["full_name"]}
-            onChange={updateFormData}
-          />
-        </InputField>
-        <InputField>
-          <img className="icon" src={email} alt="User Email" />
-
-          <input
-            type="email"
-            name="email"
-            id="user-email"
-            placeholder="Email..."
-            required={true}
-            value={formData["email"]}
-            onChange={updateFormData}
-          />
-        </InputField>
-        <InputField>
-          <img className="icon" src={phone} alt="Phone number" />
-          <input
-            type="tel"
-            name="phone_number"
-            id="phone-number"
-            placeholder="Phone number..."
-            value={formData["phone_number"]}
-            onChange={updateFormData}
-          />
-        </InputField>
-        <TextField>
-          <textarea
-            name="message"
-            id="message"
-            rows="10"
-            placeholder="Your thought..."
-            required={true}
-            value={formData["message"]}
-            onChange={updateFormData}
-          ></textarea>
-        </TextField>
-
-        <button
-          type="submit"
-          onClick={(e) => {
-            e.target.parentElement.click();
+    <InView
+      onChange={(inView, entry) => {
+        inView
+          ? (entry.target.firstChild.style.animationName = "fade-in-opacity")
+          : (entry.target.firstChild.style.animationName = "");
+      }}
+    >
+      <ContactContainer id="contact">
+        <div className="top"></div>
+        <Mirror
+          style={{
+            backgroundColor: "#ffffff1c",
+            backdropFilter: "blur(5px)",
+            border: "2px solid var(--bright)",
           }}
-        >
-          <SubmitButton text="Send" preventDefault={true} />
-        </button>
-      </form>
+        />
+        <PrimaryTitle text="Contact me" style={{ color: "var(--bright)", fontSize: "3rem" }} />
+        <form action="" onSubmit={submitMessage}>
+          <div className="input-fields">
+            <InputField>
+              <img className="icon" src={user_contact} alt="User Name" />
+              <input
+                type="text"
+                name="full_name"
+                id="user-name"
+                placeholder="Full Name..."
+                required={true}
+                value={formData["full_name"]}
+                onChange={updateFormData}
+              />
+            </InputField>
+            <InputField>
+              <img className="icon" src={email} alt="User Email" />
+
+              <input
+                type="email"
+                name="email"
+                id="user-email"
+                placeholder="Email..."
+                required={true}
+                value={formData["email"]}
+                onChange={updateFormData}
+              />
+            </InputField>
+            <InputField>
+              <img className="icon" src={phone} alt="Phone number" />
+              <input
+                type="tel"
+                name="phone_number"
+                id="phone-number"
+                placeholder="Phone number..."
+                value={formData["phone_number"]}
+                onChange={updateFormData}
+              />
+            </InputField>
+          </div>
+          <div className="message-fields">
+            <TextField>
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Your thought..."
+                required={true}
+                value={formData["message"]}
+                onChange={updateFormData}
+              ></textarea>
+            </TextField>
+
+            <button
+              type="submit"
+              onClick={(e) => {
+                e.target.parentElement.click();
+              }}
+            >
+              <SubmitButton text="Send" preventDefault={true} />
+            </button>
+          </div>
+        </form>
+        <div className="bottom"></div>
       </ContactContainer>
     </InView>
   );
