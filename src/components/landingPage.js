@@ -12,8 +12,8 @@ import my_picture from "../images/resized.svg";
 import my_picture_desktop from "../images/desktop-me.png";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import Loader from "./partials/loader";
+import BackgroundDecoration from "./partials/backgroundDecoration";
 export default function LandingPage() {
-  
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
     updateDisplay((old) => !old);
@@ -23,16 +23,19 @@ export default function LandingPage() {
       <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" />
       </span>
-        <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+      <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
 
       <InView
-        onChange={(inView, entry) => {console.log(inView)
-          inView?
-          (entry.target.parentNode.getElementsByTagName("nav")[0].classList.remove("hidden")):
-          (entry.target.parentNode.getElementsByTagName("nav")[0].classList.add("hidden"))}
-        }
-      >
-      </InView>
+        onChange={(inView, entry) => {
+          inView
+            ? entry.target.parentNode
+                .getElementsByTagName("nav")[0]
+                .classList.remove("hidden")
+            : entry.target.parentNode
+                .getElementsByTagName("nav")[0]
+                .classList.add("hidden");
+        }}
+      ></InView>
       <div id="decoration-text">
         <h1>From analysis to Deployment</h1>
       </div>
@@ -74,6 +77,9 @@ export default function LandingPage() {
           />
           <div className="blur-img"></div>
         </PrimaryImage>
+          <BackgroundDecoration
+            style={{ top: "-10vw", left: "50vw", zIndex: "-3" }}
+          />
       </div>
       <Detail>
         <div className="heading">

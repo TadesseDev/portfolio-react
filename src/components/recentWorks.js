@@ -17,6 +17,7 @@ import meCoding from "../images/me-coding.svg";
 import { useEffect } from "react";
 import Direction from "./partials/direction.js";
 import Mirror from "./partials/mirror";
+import BackgroundDecoration from "./partials/backgroundDecoration";
 export default function RecentWork() {
   const { showMoreContent, showLessContent } = useContext(
     CommonFunctionContext
@@ -52,7 +53,7 @@ export default function RecentWork() {
                 : (entry.target.firstChild.style.animationName = "");
             }}
             key={project.id}
-            style={{ display: "inline" }}
+            style={{ display: "inline", position: "relative" }}
           >
             <Project key={project.id}>
               <Mirror
@@ -125,6 +126,14 @@ export default function RecentWork() {
                 <FlyButton text="Code" href={project.source_code} />
               </div>
             </Project>
+            <BackgroundDecoration
+              className="backgroundDecoration"
+              style={{
+                top: Math.random() * 10 + "vw",
+                left: Math.random() * 30 + "vw",
+                zIndex: "-3",
+              }}
+            />
           </InView>
         ))}
       </Projects>

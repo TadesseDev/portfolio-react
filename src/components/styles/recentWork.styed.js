@@ -18,6 +18,11 @@ export const Projects = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media (min-width: 768px) {
+    div:nth-child(even) .backgroundDecoration {
+      display: none;
+    }
+  }
 `;
 export const Project = styled.div`
   position: relative;
@@ -58,6 +63,7 @@ export const Project = styled.div`
     display: flex;
     justify-content: space-around;
   }
+
   @media (min-width: 768px) {
     max-width: min(calc(40vw - 40px - 2vw), 300px);
     padding: 20px;

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { InView } from "react-intersection-observer";
- import { sendPost } from "../api/root";
+import { sendPost } from "../api/root";
 import PrimaryTitle from "./partials/primaryTitle";
 import user_contact from "../icon/user_contact.svg";
 import email from "../icon/email.svg";
 import phone from "../icon/phone.svg";
 import SubmitButton from "./partials/flyButton";
 import Mirror from "./partials/mirror";
+import BackgroundDecoration from "./partials/backgroundDecoration";
 import ContactContainer, {
   InputField,
   TextField,
@@ -42,6 +43,7 @@ export default function Contact() {
           ? (entry.target.firstChild.style.animationName = "fade-in-opacity")
           : (entry.target.firstChild.style.animationName = "");
       }}
+      style={{ position: "relative", overflow: "visible" }}
     >
       <ContactContainer id="contact">
         <div className="top"></div>
@@ -52,7 +54,7 @@ export default function Contact() {
             border: "2px solid var(--bright)",
           }}
         />
-        <PrimaryTitle text="Contact me" style={{ color: "var(--bright)", fontSize: "3rem" }} />
+        <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
         <form action="" onSubmit={submitMessage}>
           <div className="input-fields">
             <InputField>
@@ -117,6 +119,10 @@ export default function Contact() {
         </form>
         <div className="bottom"></div>
       </ContactContainer>
+      <BackgroundDecoration
+        style={{ top: "-5vw", left: "-20%", zIndex: "-3" }}
+      />
+        <BackgroundDecoration style={{ top: "60%", left: "60%", zIndex: "-3" }} />
     </InView>
   );
 }

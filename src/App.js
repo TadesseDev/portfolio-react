@@ -30,8 +30,8 @@ function App() {
   const positions = [`100% -15vh`, `0 ${vh}vh`];
 
   /*
-  This ain't a simple objects
-  - it make sure the is always exactly two decoration image on a single page
+  This ain't a simple observer
+  - it make sure the is always exactly two background decoration image on a single page
   - it make sure half of the decoration image is on the top and the other half is on the bottom
   - it make sure the decoration image is always on the right and left side of the page
 */
@@ -51,13 +51,7 @@ function App() {
         top = !top;
       }
       rootHeight = rootNode.scrollHeight;
-      const decorations = document.getElementsByClassName("root-decoration");
-      for (let decoration of decorations) {
-        decoration.style.top = `${Math.floor(
-          Math.random() * (rootHeight - 300)
-        )}px`;
-        decoration.style.left = `${Math.floor(Math.random() * 100)}%`;
-      }
+
       rootNode.setAttribute(
         "style",
         `
@@ -86,10 +80,6 @@ function App() {
           <About />
           <Contact />
           <Footer />
-          {AppDecorations({
-            number: 20,
-            className: "root-decoration",
-          }).map((decoration) => decoration)}
         </div>
       </InformationContext.Provider>
     </Provider>

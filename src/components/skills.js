@@ -11,6 +11,7 @@ import database from "../icon/database.svg";
 import Mirror from "./partials/mirror";
 import test from "../icon/database.svg"; // TODO: change the icon for the test
 import { getSkills } from "../redux/components/skills.js";
+import BackgroundDecoration from "./partials/backgroundDecoration";
 export default function Skills() {
   const storeSkills = useSelector((store) => store.skills);
   let iconMap = new Map([
@@ -52,9 +53,16 @@ export default function Skills() {
                     </span>
                     <h4 className="skill-name">{skill.name}</h4>
                     <p className="skill-description">{skill.description}</p>
-
                   </div>
                 ))}
+
+                <BackgroundDecoration
+                  style={{
+                    top: Math.random() * 10 + "vw",
+                    left: Math.random() * 30 + "vw",
+                    zIndex: "-3"
+                  }}
+                />
               </SubSkills>
               <hr />
             </div>
