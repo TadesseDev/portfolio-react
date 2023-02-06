@@ -35,15 +35,21 @@ export default function Contact() {
     loaderContainer.style.display = "flex";
     e.preventDefault();
     sendPost("messages", formData)
-      .then((res) => {
+      .then(() => {
         loaderText.style.color = "green";
         loaderText.textContent = "I got it ✅";
+        updateData({
+          full_name: "",
+          email: "",
+          phone_number: "",
+          message: "",
+        });
       })
-      .catch((err) => {
+      .catch(() => {
         loaderText.style.color = "red";
         loaderText.textContent = "Something went wrong ❌";
       })
-      .finally((res) => {
+      .finally(() => {
         loader.querySelectorAll("div").forEach((div) => {
           div.style.animationName = "";
         });
