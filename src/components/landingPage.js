@@ -93,9 +93,6 @@ export default function LandingPage() {
           />
           <div className="blur-img"></div>
         </PrimaryImage>
-        <BackgroundDecoration
-          style={{ top: "-10vw", left: "50vw", zIndex: "-3" }}
-        />
       </div>
       <Detail>
         <div className="heading">
@@ -161,6 +158,10 @@ export default function LandingPage() {
           more
         </a>
       </div>
+
+      <BackgroundDecoration
+        style={{ top: "10vw", left: "40vw", zIndex: "-3" }}
+      />
     </Landing>
   );
 }
