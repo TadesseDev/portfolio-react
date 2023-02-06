@@ -13,11 +13,27 @@ import my_picture_desktop from "../images/desktop-me.png";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import Loader from "./partials/loader";
 import BackgroundDecoration from "./partials/backgroundDecoration";
+
 export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
     updateDisplay((old) => !old);
   };
+  let OldWinSize = window.innerWidth;
+  const [PrimaryPicture, updatePrimaryPicture] = useState(
+    window.innerWidth > 764 ? my_picture_desktop : my_picture
+  );
+  const handleResize = () => {
+    const width = window.innerWidth;
+    if (
+      (OldWinSize > 764 && width < 764) ||
+      (OldWinSize < 764 && width > 764)
+    ) {
+      updatePrimaryPicture(width > 764 ? my_picture_desktop : my_picture);
+      OldWinSize = width;
+    }
+  };
+  window.addEventListener("resize", handleResize);
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
@@ -68,7 +84,7 @@ export default function LandingPage() {
             placeholder=<Loader />
           />
           <LazyLoadImage
-            src={my_picture_desktop}
+            src={PrimaryPicture}
             alt="my"
             effect="blur"
             className="img"
@@ -77,9 +93,9 @@ export default function LandingPage() {
           />
           <div className="blur-img"></div>
         </PrimaryImage>
-          <BackgroundDecoration
-            style={{ top: "-10vw", left: "50vw", zIndex: "-3" }}
-          />
+        <BackgroundDecoration
+          style={{ top: "-10vw", left: "50vw", zIndex: "-3" }}
+        />
       </div>
       <Detail>
         <div className="heading">

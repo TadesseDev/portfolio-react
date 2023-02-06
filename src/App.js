@@ -9,7 +9,6 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import background_1 from "./images/background_1.svg";
 import background_2 from "./images/background_2.svg";
-import { AppDecorations } from "./components/partials/backgroundDecoration";
 import { Provider } from "react-redux";
 import {
   medias,
