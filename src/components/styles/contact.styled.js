@@ -32,7 +32,7 @@ const ContactContainer = styled.div`
     margin: 100px auto;
     padding: 50px 100px;
     width: max-content;
-    h2 {
+    h2 span{
       color: var(--bright);
     }
     form {
