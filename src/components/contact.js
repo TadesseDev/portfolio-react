@@ -51,8 +51,8 @@ export default function Contact() {
           style={{
             backgroundColor: "#ffffff1c",
             backdropFilter: "blur(5px)",
-            border: "2px solid var(--bright)",
           }}
+          className="mirror"
         />
         <PrimaryTitle text="Contact me" style={{ color: "var(--primary)" }} />
         <form action="" onSubmit={submitMessage}>

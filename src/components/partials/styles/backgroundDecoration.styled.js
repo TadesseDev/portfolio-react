@@ -33,7 +33,7 @@ export default styled.div`
       width: 5vw;
       height: 5vw;
       transform: rotate(90deg);
-      opacity: 0.01;
+      opacity: 0.1;
     }
     25% {
       width: 10vw;

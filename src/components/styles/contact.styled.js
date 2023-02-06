@@ -22,17 +22,17 @@ const ContactContainer = styled.div`
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     overflow: visible;
     .input-fields,
     .message-fields {
-      min-width: 300px;
+      min-width: min(300px, 28vw);
     }
     border-radius: 0;
     margin: 100px auto;
     padding: 50px 100px;
     width: max-content;
-    h2{
+    h2 {
       color: var(--bright);
     }
     form {
@@ -62,6 +62,9 @@ const ContactContainer = styled.div`
       background-color: var(--shine);
       top: calc(100% - 50px);
       left: calc(100% - 50px);
+    }
+    .mirror {
+      border: 2px solid var(--bright);
     }
   }
 `;

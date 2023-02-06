@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://localhost:4000/api/v1/";
+const baseURL = "https://portfolio-backend-h2ot.onrender.com/api/v1/";
 const root = axios.create({
   baseURL,
   headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -10,6 +10,5 @@ export function sendGet(custom) {
 }
 
 export function sendPost(custom, data) {
-return root.post(custom, data);
+  return root.post(custom, data);
 }
-
