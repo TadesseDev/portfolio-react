@@ -9,15 +9,19 @@ export const showMoreContent = (e, parentNode) => {
   less.style.display = "block";
   more.style.display = "none";
 };
-export const showLessContent = (e, parentNode, height=20) => {
+export const showLessContent = (e, parentNode, height = 20) => {
   const parent = parentNode;
   const more = parent.getElementsByClassName("more")[0];
   const less = parent.getElementsByClassName("less")[0];
   const textContainer = parent.getElementsByClassName("text-container")[0];
 
-  textContainer.style.maxHeight = height+"px";
+  textContainer.style.maxHeight = height + "px";
   less.style.display = "none";
   more.style.display = "block";
 };
 
+export const toggleLoader = (id) => {
+  console.log("toggling loader", document.getElementById(id));
+  document.getElementById(id)?.toggleClass("hidden");
+};
 export default createContext();

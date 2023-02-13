@@ -18,6 +18,7 @@ import {
 import CommonFunctionsContext, {
   showMoreContent,
   showLessContent,
+  toggleLoader,
 } from "./context/commonFunctionsContext";
 function App() {
   const rootNode = document.getElementById("root");
@@ -67,11 +68,11 @@ function App() {
     <Provider store={store}>
       <InformationContext.Provider value={{ medias, address }}>
         <div className="App">
+          <CommonFunctionsContext.Provider
+            value={{ showMoreContent, showLessContent, toggleLoader }}
+          >
           <LandingPage />
           <Skills />
-          <CommonFunctionsContext.Provider
-            value={{ showMoreContent, showLessContent }}
-          >
             <RecentWork />
             <Certifications />
             <Testimonials />

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import commonFunctions from "../context/commonFunctionsContext";
 import { InView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -15,6 +16,7 @@ import Loader from "./partials/loader";
 import BackgroundDecoration from "./partials/backgroundDecoration";
 
 export default function LandingPage() {
+  const { toggleLoader } = useContext(commonFunctions);
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
     updateDisplay((old) => !old);
@@ -34,6 +36,9 @@ export default function LandingPage() {
     }
   };
   window.addEventListener("resize", handleResize);
+  window.addEventListener("DOMContentLoaded", () => {
+    console.log(document.innerHTML);
+  });
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
@@ -68,6 +73,17 @@ export default function LandingPage() {
           timing={5}
         />
         <PrimaryImage>
+          <Loader
+            id="primaryImageLoader"
+            style={{
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+              width: "50%",
+              height: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          />
           <span className="decoration-container">
             <div className="decoration" id="xd"></div>
             <div className="decoration" id="postgres"></div>
@@ -82,6 +98,7 @@ export default function LandingPage() {
             wrapperProps={{ style: { display: "inline", width: "100%" } }}
             style={{ display: "none" }}
             placeholder=<Loader />
+            beforeLoad={toggleLoader("primaryImageLoader")}
           />
           <LazyLoadImage
             src={PrimaryPicture}
