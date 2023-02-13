@@ -20,8 +20,8 @@ export const showLessContent = (e, parentNode, height = 20) => {
   more.style.display = "block";
 };
 
-export const toggleLoader = (id) => {
+export const hideElement = (id) => {
   console.log("toggling loader", document.getElementById(id));
-  document.getElementById(id)?.toggleClass("hidden");
+  document.getElementById(id)?.classList.add("hide");
 };
 export default createContext();

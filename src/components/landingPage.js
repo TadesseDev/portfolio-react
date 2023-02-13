@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import commonFunctions from "../context/commonFunctionsContext";
 import { InView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -16,7 +16,7 @@ import Loader from "./partials/loader";
 import BackgroundDecoration from "./partials/backgroundDecoration";
 
 export default function LandingPage() {
-  const { toggleLoader } = useContext(commonFunctions);
+  const { hideElement } = useContext(commonFunctions);
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = () => {
     updateDisplay((old) => !old);
@@ -39,6 +39,7 @@ export default function LandingPage() {
   window.addEventListener("DOMContentLoaded", () => {
     console.log(document.innerHTML);
   });
+
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
@@ -90,16 +91,7 @@ export default function LandingPage() {
             <div className="decoration" id="javascript"></div>
             <div className="decoration" id="ruby"></div>
           </span>
-          <LazyLoadImage
-            src={my_picture}
-            alt="my"
-            effect="blur"
-            className="img"
-            wrapperProps={{ style: { display: "inline", width: "100%" } }}
-            style={{ display: "none" }}
-            placeholder=<Loader />
-            beforeLoad={toggleLoader("primaryImageLoader")}
-          />
+
           <LazyLoadImage
             src={PrimaryPicture}
             alt="my"
@@ -107,6 +99,9 @@ export default function LandingPage() {
             className="img"
             wrapperProps={{ style: { display: "inline", width: "100%" } }}
             placeholder=<Loader />
+            afterLoad={() => {
+              hideElement("primaryImageLoader");
+            }}
           />
           <div className="blur-img"></div>
         </PrimaryImage>
