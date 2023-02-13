@@ -47,7 +47,19 @@ export default styled.div`
     animation-iteration-count: infinite;
     animation-duration: ${({ timing }) => timing}s;
     animation-timing-function: linear;
-    animation-delay: ${({ timing }) => timing*0.7}s;
+    animation-delay: ${({ timing }) => timing * 0.7}s;
+  }
+  .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-transparent0);
+    z-index: 0;
+    color: var(--shine);
+    display: ${({ text }) => (text ? "flex" : "none")};
+    align-items: center;
+    justify-content: center;
   }
   @keyframes loading-inner {
     0% {

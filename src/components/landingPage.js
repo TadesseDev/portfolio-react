@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import commonFunctions from "../context/commonFunctionsContext";
 import { InView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -84,6 +84,7 @@ export default function LandingPage() {
               height: "50%",
               transform: "translate(-50%, -50%)",
             }}
+            text="Loading picture..."
           />
           <span className="decoration-container">
             <div className="decoration" id="xd"></div>
@@ -98,7 +99,6 @@ export default function LandingPage() {
             effect="blur"
             className="img"
             wrapperProps={{ style: { display: "inline", width: "100%" } }}
-            placeholder=<Loader />
             afterLoad={() => {
               hideElement("primaryImageLoader");
             }}

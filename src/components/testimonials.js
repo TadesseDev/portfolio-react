@@ -1,11 +1,14 @@
 import React, { useEffect, useContext } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { InView } from "react-intersection-observer";
-import CommonFunctionContext from "../context/commonFunctionsContext";
+import commonFunctions from "../context/commonFunctionsContext";
 import { useDispatch, useSelector } from "react-redux";
 import { getTestimonials } from "../redux/components/testimonials";
 import PrimaryTitle from "./partials/primaryTitle";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import SubTitle from "./partials/subTitle";
+import Loader from "./partials/loader";
 import TestimonialContainer, {
   Testimonial,
   TestimonyCard,
@@ -13,10 +16,7 @@ import TestimonialContainer, {
 import testimonialBlob from "../images/testimonial-blob.svg";
 import testimonialBlob_flip from "../images/testimonial-blob-flip.svg";
 export default function Testimonials() {
-
-  const { showMoreContent, showLessContent } = useContext(
-    CommonFunctionContext
-  );
+  const { hideElement } = useContext(commonFunctions);
   const testimonials = useSelector((state) => state.testimonials);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -31,10 +31,7 @@ export default function Testimonials() {
             text={testimony.name}
             style={{ marginBottom: "0", fontSize: "1.5rem" }}
           ></SubTitle>
-          <SubTitle
-            text={testimony.title}
-            className="title"
-          ></SubTitle>
+          <SubTitle text={testimony.title} className="title"></SubTitle>
           <InView
             onChange={(inView, entry) => {
               inView
@@ -44,12 +41,29 @@ export default function Testimonials() {
             }}
           >
             <TestimonyCard
-              testimonyImage={testimony.image}
               backgroundImage={
                 testimony.id % 2 === 0 ? testimonialBlob_flip : testimonialBlob
               }
             >
-              <span className="testimonial-img"></span>
+              <span className="testimonial-img">
+                <Loader
+                  id={"testimonials" + testimony.id}
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  text="Loading..."
+                />
+                <LazyLoadImage
+                  src={testimony.image}
+                  alt={testimony.name}
+                  effect="blur"
+                  afterLoad={() => {
+                    hideElement("testimonials" + testimony.id);
+                  }}
+                />
+              </span>
               <a href={"mailto:" + testimony.email}>{testimony.email}</a>
 
               <p>

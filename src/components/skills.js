@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import commonFunctions from "../context/commonFunctionsContext";
 import { useDispatch, useSelector } from "react-redux";
 import { SkillsContainer, SubSkills } from "./styles/skills.styled";
 import PrimaryTitle from "./partials/primaryTitle";
@@ -11,8 +12,12 @@ import database from "../icon/database.svg";
 import Mirror from "./partials/mirror";
 import test from "../icon/database.svg"; // TODO: change the icon for the test
 import { getSkills } from "../redux/components/skills.js";
+import Loader from "./partials/loader";
 import BackgroundDecoration from "./partials/backgroundDecoration";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 export default function Skills() {
+  const { hideElement } = useContext(commonFunctions);
   const storeSkills = useSelector((store) => store.skills);
   let iconMap = new Map([
     ["Design", design],
@@ -49,7 +54,21 @@ export default function Skills() {
                 {values.map((skill) => (
                   <div key={skill.id} className="skill">
                     <span className="icon">
-                      <img src={skill.icon} alt={skill.name} />
+                      <Loader
+                        id={"skill" + skill.id}
+                        style={{
+                          width: "50px",
+                          height: "50px",
+                        }}
+                      />
+                      <LazyLoadImage
+                        src={skill.icon}
+                        alt={skill.name}
+                        effect="blur"
+                        afterLoad={() => {
+                          hideElement("skill" + skill.id);
+                        }}
+                      />
                     </span>
                     <h4 className="skill-name">{skill.name}</h4>
                     <p className="skill-description">{skill.description}</p>
@@ -60,7 +79,7 @@ export default function Skills() {
                   style={{
                     top: Math.random() * 10 + "vw",
                     left: Math.random() * 30 + "vw",
-                    zIndex: "-3"
+                    zIndex: "-3",
                   }}
                 />
               </SubSkills>
