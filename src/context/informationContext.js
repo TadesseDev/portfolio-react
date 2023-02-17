@@ -20,7 +20,7 @@ export const medias = new Map([
       icon2: linkedIn_2,
       description:
         "Ill be connecting with professionals, sharing my blog and Ideas.",
-      link: "https://www.linkedin.com/in/tadesse-alemayehu-full-stack-developer/",
+      link: "https://www.linkedin.com/in/tadessedev",
     },
   ],
   [
@@ -30,7 +30,7 @@ export const medias = new Map([
       icon2: twitter_2,
       description:
         "I love twitting my thought on twitter. Follow me, Lets keep it fresh.",
-      link: "https://twitter.com/tadesseWebDev",
+      link: "https://twitter.com/tadesseDev",
     },
   ],
   [
@@ -47,7 +47,7 @@ export const medias = new Map([
       icon: gitHub,
       icon2: gitHub_2,
       description: "You can see my recent projects, solutions, activities",
-      link: "http://github.com/tadesse-Alemayehu/",
+      link: "http://github.com/tadessedev",
     },
   ],
   [
@@ -63,7 +63,7 @@ export const medias = new Map([
     {
       icon: facebook,
       description: "",
-      link: "https://www.facebook.com/tadesseWebDev",
+      link: "https://www.facebook.com/tadesseDev1",
     },
   ],
   [
@@ -72,7 +72,7 @@ export const medias = new Map([
       icon: instagram,
       icon2: instagram_2,
       description: "Ill be posting my pictures once every year 😊.",
-      link: "https://www.instagram.com/tadessewebdev/",
+      link: "https://www.instagram.com/tadessedev/",
     },
   ],
 ]);
