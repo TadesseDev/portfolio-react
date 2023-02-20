@@ -94,6 +94,10 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     width: 10vw;
     max-width: 50px
    }
+   img {
+    width: auto;
+    height: auto;
+   }
    .icon img{
     width: 100%;
    }

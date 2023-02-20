@@ -9,11 +9,15 @@ export default function SocialMediaIcons({ links = {}, style = {} }) {
     <SocialMediasContainer style={{ ...style }}>
       {Object.keys(links).map((key) => (
         <li key={key}>
-          <a href={{ ...medias.get(key), ...links[key] }.link} target="blank">
+          <a
+            href={{ ...medias.get(key), ...links[key] }.link}
+            target="blank"
+            aria-label={`See ${links.name || "tadesse"}'s ${key}`}
+          >
             <LazyLoadImage
               className="icon"
               src={medias.get(key)?.icon}
-              alt={key}
+              alt={`See ${links[key].name || "tadesse"}'s ${key}`}
               effect="blur"
             />
           </a>

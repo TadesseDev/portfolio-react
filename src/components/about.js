@@ -74,7 +74,12 @@ export default function About() {
               <img src={medias.get(key)?.icon2} alt={key} />
               <p>{medias.get(key)?.description}</p>
               <a href={medias.get(key)?.link} target="_black">
-                <button className="gradientTopBottom">Go</button>
+                <button
+                  className="gradientTopBottom"
+                  aria-label={`See more in my ${key} account`}
+                >
+                  Open
+                </button>
               </a>
             </AboutCard>
           ))}

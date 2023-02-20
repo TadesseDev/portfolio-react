@@ -57,6 +57,7 @@ export const Project = styled.div`
       margin: 0px;
       padding: 0px;
       overflow: hidden;
+      color: var(--normal);
     }
   }
   .links {

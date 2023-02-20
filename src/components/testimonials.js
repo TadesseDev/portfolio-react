@@ -116,9 +116,18 @@ export default function Testimonials() {
             </TestimonyCard>
             <SocialMediaIcons
               links={{
-                linkedIn: { link: testimony.linkedin },
-                twitter: { link: testimony.twitter },
-                gitHub: { link: testimony.github },
+                linkedIn: {
+                  link: testimony.linkedin || "tadesse.dev",
+                  name: testimony.name,
+                },
+                twitter: {
+                  link: testimony.twitter || "tadesse.dev",
+                  name: testimony.name,
+                },
+                gitHub: {
+                  link: testimony.github || "tadesse.dev",
+                  name: testimony.name,
+                },
               }}
             />
             <hr />

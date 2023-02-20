@@ -92,7 +92,7 @@ export default function LandingPage() {
 
           <LazyLoadImage
             src={PrimaryPicture}
-            alt="my"
+            alt="Tadesse Dubale picture"
             effect="blur"
             className="img"
             wrapperProps={{ style: { display: "inline", width: "100%" } }}
