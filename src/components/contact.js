@@ -58,7 +58,6 @@ export default function Contact() {
           loaderText.style.color = "var(--bright)";
           loaderText.textContent = "Submitting...";
         }, 2000);
-        console.log("finally");
       });
   };
   return (

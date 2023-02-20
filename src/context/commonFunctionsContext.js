@@ -21,7 +21,6 @@ export const showLessContent = (e, parentNode, height = 20) => {
 };
 
 export const hideElement = (id) => {
-  console.log("toggling loader", document.getElementById(id));
   document.getElementById(id)?.classList.add("hide");
 };
 export default createContext();

@@ -72,10 +72,10 @@ function App() {
             value={{ showMoreContent, showLessContent, hideElement }}
           >
             <LandingPage />
+            <Testimonials />
             <Skills />
             <RecentWork />
             <Certifications />
-            <Testimonials />
           </CommonFunctionsContext.Provider>
           <About />
           <Contact />

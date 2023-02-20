@@ -36,9 +36,6 @@ export default function LandingPage() {
     }
   };
   window.addEventListener("resize", handleResize);
-  window.addEventListener("DOMContentLoaded", () => {
-    console.log(document.innerHTML);
-  });
 
   return (
     <Landing id="home">
