@@ -17,7 +17,6 @@ export const Landing = styled.main`
     z-index: 2;
     background-color: var(--primary-transparent);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
   }
   .sun {
     transform: translate(-40%, -40%);
@@ -270,7 +269,7 @@ export const Detail = styled.div`
     bottom: 0;
     max-width: 35.5vw;
     min-height: 70vh;
-    p{
+    p {
       margin-right: 0;
     }
     .heading {

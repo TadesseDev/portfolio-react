@@ -8,7 +8,7 @@ import DownloadButton from "./partials/downloadButton";
 import { useState } from "react";
 import { Circle } from "./partials/decorations";
 import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
-import menu from "../icon/menu/menu.png";
+import menu from "../icon/menu/menu.svg";
 import my_picture from "../images/resized.svg";
 import my_picture_desktop from "../images/desktop-me.png";
 import SocialMediaIcons from "./partials/socialMediaIcons";
