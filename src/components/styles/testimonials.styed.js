@@ -41,7 +41,7 @@ export const TestimonyCard = styled.div`
   margin: auto;
   background-color: #ffffff3d;
   border-radius: 10px;
-  margin-top: calc(12.5vw + 15px);
+  margin-top: calc(min(12.5vw, 75px) + 15px);
   padding: 15px;
   box-shadow: 0 0 10px 10px #00000025;
   animation-duration: 1s;
