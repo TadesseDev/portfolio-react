@@ -10,8 +10,8 @@ export const Landing = styled.main`
   .showMenu img {
     margin: 3vw;
     padding: 2vw;
-    width: 10vw;
-    max-width: 50px;
+    width: 5vw;
+    max-width: 30px;
     position: fixed;
     right: 0;
     z-index: 2;
