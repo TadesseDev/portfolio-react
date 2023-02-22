@@ -12,7 +12,7 @@ const TestimonialContainer = styled.div`
       max-width: 50px;
     }
 
-    @media (min-width: 1800px) {
+    @media (min-width: 1600px) {
       grid-template-columns: repeat(3, calc(30% - 15px));
 
       h2 {
@@ -55,6 +55,9 @@ export const TestimonyCard = styled.div`
   box-shadow: 0 0 10px 10px #00000025;
   animation-duration: 1s;
   animation-timing-function: linear;
+  a {
+    color: var(--shine);
+  }
   button {
     cursor: pointer;
   }

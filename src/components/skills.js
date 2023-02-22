@@ -95,7 +95,7 @@ export default function Skills() {
             }}
             className="mirror"
           />
-          <h2>Are you wondering about specific technology?</h2>
+          <h3>Are you wondering about specific technology?</h3>
           <p>This is not all of me...😊</p>
           <a href="#contact">
             <button>Get in touch</button>

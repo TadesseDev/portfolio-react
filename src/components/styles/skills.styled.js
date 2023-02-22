@@ -26,10 +26,6 @@ export const SkillsContainer = styled.div`
     margin: 0 auto;
     z-index: 1;
     overflow: hidden;
-    color: var(--shine);
-    h2 {
-      color: var(--shine);
-    }
   }
   button {
     background: none;
@@ -75,6 +71,7 @@ export const SkillsContainer = styled.div`
     button {
       font-size: 2rem;
       font-family: var(--title-font);
+      padding: 10px 30px;
     }
   }
 
