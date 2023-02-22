@@ -32,6 +32,7 @@ const GlobalStyles = createGlobalStyle`
     --shine: #00FFFF;
     --bright: #DAE028;
     --normal: #FFFFFF;
+    --transparent0: #fffff026;
     --transparent: #fffff073;
     --primary-transparent: #07214473;
     --main-title-font: maginors;

@@ -9,6 +9,7 @@ import PrimaryTitle from "./partials/primaryTitle";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import SubTitle from "./partials/subTitle";
 import Loader from "./partials/loader";
+import BackgroundDecoration from "./partials/backgroundDecoration";
 import TestimonialContainer, {
   Testimonial,
   TestimonyCard,
@@ -27,6 +28,13 @@ export default function Testimonials() {
       <PrimaryTitle text="Testimonials" />
       {testimonials.map((testimony) => (
         <Testimonial key={testimony.id}>
+          <BackgroundDecoration
+            style={{
+              top: Math.random() * 100 + Math.random() * -100 + "px",
+              left: Math.random() * 30 + Math.random() * -30 + "vw",
+              zIndex: "-3",
+            }}
+          />
           <SubTitle
             text={testimony.name}
             style={{ marginBottom: "0", fontSize: "1.5rem" }}

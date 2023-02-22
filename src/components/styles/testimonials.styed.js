@@ -23,6 +23,7 @@ const TestimonialContainer = styled.div`
 `;
 export const Testimonial = styled.div`
   margin-top: 40px;
+  position: relative;
   ul {
     justify-content: center;
     gap: 10px;
@@ -47,7 +48,7 @@ export const TestimonyCard = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
-  background-color: #ffffff3d;
+  background-color: var(--transparent0git );
   border-radius: 10px;
   margin-top: calc(min(12.5vw, 75px) + 15px);
   padding: 15px;
