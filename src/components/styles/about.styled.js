@@ -31,6 +31,7 @@ export const CardContainer = styled.div`
   max-height: 500px;
   animation-duration: 1s;
   animation-timing-function: linear;
+  justify-content: center;
   @media (min-width: 480px) {
     min-height: unset;
     max-height: unset;

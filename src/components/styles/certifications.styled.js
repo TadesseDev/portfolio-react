@@ -19,6 +19,7 @@ export const CertificationsContainer = styled.div`
     margin: 10px;
     display: flex;
     width: calc(100% - 20px);
+    max-width: 700px;
     justify-content: space-between;
     gap: 2px;
     position: absolute;
@@ -32,6 +33,10 @@ export const CertificationsContainer = styled.div`
     }
   }
   @media (min-width: 768px) {
+    #certificate-pagination {
+      margin-left: 50%;
+    transform: translateX(-50%);
+    }
     #goto-certificate {
       margin: auto;
       * {
@@ -42,9 +47,11 @@ export const CertificationsContainer = styled.div`
   @media (min-width: 1024px) {
     .certification-description {
       border-bottom: none;
-      .more,.less{
+      .more,
+      .less {
         display: none;
-      } p {
+      }
+      p {
         max-height: max-content;
       }
     }
