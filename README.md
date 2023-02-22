@@ -1,14 +1,15 @@
 # Portfolio
 
-> My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are React and Ruby on rails 🙌 See me live: <https://tadesse-alemayehu.github.io/Portfolio/>).
+> My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are React and Ruby on rails 🙌 [See me live:](https://www.tadesse.dev)
 
 # Screenshot's
 
 Mobile
 
-![portfolio-mobile](https://user-images.githubusercontent.com/69077061/213710307-cc1438ab-58c5-4c4e-9d48-9a0e71776949.PNG)
+![Capture2](https://user-images.githubusercontent.com/69077061/220669370-7ebf9abc-1116-48e5-812c-eedb48353b2c.PNG)
 
 Desktop
+![Capture](https://user-images.githubusercontent.com/69077061/220669388-7dbfaec8-813a-48ff-8584-b521561ca409.PNG)
 
 ## Built With
 
@@ -25,7 +26,7 @@ Desktop
 
 ## Live Demo
 
-[Coming soon]() 🙂
+[Go Lice](https://www.tadesse.dev) 🙂
 
 ## Getting Started
 
