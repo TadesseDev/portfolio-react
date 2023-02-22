@@ -7,10 +7,18 @@ const TestimonialContainer = styled.div`
     justify-content: space-between;
     h2 {
       grid-column: span 2;
-   }
-   .icon{
-    max-width: 50px;
-   }
+    }
+    .icon {
+      max-width: 50px;
+    }
+
+    @media (min-width: 1800px) {
+      grid-template-columns: repeat(3, calc(30% - 15px));
+
+      h2 {
+        grid-column: span 3;
+      }
+    }
   }
 `;
 export const Testimonial = styled.div`
