@@ -1,6 +1,6 @@
 # Portfolio
 
-> My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are React and Ruby on rails 🙌 [See me live:](https://www.tadesse.dev)
+> My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are React and Ruby on rails 🙌 [See me live](https://www.tadesse.dev) Or [check out the API](https://portfolio.api.tadesse.dev)
 
 # Screenshot's
 
@@ -26,14 +26,17 @@ Desktop
 
 ## Live Demo
 
-[Go Lice](https://www.tadesse.dev) 🙂
+[Go Live](https://www.tadesse.dev) 🙂
+
+[Check out the API](https://portfolio.api.tadesse.dev)
 
 ## Getting Started
 
 > This is an open source project. I hope you manage to design something similar bas on this one.
+
 > You can also have the Figma template, Just sent me an email putting `I'm looking for the figma template of your react portfolio` in the about section of your email.
 
-1. Open [main branch](https://github.com/Tadesse-Alemayehu/portfolio-react/)
+1. Open [main branch](https://github.com/Tadessedev/portfolio-react/)
 2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
 
   ```bash
@@ -46,25 +49,30 @@ Desktop
     pwd
   ```
 
-4. [clone repository](git@github.com:Tadesse-Alemayehu/porfolio)(git clone "branch-link")
+4. [clone repository](git@github.com:Tadessedev/porfolio)(git clone "branch-link")
 
   ```bash
-    git clone https://github.com/Tadesse-Alemayehu/portfolio-react/
+    git clone https://github.com/Tadessedev/portfolio-react/
   ```
 
-5. Run "npm install" to install required packages.
+5. cd the project folder
+
+ ```bash
+    cd portfolio-react
+  ```
+6. Run "npm install" to install required packages.
 
  ```bash
     npm install
   ```
 
-6. Run
+7. Run
 
   ```bash
     npm start
   ```
 
-7. Enjoy 😎
+8. Enjoy 😎
 
 ## Authors
 
