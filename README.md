@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio Front End
 
 > My portfolio ✋🏼 where you will get glimpses of what I'm capable of. Including some of the projects I have been working on 🎞 , technologies I am familiar with, contact details, and more. The main technologies here are React and Ruby on rails 🙌 [See me live](https://www.tadesse.dev) Or [check out the API](https://portfolio.api.tadesse.dev)
 
