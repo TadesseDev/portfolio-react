@@ -78,9 +78,9 @@ Desktop
 
 👤 **Tadesse Alemayehu**
 
-- GitHub: [@githubhandle](https://github.com/Tadesse-Alemayehu)
-- Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
+- GitHub: [@githubhandle](https://github.com/Tadessedev)
+- Twitter: [@twitterhandle](https://twitter.com/TadessebDev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadessedev)
 
 ## Show your support
 
