@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const baseURL = "https://portfolio.api.tadesse.dev/api/v1/";
-const baseURL = "http://localhost:4000/api/v1/";
+const baseURL = process.env.REACT_APP_API_SERVER;
+console.log("baseUrl is ", baseURL)
 const root = axios.create({
   baseURL,
   headers: { "Content-Type": "application/json", Accept: "application/json" },
