@@ -12,7 +12,7 @@ export default function primaryTitle({ icon = "", text = "", style = {}, classNa
       className={className}
     >
       <span className="icon" style={{ margin: "10px", display: icon?"default":"none" }}>
-        <span className="icon">{icon && <img src={icon} alt="skill" />}</span>
+        <span className="icon">{icon && <img src={icon} alt="skill" width="100%" height="100%"/>}</span>
       </span>
       <span>{text}</span>
     </h3>

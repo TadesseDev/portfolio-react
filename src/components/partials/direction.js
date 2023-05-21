@@ -16,7 +16,7 @@ const Direction = ({ icon, toggle = () => {}, style = {}, className = "" }) => {
       onClick={toggle}
       style={style}
     >
-      <img src={iconMap.get(icon)} alt={icon} />
+      <img src={iconMap.get(icon)} alt={icon} width="15px" height="15px" />
     </DirectionContainer>
   );
 };

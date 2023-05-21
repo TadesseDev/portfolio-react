@@ -96,6 +96,10 @@ export const SubSkills = styled.div`
   }
   .icon {
     grid-area: bottom-left;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .skill-name {
     grid-area: top-right;

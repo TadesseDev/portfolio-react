@@ -9,8 +9,8 @@ import { useState } from "react";
 import { Circle } from "./partials/decorations";
 import { Landing, PrimaryImage, Detail } from "./styles/LandingPage.styled";
 import menu from "../icon/menu/menu.svg";
-import my_picture from "../images/resized.svg";
-import my_picture_desktop from "../images/desktop-me.png";
+import my_picture from "../images/mobile-me.webp";
+import my_picture_desktop from "../images/desktop-me.webp";
 import SocialMediaIcons from "./partials/socialMediaIcons";
 import Loader from "./partials/loader";
 import BackgroundDecoration from "./partials/backgroundDecoration";
@@ -40,7 +40,7 @@ export default function LandingPage() {
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
-        <img src={menu} alt="open menus" />
+        <img src={menu} alt="open menus" width="5vw" hight="auto"/>
       </span>
       <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
 
@@ -95,6 +95,8 @@ export default function LandingPage() {
             alt="Tadesse Dubale picture"
             effect="blur"
             className="img"
+            width="10vw"
+            height="10vw"
             wrapperProps={{ style: { display: "inline", width: "100%" } }}
             afterLoad={() => {
               hideElement("primaryImageLoader");

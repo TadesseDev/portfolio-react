@@ -16,11 +16,9 @@ const about = styled.div`
     .about-texts {
       display: grid;
       grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
+      justify-content: space-between;
       gap: 5px;
-
     }
-
   }
 `;
 export const CardContainer = styled.div`

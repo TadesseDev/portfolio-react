@@ -83,7 +83,13 @@ export default function Contact() {
         <form action="" onSubmit={submitMessage}>
           <div className="input-fields">
             <InputField>
-              <img className="icon" src={user_contact} alt="User Name" />
+              <img
+                className="icon"
+                src={user_contact}
+                alt="User Name"
+                width="12%"
+                height="100%"
+              />
               <input
                 type="text"
                 name="full_name"
@@ -95,7 +101,13 @@ export default function Contact() {
               />
             </InputField>
             <InputField>
-              <img className="icon" src={email} alt="User Email" />
+              <img
+                className="icon"
+                src={email}
+                alt="User Email"
+                width="12%"
+                height="100%"
+              />
 
               <input
                 type="email"
@@ -108,7 +120,13 @@ export default function Contact() {
               />
             </InputField>
             <InputField>
-              <img className="icon" src={phone} alt="Phone number" />
+              <img
+                className="icon"
+                src={phone}
+                alt="Phone number"
+                width="12%"
+                height="100%"
+              />
               <input
                 type="tel"
                 name="phone_number"

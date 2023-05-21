@@ -69,7 +69,7 @@ let Navbar = styled.nav`
         display: none;
       }
     }
-    
+
     li {
       padding-bottom: 0;
       padding: 0 10px;

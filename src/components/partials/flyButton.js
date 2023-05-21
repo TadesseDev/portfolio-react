@@ -12,11 +12,11 @@ export default function flyButton({
       className="gradientTopBottom"
       href={href}
       target={target}
-      onClick={preventDefault ? (e) => e.preventDefault() : () => { }}
+      onClick={preventDefault ? (e) => e.preventDefault() : () => {}}
     >
       {text}
       <IconContainer className="gradientTopBottom">
-        <img src={flyIcon} alt="Open link" />
+        <img src={flyIcon} alt="Open link" width="80%" height="80%" />
       </IconContainer>
     </FlyLink>
   );

@@ -11,7 +11,7 @@ export default function primaryTitle({ icon = false, text = "", style = {} }) {
       }}
     >
       <span className="icon" style={{ display: icon ? "default" : "none" }}>
-        {icon && <img src={icon} alt="skill" />}
+        {icon && <img src={icon} alt="skill" width="100%"/>}
       </span>
       <span>{text}</span>
     </h2>

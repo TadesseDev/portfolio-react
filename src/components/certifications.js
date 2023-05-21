@@ -12,7 +12,6 @@ import SubTitle from "./partials/subTitle";
 import { getCertifications } from "../redux/components/certifications";
 import { useEffect } from "react";
 import Direction from "./partials/direction.js";
-import { notInitialized } from "react-redux/es/utils/useSyncExternalStore";
 export default function Certifications() {
   const { showMoreContent, showLessContent } = useContext(
     CommonFunctionContext
@@ -103,7 +102,7 @@ export default function Certifications() {
                     display: "none",
                   }}
                   toggle={(e) =>
-                    showLessContent(e, e.target.parentNode.parentNode,40)
+                    showLessContent(e, e.target.parentNode.parentNode, 40)
                   }
                   className="less"
                 />
@@ -153,7 +152,7 @@ export default function Certifications() {
             <span
               key={index}
               style={
-                index == 1
+                index === 1
                   ? { color: "var(--bright)" }
                   : { color: "var(--shine)" }
               }

@@ -26,49 +26,97 @@ export default function NavBar({ showNavBar, toggleNavbar }) {
       <ul>
         <li>
           <a href="#home" onClick={toggleNavbar}>
-            <img className="icon" src={home} alt="home" />
+            <img
+              className="icon"
+              src={home}
+              alt="home"
+              width="30px"
+              height="auto"
+            />
             <span>Home</span>
           </a>
         </li>
         <li>
           <a href="#skills" onClick={toggleNavbar}>
-            <img className="icon" src={skills} alt="skills" />
+            <img
+              className="icon"
+              src={skills}
+              alt="skills"
+              width="30px"
+              height="auto"
+            />
             <span>Skills</span>
           </a>
         </li>
         <li>
           <a href="#recent-works" onClick={toggleNavbar}>
-            <img className="icon" src={works} alt="works" />
+            <img
+              className="icon"
+              src={works}
+              alt="works"
+              width="30px"
+              height="auto"
+            />
             <span>Projects</span>
           </a>
         </li>
         <li>
           <a href="#certifications" onClick={toggleNavbar}>
-            <img className="icon" src={certificates} alt="certificates" />
+            <img
+              className="icon"
+              src={certificates}
+              alt="certificates"
+              width="30px"
+              height="auto"
+            />
             <span>Certificates</span>
           </a>
         </li>
         <li>
           <a href="#testimonials" onClick={toggleNavbar}>
-            <img className="icon" src={testimonials} alt="home" />
+            <img
+              className="icon"
+              src={testimonials}
+              alt="home"
+              width="30px"
+              height="auto"
+            />
             <span>Testimonials</span>
           </a>
         </li>
         <li>
           <a href="#about" onClick={toggleNavbar}>
-            <img className="icon" src={about} alt="about" />
+            <img
+              className="icon"
+              src={about}
+              alt="about"
+              width="30px"
+              height="auto"
+            />
             <span>About</span>
           </a>
         </li>
         <li>
           <a href="#find-me" onClick={toggleNavbar}>
-            <img className="icon" src={user} alt="user" />
+            <img
+              className="icon"
+              src={user}
+              alt="user"
+              width="30px"
+              height="auto"
+            />
             <span>social media</span>
           </a>
         </li>
         <li>
           <a href="#contact" onClick={toggleNavbar}>
-            <img className="icon" src={me_standing} alt="me standing" />
+            <img
+              className="icon"
+              src={me_standing}
+              alt="me standing"
+              width="30px"
+              height="auto"
+            />
             <span>Contact me</span>
           </a>
         </li>

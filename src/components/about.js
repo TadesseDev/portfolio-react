@@ -71,7 +71,12 @@ export default function About() {
             >
               <Mirror />
               <h3>{key}</h3>
-              <img src={medias.get(key)?.icon2} alt={key} />
+              <img
+                src={medias.get(key)?.icon2}
+                alt={key}
+                width="100"
+                height="100%"
+              />
               <p>{medias.get(key)?.description}</p>
               <a href={medias.get(key)?.link} target="_black">
                 <button
