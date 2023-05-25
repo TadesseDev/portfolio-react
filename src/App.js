@@ -31,7 +31,7 @@ function App() {
 
   /*
   This ain't a simple observer
-  - it make sure the is always exactly two background decoration image on a single page
+  - it make sure there is always exactly two background decoration image on a single page
   - it make sure half of the decoration image is on the top and the other half is on the bottom
   - it make sure the decoration image is always on the right and left side of the page
 */

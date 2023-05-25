@@ -62,11 +62,11 @@ export default function Certifications() {
   }, [dispatch]);
 
   useEffect(() => {
-    document.getElementById(`certificate_${0}`)?.classList.toggle("hide");
+    document.getElementById(`certificate_${0}`)?.classList.remove("hide");
   }, [certifications]);
   return (
     <CertificationsContainer id="certifications">
-      <PrimaryTitle icon="" text={"Certifications"} />{" "}
+      <PrimaryTitle icon="" text={"Certifications"} />
       {certifications.map(
         (
           { id, title = "", description = "", link = "", image = "" },

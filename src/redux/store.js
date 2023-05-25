@@ -7,14 +7,14 @@ import recentWorks from "./components/recentWorks.js";
 import certifications from "./components/certifications.js";
 import testimonials from "./components/testimonials.js";
 
-const middlewares = [thunk,]
-if (process.env.NODE_ENV === 'development') {
-  middlewares.push(logger);
+const middleWares = [thunk];
+if (process.env.NODE_ENV === "development") {
+  middleWares.push(logger);
 }
 const reducers = combineReducers({
   skills,
   recentWorks,
   certifications,
-  testimonials
+  testimonials,
 });
-export default createStore(reducers, applyMiddleware(...middlewares));
+export default createStore(reducers, applyMiddleware(...middleWares));
