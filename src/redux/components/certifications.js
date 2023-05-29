@@ -1,9 +1,12 @@
+import { act } from "@testing-library/react";
 import { sendGet } from "../../api/root";
 const SET_ALL_CERTIFICATIONS = "components/recentWorks/SET_ALL_CERTIFICATIONS";
+  if (localStorage.getItem("certifications"))
+    localStorage.removeItem("certifications");
 export const getCertifications = () => (dispatch) => {
   sendGet("certifications")
     .then((result) => {
-      dispatch({ type: SET_ALL_CERTIFICATIONS, payload: result.data });
+      act(() => {dispatch({ type: SET_ALL_CERTIFICATIONS, payload: result.data }); });
     })
     .catch((error) => console.error(error));
 };

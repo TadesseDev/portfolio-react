@@ -1,3 +1,4 @@
+import { act } from "@testing-library/react";
 import { sendGet } from "../../api/root";
 const SET_TESTIMONIALS = "components/recentWorks/SET_TESTIMONIALS";
 export const getTestimonials = () => (dispatch) => {
@@ -5,8 +6,9 @@ export const getTestimonials = () => (dispatch) => {
  localStorage.removeItem("testimonials")
     sendGet("testimonials")
       .then((result) => {
-
-        dispatch({ type: SET_TESTIMONIALS, payload: result.data });
+        act(() => {
+          dispatch({ type: SET_TESTIMONIALS, payload: result.data });
+        });
       })
       .catch((error) => console.error(error));
 
