@@ -53,7 +53,7 @@ export default function NavBar({ showNavBar, toggleNavbar }) {
             <img
               className="icon"
               src={works}
-              alt="works"
+              alt="recent works"
               width="30px"
               height="auto"
             />
@@ -77,7 +77,7 @@ export default function NavBar({ showNavBar, toggleNavbar }) {
             <img
               className="icon"
               src={testimonials}
-              alt="home"
+              alt="testimonials"
               width="30px"
               height="auto"
             />
@@ -101,7 +101,7 @@ export default function NavBar({ showNavBar, toggleNavbar }) {
             <img
               className="icon"
               src={user}
-              alt="user"
+              alt="social medias"
               width="30px"
               height="auto"
             />
@@ -113,7 +113,7 @@ export default function NavBar({ showNavBar, toggleNavbar }) {
             <img
               className="icon"
               src={me_standing}
-              alt="me standing"
+              alt="contact me"
               width="30px"
               height="auto"
             />
