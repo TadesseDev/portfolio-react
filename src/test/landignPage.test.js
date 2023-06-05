@@ -4,6 +4,7 @@ import "intersection-observer";
 jest.mock("../api/root.js");
 import App from "../App";
 import NavBar from "../components/partials/navBar";
+import LandingPage from "../components/landingPage";
 
 beforeAll(async () => {
   document.body.innerHTML = `<noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div>`;
@@ -70,5 +71,7 @@ describe("Navbar items test", () => {
 
 
 describe("test homepage items", () => {
-
+  it("Assert get my cv button is visible and valid", async () => {
+    render(<LandingPage />);
+  });
 })
