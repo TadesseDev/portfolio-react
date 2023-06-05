@@ -12,7 +12,7 @@ beforeAll(async () => {
 describe("Navbar items test", () => {
   test("Menu bar text content", async () => {
     render(<NavBar />);
-    getByText("Home");
+    screen.getByText("Home");
     screen.getByText("Skills");
     screen.getByText("Projects");
     screen.getByText("Certificates");
@@ -68,4 +68,7 @@ describe("Navbar items test", () => {
   });
 });
 
-describe("test homepage items", () => {});
+
+describe("test homepage items", () => {
+
+})
