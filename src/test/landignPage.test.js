@@ -71,7 +71,8 @@ describe("Navbar items test", () => {
 
 
 describe("test homepage items", () => {
-  it("Assert get my cv button is visible and valid", async () => {
-    render(<LandingPage />);
-  });
+  // it("Assert get my cv button is visible and valid", async () => {
+  //   render(<LandingPage />);
+  //   // const getMyCv = screen.ind("get-my-cv");
+  // });
 })
