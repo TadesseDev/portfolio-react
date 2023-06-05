@@ -6,7 +6,7 @@ const TestimonialContainer = styled.div`
     grid-template-columns: repeat(2, calc(50% - 15px));
     justify-content: space-between;
     h2 {
-      grid-column: span 2;
+      grid-column: span 2;.
     }
     .icon {
       max-width: 50px;

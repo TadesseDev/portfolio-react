@@ -14,7 +14,7 @@ export const getSkills = () => (dispatch) => {
     .catch((error) => console.error(error));
 };
 
-export default function skillReducer(state = [], { type = "", payload = [] }) {
+export default function skillsReducer(state = [], { type = "", payload = [] }) {
   switch (type) {
     case GET_ALL_SKILLS:
       return payload;

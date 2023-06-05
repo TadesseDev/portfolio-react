@@ -393,7 +393,7 @@ const mockData = {
         skill_level: 7,
         tech_type: "Database",
         description:
-          "I design my graduation project (BSC in computer sience) with Microsoft SQL Server, the experience was great, and I have used it to build many apps.",
+          "I design my graduation project (BSC in computer science) with Microsoft SQL Server, the experience was great, and I have used it to build many apps.",
         created_at: "2023-05-19T22:47:34.697Z",
         updated_at: "2023-05-19T22:47:34.697Z",
       },

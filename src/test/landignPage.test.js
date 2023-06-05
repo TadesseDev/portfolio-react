@@ -10,7 +10,7 @@ beforeAll(async () => {
 });
 
 describe("Navbar items test", () => {
-  test("menu bar text content", async () => {
+  test("Menu bar text content", async () => {
     render(<NavBar />);
     screen.getByText("Home");
     screen.getByText("Skills");
@@ -22,7 +22,7 @@ describe("Navbar items test", () => {
     screen.getByText("Contact me");
   });
 
-  test("menu interaction", async () => {
+  test("Menu bar interaction", async () => {
     render(<App />);
     const navbar = await screen.findByTestId("navbar");
     expect(navbar.getAttribute("display")).toBe("none");
@@ -35,7 +35,7 @@ describe("Navbar items test", () => {
     fireEvent.click(hideMenu);
   });
 
-  test("test navbar icons visibility", async () => {
+  test("Menu bar icons visibility", async () => {
     render(<App />);
     const showMenu = screen.getByAltText("open menus");
     const navbar = await screen.findByTestId("navbar");
@@ -57,7 +57,6 @@ describe("Navbar items test", () => {
     expect(about).toBeVisible();
     expect(socialMedia).toBeVisible();
     expect(contactMe).toBeVisible();
-
     expect(home.src).toBeTruthy();
     expect(skills.src).toBeTruthy();
     expect(projects.src).toBeTruthy();

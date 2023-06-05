@@ -22,3 +22,4 @@ export default function testimonialsReducer(state = [], { type = "", payload = [
       return state;
   }
 }
+
