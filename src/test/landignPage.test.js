@@ -67,3 +67,8 @@ describe("Navbar items test", () => {
     expect(contactMe.src).toBeTruthy();
   });
 });
+
+
+describe("test homepage items", () => {
+  
+})
