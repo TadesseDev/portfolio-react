@@ -133,14 +133,8 @@ export const Landing = styled.main`
     .direction {
       top: 50%;
       transform: translate(0, -50%);
-      ${
-        "" /* width: 40px;
-      height: 40px; */
-      }
     }
-    .direction::after{
-      content: "show menu"
-    }
+
   }
 `;
 
