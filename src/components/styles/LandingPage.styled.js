@@ -132,11 +132,8 @@ export const Landing = styled.main`
     }
     .direction {
       ${"" /* display: none; */}
-      ${"" /* transform: rotate(180deg); */}
     }
-    .direction .left {
-      transform: translate(calc(-50% - 2px)), rotate(180deg);
-    }
+
   }
 `;
 

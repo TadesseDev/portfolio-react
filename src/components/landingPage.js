@@ -20,7 +20,7 @@ export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
-    e.target.classList.toggle("left");
+    // e.target.cla
     console.log(e.target);
   };
   let OldWinSize = window.innerWidth;
