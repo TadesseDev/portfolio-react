@@ -20,9 +20,9 @@ export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
-    // e.target.parentNode.style.transform="unset";
+    // e.target.parentNode.getElementsByClassName(".direction")[0].style.transform = "unset";
     // e.target.parentNode.style.transform = "translate(calc(-50% - 2px)) rotate(180deg)";
-    // console.log(e.target.parentNode);
+    console.log(e.target.parentNode.getElementsByClassName("direction"));
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(
