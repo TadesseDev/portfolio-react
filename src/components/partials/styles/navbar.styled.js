@@ -66,7 +66,7 @@ let Navbar = styled.nav`
       align-items: baseline;
 
       span {
-        display: none;
+        ${"" /* display: none; */}
       }
     }
 
