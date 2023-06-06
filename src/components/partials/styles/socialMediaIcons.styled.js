@@ -7,6 +7,10 @@ const SocialMediasContainer = styled.ul`
   margin: 10px;
   min-width: 100%;
   a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
     p{
       padding: 0;
       margin:0;
