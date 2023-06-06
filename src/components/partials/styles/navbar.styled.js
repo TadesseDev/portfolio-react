@@ -64,15 +64,12 @@ let Navbar = styled.nav`
       width: max-content;
       padding: 0 10%;
       align-items: baseline;
-
-      span {
-        display: none;
-      }
     }
 
     li {
       padding-bottom: 0;
       padding: 0 10px;
+      margin: auto;
       a {
         display: flex;
         gap: 5px;
