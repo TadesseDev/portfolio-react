@@ -13,7 +13,6 @@ export default function SocialMediaIcons({ links = {}, style = {} }) {
             href={{ ...medias.get(key), ...links[key] }.link}
             target="blank"
             aria-label={`See ${links.name || "tadesse"}'s ${key}`}
-            data-name={key}
           >
             <LazyLoadImage
               className="icon"
@@ -21,6 +20,7 @@ export default function SocialMediaIcons({ links = {}, style = {} }) {
               alt={`See ${links[key].name || "tadesse"}'s ${key}`}
               effect="blur"
             />
+            <div>{key}</div>
           </a>
         </li>
       ))}
