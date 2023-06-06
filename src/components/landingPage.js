@@ -139,7 +139,7 @@ export default function LandingPage() {
             gitHub: {},
             hackerRank: {},
           }}
-          style={{ marginRight: "50000000px" }}
+          style={{ paddingRight: "50000000px" }}
         />
       </Detail>
       <Circle
