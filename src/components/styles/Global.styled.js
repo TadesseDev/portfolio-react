@@ -58,7 +58,7 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     display: flex;
     ::-webkit-scrollbar {
     width: 10px;
-    background-color: var(--normal);
+    background-color: var(--decoration2);
   }
 
   ::-webkit-scrollbar-track {
@@ -70,7 +70,7 @@ background: linear-gradient(180deg, rgba(233,238,96,1) 0%, rgba(59,175,192,1) 10
     border-radius: 8px;
     border: 1px solid transparent;
     background-clip: content-box;
-    background-color: var(--decoration2);
+    background-color: var(--shine);
   }
    }
    h1{
