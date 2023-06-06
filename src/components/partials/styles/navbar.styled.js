@@ -52,9 +52,10 @@ let Navbar = styled.nav`
     padding: 0 10px;
     border: 0;
     box-shadow: none;
+    transition: width 1s ease-in-out;
     &:hover {
-      ul{
-      width: max-content;
+      ul {
+        width: max-content;
       }
     }
     ul {
@@ -63,7 +64,6 @@ let Navbar = styled.nav`
         max-width: 20px;
         margin: auto;
       }
-      transition: width 0.5s ease-in-out;
       flex-direction: column;
       min-height: max-content;
       width: 0px;
