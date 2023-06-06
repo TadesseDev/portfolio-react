@@ -20,7 +20,7 @@ export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
-    e.target.style.transform = "translate(calc(-50% - 2px)), rotate(180deg)";
+    e.target.style.transform = "translate(calc(-50% - 2px)) rotate(180deg)";
     console.log(e.target);
   };
   let OldWinSize = window.innerWidth;
