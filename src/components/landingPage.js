@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import commonFunctions from "../context/commonFunctionsContext";
 import { InView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -18,8 +18,10 @@ import BackgroundDecoration from "./partials/backgroundDecoration";
 export default function LandingPage() {
   const { hideElement } = useContext(commonFunctions);
   let [showNavBar, updateDisplay] = useState(false);
+  const navBarRef = useRef(null);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
+    console.log(navBarRef);
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(
@@ -42,7 +44,11 @@ export default function LandingPage() {
       <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" width="5vw" hight="auto" />
       </span>
-      <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+      <NavBar
+        showNavBar={showNavBar}
+        toggleNavbar={toggleNavbar}
+        ref={navBarRef}
+      />
 
       <InView
         onChange={(inView, entry) => {
