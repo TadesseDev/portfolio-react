@@ -132,7 +132,7 @@ export const Landing = styled.main`
     }
     .direction {
       top: 50%;
-      transform: translate(0, -50%);
+      transform: translate(0, -100%);
     }
 
   }
