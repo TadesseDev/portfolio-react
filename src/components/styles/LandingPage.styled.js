@@ -131,7 +131,8 @@ export const Landing = styled.main`
       display: none;
     }
     .direction {
-      display: none;
+      ${"" /* display: none; */}
+      transform: rotate(180deg);
     }
   }
 `;
