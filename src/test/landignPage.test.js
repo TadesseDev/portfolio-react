@@ -1,5 +1,15 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { within } from "@testing-library/dom";
+import CommonFunctionsContext, {
+  showMoreContent,
+  showLessContent,
+  hideElement,
+} from "../context/commonFunctionsContext";
+import {
+  medias,
+  address,
+  InformationContext,
+} from "../context/informationContext";
 import "intersection-observer";
 jest.mock("../api/root.js");
 import App from "../App";
@@ -69,10 +79,23 @@ describe("Navbar items test", () => {
   });
 });
 
-
 describe("test homepage items", () => {
-  // it("Assert get my cv button is visible and valid", async () => {
-  //   render(<LandingPage />);
-  //   // const getMyCv = screen.ind("get-my-cv");
-  // });
-})
+  it("Assert get my cv button is visible and valid", async () => {
+    render(
+      <InformationContext.Provider value={{ medias, address }}>
+        <CommonFunctionsContext.Provider
+          value={{ showMoreContent, showLessContent, hideElement }}
+        >
+          <LandingPage />
+        </CommonFunctionsContext.Provider>
+      </InformationContext.Provider>
+    );
+    const getMyCv = screen.getAllByAltText(/See /);
+    expect(getMyCv.length).toBe(5);
+    getMyCv.forEach((element) => {
+      expect(element).toBeVisible();
+      expect(element.closest("a").href).toBeTruthy();
+      expect(element.src).toBeTruthy();
+    });
+  });
+});
