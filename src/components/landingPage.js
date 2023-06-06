@@ -119,8 +119,9 @@ export default function LandingPage() {
           href="https://docs.google.com/document/d/1xGXejoEeo6X-5TrkKsl6Okj21yWyGKP6dq3Qm47tKBo/edit?usp=sharing"
           id="getResume"
           target="blank"
+          data-testId="getMyResume"
         >
-          <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} data-testId="getMyResume"/>
+          <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} />
           <Circle
             moreStyle={{
               width: 40,
