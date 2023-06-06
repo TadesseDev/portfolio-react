@@ -18,8 +18,9 @@ import BackgroundDecoration from "./partials/backgroundDecoration";
 export default function LandingPage() {
   const { hideElement } = useContext(commonFunctions);
   let [showNavBar, updateDisplay] = useState(false);
-  const toggleNavbar = () => {
+  const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
+    console.log(e)
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(
