@@ -66,12 +66,7 @@ let Navbar = styled.nav`
       align-items: baseline;
 
       span {
-        display: block;
-      }
-      a:hover {
-        span {
-          display: block;
-        }
+        display: none;
       }
     }
 
@@ -81,7 +76,7 @@ let Navbar = styled.nav`
       a {
         display: flex;
         gap: 5px;
-        flex-direction: inherit;
+        flex-direction: column;
         font-size: 0.7rem;
         font-family: var(--paragraph-font);
         &:hover {
