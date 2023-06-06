@@ -20,7 +20,7 @@ export default function LandingPage() {
   let [showNavBar, updateDisplay] = useState(false);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
-    console.log(e)
+    console.log(e.target)
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(
