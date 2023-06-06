@@ -93,9 +93,10 @@ describe("test homepage items", () => {
     const getMyCv = screen.getAllByAltText(/See /);
     expect(getMyCv.length).toBe(5);
     getMyCv.forEach((element) => {
-      console.log("href is : ", element.closest("a").testId());
+      const attributeName = element.closest("a").getAttribute("data-name");
+      console.log("href is : ", typeof attributeName);
       expect(element).toBeVisible();
-      expect(element.closest("a").href).toBeTruthy();
+      expect(element.closest("a").href).toMatch(attributeName.toLowerCase());
       expect(element.src).toBeTruthy();
     });
   });

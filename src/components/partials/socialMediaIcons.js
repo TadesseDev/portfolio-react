@@ -13,7 +13,7 @@ export default function SocialMediaIcons({ links = {}, style = {} }) {
             href={{ ...medias.get(key), ...links[key] }.link}
             target="blank"
             aria-label={`See ${links.name || "tadesse"}'s ${key}`}
-            data-testid={key}
+            data-name={key}
           >
             <LazyLoadImage
               className="icon"
