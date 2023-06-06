@@ -132,7 +132,7 @@ export const Landing = styled.main`
     }
     .direction {
       ${"" /* display: none; */}
-      transform: rotate(180deg);
+      ${"" /* transform: rotate(180deg); */}
     }
   }
 `;
