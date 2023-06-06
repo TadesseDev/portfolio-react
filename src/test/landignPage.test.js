@@ -115,6 +115,9 @@ describe("test homepage items", () => {
   it("assert 'Get my CV` button is visible and available on the dom", async () => {
     const getMyCv = screen.getByText(/get my resume/i);
     expect(getMyCv).toBeVisible();
-    const link=screen.getByTestId("getMyResume");
+    const link = screen.getByTestId("getMyResume");
+    expect(link.href).toBe(
+      "https://docs.google.com/document/d/1xGXejoEeo6X-5TrkKsl6Okj21yWyGKP6dq3Qm47tKBo/edit?usp=sharing"
+    );
   });
 });

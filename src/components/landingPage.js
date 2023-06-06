@@ -119,7 +119,7 @@ export default function LandingPage() {
           href="https://docs.google.com/document/d/1xGXejoEeo6X-5TrkKsl6Okj21yWyGKP6dq3Qm47tKBo/edit?usp=sharing"
           id="getResume"
           target="blank"
-          data-testId="getMyResume"
+          data-testid="getMyResume"
         >
           <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} />
           <Circle
