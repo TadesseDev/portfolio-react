@@ -49,7 +49,7 @@ let Navbar = styled.nav`
     min-width: calc(100vw - 40px);
     padding: 20px;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     border: 0;
     box-shadow: none;
 
@@ -62,7 +62,7 @@ let Navbar = styled.nav`
       flex-direction: column;
       min-height: max-content;
       width: max-content;
-      padding: 0 10%;
+      padding: 0;
       align-items: baseline;
     }
 
@@ -93,7 +93,7 @@ let Navbar = styled.nav`
     position: fixed;
     left: 100vw;
     top: 50%;
-    transform: translate(-120%, -50%);
+    transform: translate(-100%, -50%);
   }
 `;
 
