@@ -133,9 +133,14 @@ export const Landing = styled.main`
     .direction {
       top: 50%;
       transform: translate(0, -50%);
-      wid
+      ${
+        "" /* width: 40px;
+      height: 40px; */
+      }
     }
-
+    .direction::before{
+      c
+    }
   }
 `;
 
