@@ -40,7 +40,7 @@ export default function LandingPage() {
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
-        <img src={menu} alt="open menus" width="5vw" hight="auto"/>
+        <img src={menu} alt="open menus" width="5vw" hight="auto" />
       </span>
       <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
 
@@ -139,6 +139,7 @@ export default function LandingPage() {
             gitHub: {},
             hackerRank: {},
           }}
+          style={{ marginRight: "50000000px" }}
         />
       </Detail>
       <Circle

@@ -102,7 +102,8 @@ describe("test homepage items", () => {
     const getMyCv = screen.getAllByAltText(/See /);
     expect(getMyCv.length).toBe(5);
     getMyCv.forEach((element) => {
-      expect(element).toBeVisible();
+      expect(element).overFlow = "visible";
+      expect(element).toBeVisible({screen});
       expect(socialMediaLinks.includes(element.closest("a").href)).toBeTruthy();
       expect(element.src).toBeTruthy();
     });
