@@ -20,7 +20,7 @@ export const medias = new Map([
       icon2: linkedIn_2,
       description:
         "Ill be connecting with professionals, sharing my blog and Ideas.",
-      link: "",
+      link: "https://www.linkedin.com/in/tadessedev",
     },
   ],
   [
