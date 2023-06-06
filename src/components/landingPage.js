@@ -21,11 +21,11 @@ export default function LandingPage() {
   const navBarRef = useRef(null);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
-    const direction = navBarRef.current.getElementsByClassName("direction")[0];
-    if (direction.style.transform == "translate(calc(-50% - 2px))")
-      direction.style.transform = "translate(calc(-50% - 2px)) rotate(180deg)";
-    else direction.style.transform = "translate(calc(-50% - 2px))";
-    console.log(direction);
+    // const direction = navBarRef.current.getElementsByClassName("direction")[0];
+    // if (direction.style.transform == "translate(calc(-50% - 2px))")
+    //   direction.style.transform = "translate(calc(-50% - 2px)) rotate(180deg)";
+    // else direction.style.transform = "translate(calc(-50% - 2px))";
+    // console.log(direction);
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(

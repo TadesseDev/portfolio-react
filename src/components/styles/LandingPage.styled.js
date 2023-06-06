@@ -131,7 +131,9 @@ export const Landing = styled.main`
       display: none;
     }
     .direction {
-      ${"" /* display: none; */}
+      top: 50%;
+      transform: translate(0, -50%);
+      wid
     }
 
   }
