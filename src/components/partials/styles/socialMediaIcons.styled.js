@@ -6,14 +6,14 @@ const SocialMediasContainer = styled.ul`
   justify-content: space-around;
   margin: 10px;
   min-width: 100%;
-  a{
+  a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
-    p{
+    padding: 0 min(10px, 1vw);
+    p {
       padding: 0;
-      margin:0;
+      margin: 0;
       font-size: 0.8rem;
     }
   }
