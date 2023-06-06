@@ -3,7 +3,7 @@ import more from "../../icon/directions/more.png";
 import show from "../../icon/directions/show.png";
 import less from "../../icon/directions/less.png";
 import DirectionContainer from "./styles/direction.styled";
-const Direction = ({ icon, toggle = () => {}, style = {}, className = "" }) => {
+const Direction = ({ icon, toggle = () => {}, style = {}, className = "", text="" }) => {
   let iconMap = new Map([
     ["hide", hide],
     ["show", show],
@@ -11,13 +11,17 @@ const Direction = ({ icon, toggle = () => {}, style = {}, className = "" }) => {
     ["less", less],
   ]);
   return (
-    <DirectionContainer
-      className={"direction " + className}
-      onClick={toggle}
-      style={style}
-    >
-      <img src={iconMap.get(icon)} alt={icon} width="15px" height="15px" />
-    </DirectionContainer>
+    <>
+      <DirectionContainer
+        className={"direction " + className}
+        onClick={toggle}
+        style={style}
+        text="Show Menu"
+      >
+        <img src={iconMap.get(icon)} alt={icon} width="15px" height="15px" />
+      </DirectionContainer>
+      {text && (<p>{text}</p>)}
+    </>
   );
 };
 
