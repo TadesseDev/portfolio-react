@@ -52,16 +52,21 @@ let Navbar = styled.nav`
     padding: 0 10px;
     border: 0;
     box-shadow: none;
-
+    &:hover {
+      ul{
+      width: max-content;
+      }
+    }
     ul {
       justify-content: flex-start;
       .icon {
         max-width: 20px;
         margin: auto;
       }
+      transition: width 0.5s ease-in-out;
       flex-direction: column;
       min-height: max-content;
-      width: max-content;
+      width: 0px;
       padding: 0;
       align-items: baseline;
     }
