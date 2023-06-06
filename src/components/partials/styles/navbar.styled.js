@@ -49,7 +49,6 @@ let Navbar = styled.nav`
     min-width: calc(100vw - 40px);
     padding: 20px;
     margin: 0;
-    padding: 0 10px;
     border: 0;
     box-shadow: none;
     &:hover {
@@ -59,7 +58,7 @@ let Navbar = styled.nav`
     }
     ul {
       justify-content: flex-start;
-      transition: width 0.5s ease-in-out;
+      transition: width 0.3s ease-in-out;
       .icon {
         max-width: 20px;
         margin: auto;
