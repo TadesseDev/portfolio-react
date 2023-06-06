@@ -6,5 +6,12 @@ const SocialMediasContainer = styled.ul`
   justify-content: space-around;
   margin: 10px;
   min-width: 100%;
+  a{
+    p{
+      padding: 0;
+      margin:0;
+      font-size: 0.8rem;
+    }
+  }
 `;
 export default SocialMediasContainer;
