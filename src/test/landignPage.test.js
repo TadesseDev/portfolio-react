@@ -80,6 +80,17 @@ describe("Navbar items test", () => {
 });
 
 describe("test homepage items", () => {
+  beforeAll(async () => {
+        render(
+          <InformationContext.Provider value={{ medias, address }}>
+            <CommonFunctionsContext.Provider
+              value={{ showMoreContent, showLessContent, hideElement }}
+            >
+              <LandingPage />
+            </CommonFunctionsContext.Provider>
+          </InformationContext.Provider>
+        );
+  });
   it("Assert social media icons visibility and functionality", async () => {
     const socialMediaLinks = [
       "https://www.linkedin.com/in/tadessedev",
@@ -90,15 +101,7 @@ describe("test homepage items", () => {
       "https://www.facebook.com/tadesseDev1",
       "https://www.instagram.com/tadessedev/",
     ];
-    render(
-      <InformationContext.Provider value={{ medias, address }}>
-        <CommonFunctionsContext.Provider
-          value={{ showMoreContent, showLessContent, hideElement }}
-        >
-          <LandingPage />
-        </CommonFunctionsContext.Provider>
-      </InformationContext.Provider>
-    );
+
     const getMyCv = screen.getAllByAltText(/See /);
     expect(getMyCv.length).toBe(5);
     getMyCv.forEach((element) => {
@@ -109,5 +112,7 @@ describe("test homepage items", () => {
   });
 
 
-  it("assert getMyCv button is visible and available on the dom", async () => { });
+  it("assert 'Get my CV` button is visible and available on the dom", async () => {
+
+   });
 });
