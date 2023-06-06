@@ -42,7 +42,6 @@ export const Landing = styled.main`
   }
 
   .direction {
-    top: 50%;
     transform: translate(calc(-50% - 2px));
   }
   #decoration-links {
@@ -137,7 +136,7 @@ export const Landing = styled.main`
     }
     .direction {
       top: 50%;
-      transform: translate(calc(-50% - 2px));
+      transform: translate(-100%, -50%) rotate(180deg);
     }
   }
 `;
