@@ -23,7 +23,7 @@ export default function NavBar({ showNavBar, toggleNavbar, reference = {} }) {
         toggle={toggleNavbar}
         style={{
           position: "absolute",
-          transform: "translate(calc(-50% - 2px))",
+          // transform: "translate(calc(-50% - 2px))",
           border: "4px solid var(--bright)",
         }}
       />
