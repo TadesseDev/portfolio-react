@@ -137,7 +137,7 @@ export const Landing = styled.main`
     }
     .direction {
       top: 50%;
-      transform: translate(0, -100%);
+      transform: translate(calc(-50% - 2px));
     }
   }
 `;
