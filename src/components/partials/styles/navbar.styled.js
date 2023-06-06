@@ -93,7 +93,7 @@ let Navbar = styled.nav`
     position: fixed;
     left: 100vw;
     top: 50%;
-    transform: translate(-100%, -50%);
+    transform: translate(-120%, -50%);
   }
 `;
 
