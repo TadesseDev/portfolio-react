@@ -44,7 +44,11 @@ export default function LandingPage() {
       <span className="showMenu" onClick={toggleNavbar}>
         <img src={menu} alt="open menus" width="5vw" hight="auto" />
       </span>
-      <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+      <NavBar
+        showNavBar={showNavBar}
+        toggleNavbar={toggleNavbar}
+        ref={navBarRef}
+      />
 
       <InView
         onChange={(inView, entry) => {
@@ -122,7 +126,6 @@ export default function LandingPage() {
           id="getResume"
           target="blank"
           data-testid="getMyResume"
-          ref={navBarRef}
         >
           <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} />
           <Circle
