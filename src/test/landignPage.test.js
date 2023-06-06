@@ -107,4 +107,7 @@ describe("test homepage items", () => {
       expect(element.src).toBeTruthy();
     });
   });
+
+
+  it("assert getMyCv button is visible and available on the dom", async () => { });
 });
