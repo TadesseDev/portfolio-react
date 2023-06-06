@@ -16,7 +16,7 @@ Desktop
 - React
 - Ruby on Rails
 - PostgreSQL
-
+- AdobeXD (Design)
 ## Test with
 
 - jest(test/development-dependency)
@@ -31,7 +31,7 @@ Desktop
 [Check out the API](https://portfolio.api.tadesse.dev)
 
 ## Getting Started
-
+**I have design the portfolio using AdobeXD**
 > This is an open source project. I hope you manage to design something similar bas on this one.
 
 > You can also have the Figma template, Just sent me an email putting `I'm looking for the figma template of your react portfolio` in the about section of your email.
