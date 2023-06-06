@@ -138,6 +138,7 @@ export const Landing = styled.main`
       top: 50%;
       transform: translate(-100%, -50%) rotate(180deg);
     }
+
   }
 `;
 
