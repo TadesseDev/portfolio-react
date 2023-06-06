@@ -102,8 +102,6 @@ describe("test homepage items", () => {
     const getMyCv = screen.getAllByAltText(/See /);
     expect(getMyCv.length).toBe(5);
     getMyCv.forEach((element) => {
-      // const attributeName = element.closest("a").getAttribute("data-name");
-      // console.log("href is : ", typeof attributeName);
       expect(element).toBeVisible();
       expect(socialMediaLinks.includes(element.closest("a").href)).toBeTruthy();
       expect(element.src).toBeTruthy();
