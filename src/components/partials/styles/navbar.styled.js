@@ -49,7 +49,7 @@ let Navbar = styled.nav`
     min-width: calc(100vw - 40px);
     padding: 20px;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     border: 0;
     box-shadow: none;
 
@@ -67,8 +67,8 @@ let Navbar = styled.nav`
     }
 
     li {
-      padding-bottom: 0;
-      padding: 0 10px;
+      padding: 0;
+      margin: 0;
       margin: auto;
       a {
         display: flex;
