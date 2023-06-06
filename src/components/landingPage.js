@@ -22,7 +22,8 @@ export default function LandingPage() {
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
     const direction = navBarRef.current.getElementsByClassName("direction")[0];
-    direction.sty
+    direction.style.transform="unset";
+    direction.style.transform = "translate(calc(-50% - 2px)) rotate(180deg)";
     console.log(direction);
   };
   let OldWinSize = window.innerWidth;
