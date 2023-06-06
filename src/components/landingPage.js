@@ -120,7 +120,7 @@ export default function LandingPage() {
           id="getResume"
           target="blank"
         >
-          <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} />
+          <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} data-testId="getMyResume"/>
           <Circle
             moreStyle={{
               width: 40,
