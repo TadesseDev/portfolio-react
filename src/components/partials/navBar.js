@@ -10,12 +10,12 @@ import about from "../../icon/menu/about.png";
 import user from "../../icon/menu/user.png";
 import me_standing from "../../icon/menu/me-standing.png";
 import Mirror from "./mirror.js";
-export default function NavBar({ showNavBar, toggleNavbar, ref = {} }) {
+export default function NavBar({ showNavBar, toggleNavbar, reference = {} }) {
   return (
     <Navbar
       display={showNavBar ? "block" : "none"}
       data-testid="navbar"
-      ref={ref}
+      ref={reference}
     >
       <Mirror />
       <Direction
