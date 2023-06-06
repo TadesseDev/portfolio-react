@@ -80,7 +80,16 @@ describe("Navbar items test", () => {
 });
 
 describe("test homepage items", () => {
-  it("Assert ", async () => {
+  it("Assert social media icons visibility and functionality", async () => {
+    const socialMediaLinks = [
+      "https://www.linkedin.com/in/tadessedev",
+      "https://twitter.com/tadesseDev",
+      "https://angel.co/u/tadesse-alemayehu",
+      "http://github.com/tadessedev",
+      "https://www.hackerrank.com/TadesseFullStack?hr_r=1",
+      "https://www.facebook.com/tadesseDev1",
+      "https://www.instagram.com/tadessedev/",
+    ];
     render(
       <InformationContext.Provider value={{ medias, address }}>
         <CommonFunctionsContext.Provider
@@ -96,7 +105,7 @@ describe("test homepage items", () => {
       // const attributeName = element.closest("a").getAttribute("data-name");
       // console.log("href is : ", typeof attributeName);
       expect(element).toBeVisible();
-      expect(element.closest("a").href).toBeTruthy();
+      expect(socialMediaLinks.includes(element.closest("a").href)).toBeTruthy();
       expect(element.src).toBeTruthy();
     });
   });
