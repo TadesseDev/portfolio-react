@@ -115,6 +115,6 @@ describe("test homepage items", () => {
   it("assert 'Get my CV` button is visible and available on the dom", async () => {
     const getMyCv = screen.getByText(/get my resume/i);
     expect(getMyCv).toBeVisible();
-    const link=getMyCv.closest("a");
+    const link=screen.getByTestId("getMyResume");
   });
 });
