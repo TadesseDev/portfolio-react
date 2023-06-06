@@ -138,8 +138,8 @@ export const Landing = styled.main`
       height: 40px; */
       }
     }
-    .direction::before{
-      c
+    .direction::after{
+      content: "show menu"
     }
   }
 `;
