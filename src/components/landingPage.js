@@ -21,7 +21,9 @@ export default function LandingPage() {
   const navBarRef = useRef(null);
   const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
-    console.log(navBarRef);
+    const direction = navBarRef.current.getElementsByClassName("direction")[0];
+    direction.sty
+    console.log(direction);
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(
@@ -47,7 +49,7 @@ export default function LandingPage() {
       <NavBar
         showNavBar={showNavBar}
         toggleNavbar={toggleNavbar}
-        ref={navBarRef}
+        reference={navBarRef}
       />
 
       <InView
