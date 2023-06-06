@@ -20,7 +20,7 @@ export default function SocialMediaIcons({ links = {}, style = {} }) {
               alt={`See ${links[key].name || "tadesse"}'s ${key}`}
               effect="blur"
             />
-            <div>{key}</div>
+            <p>{key}</p>
           </a>
         </li>
       ))}
