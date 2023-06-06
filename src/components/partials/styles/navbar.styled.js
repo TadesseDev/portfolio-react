@@ -68,7 +68,7 @@ let Navbar = styled.nav`
       span {
         display: none;
       }
-      .icon:hover {
+      a:hover {
         span {
           display: block;
         }
