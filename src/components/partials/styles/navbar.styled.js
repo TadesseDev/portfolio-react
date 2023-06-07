@@ -49,34 +49,35 @@ let Navbar = styled.nav`
     min-width: calc(100vw - 40px);
     padding: 20px;
     margin: 0;
-    padding: 20px;
     border: 0;
     box-shadow: none;
-
+    &:hover {
+      ul {
+        width: 100px
+      }
+    }
     ul {
       justify-content: flex-start;
+      transition: width 0.3s ease-in-out;
       .icon {
         max-width: 20px;
         margin: auto;
       }
       flex-direction: column;
       min-height: max-content;
-      width: max-content;
-      padding: 0 10%;
+      width: 0px;
+      padding: 0;
       align-items: baseline;
-
-      span {
-        display: none;
-      }
     }
 
     li {
-      padding-bottom: 0;
-      padding: 0 10px;
+      padding: 0;
+      margin: 0;
+      margin: auto;
       a {
         display: flex;
         gap: 5px;
-        flex-direction: inherit;
+        flex-direction: column;
         font-size: 0.7rem;
         font-family: var(--paragraph-font);
         &:hover {

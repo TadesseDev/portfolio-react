@@ -20,6 +20,7 @@ export default function SocialMediaIcons({ links = {}, style = {} }) {
               alt={`See ${links[key].name || "tadesse"}'s ${key}`}
               effect="blur"
             />
+            <p>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
           </a>
         </li>
       ))}

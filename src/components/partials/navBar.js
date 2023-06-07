@@ -12,14 +12,16 @@ import me_standing from "../../icon/menu/me-standing.png";
 import Mirror from "./mirror.js";
 export default function NavBar({ showNavBar, toggleNavbar }) {
   return (
-    <Navbar display={showNavBar ? "block" : "none"} data-testid="navbar">
+    <Navbar
+      display={showNavBar ? "block" : "none"}
+      data-testid="navbar"
+    >
       <Mirror />
       <Direction
         icon="hide"
         toggle={toggleNavbar}
         style={{
           position: "absolute",
-          transform: "translate(calc(-50% - 2px))",
           border: "4px solid var(--bright)",
         }}
       />

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import commonFunctions from "../context/commonFunctionsContext";
 import { InView } from "react-intersection-observer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -18,8 +18,14 @@ import BackgroundDecoration from "./partials/backgroundDecoration";
 export default function LandingPage() {
   const { hideElement } = useContext(commonFunctions);
   let [showNavBar, updateDisplay] = useState(false);
-  const toggleNavbar = () => {
+  const navBarRef = useRef(null);
+  const toggleNavbar = (e) => {
     updateDisplay((old) => !old);
+    // const direction = navBarRef.current.getElementsByClassName("direction")[0];
+    // if (direction.style.transform == "translate(calc(-50% - 2px))")
+    //   direction.style.transform = "translate(calc(-50% - 2px)) rotate(180deg)";
+    // else direction.style.transform = "translate(calc(-50% - 2px))";
+    // console.log(direction);
   };
   let OldWinSize = window.innerWidth;
   const [PrimaryPicture, updatePrimaryPicture] = useState(
@@ -40,9 +46,13 @@ export default function LandingPage() {
   return (
     <Landing id="home">
       <span className="showMenu" onClick={toggleNavbar}>
-        <img src={menu} alt="open menus" width="5vw" hight="auto"/>
+        <img src={menu} alt="open menus" width="5vw" hight="auto" />
       </span>
-      <NavBar showNavBar={showNavBar} toggleNavbar={toggleNavbar} />
+      <NavBar
+        showNavBar={showNavBar}
+        toggleNavbar={toggleNavbar}
+        reference={navBarRef}
+      />
 
       <InView
         onChange={(inView, entry) => {
@@ -119,6 +129,7 @@ export default function LandingPage() {
           href="https://docs.google.com/document/d/1xGXejoEeo6X-5TrkKsl6Okj21yWyGKP6dq3Qm47tKBo/edit?usp=sharing"
           id="getResume"
           target="blank"
+          data-testid="getMyResume"
         >
           <DownloadButton title="get my resume" moreStyle={{ zIndex: "1" }} />
           <Circle

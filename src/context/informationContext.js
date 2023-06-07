@@ -39,6 +39,7 @@ export const medias = new Map([
       icon: angelList,
       description: "",
       link: "https://angel.co/u/tadesse-alemayehu",
+      testKey: "angelList",
     },
   ],
   [

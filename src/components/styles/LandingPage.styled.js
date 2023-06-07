@@ -40,6 +40,10 @@ export const Landing = styled.main`
       color: var(--transparent);
     }
   }
+
+  .direction {
+    transform: translate(calc(-50% - 2px));
+  }
   #decoration-links {
     position: absolute;
     display: none;
@@ -131,8 +135,10 @@ export const Landing = styled.main`
       display: none;
     }
     .direction {
-      display: none;
+      top: 50%;
+      transform: translate(-100%, -50%) rotate(180deg);
     }
+
   }
 `;
 
