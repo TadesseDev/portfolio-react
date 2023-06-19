@@ -1,7 +1,5 @@
 
 export async function sendGet(custom) {
-  if(custom=="recentWorks")
-  console.log(mockData[custom]);
   return mockData[custom];
 }
 
