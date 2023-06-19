@@ -21,7 +21,6 @@ Object.defineProperty(global, "IntersectionObserver", {
   value: IntersectionObserver,
 });
 
-// import { useContext } from "react";
 import {
   medias,
   address,
@@ -29,7 +28,7 @@ import {
 } from "../../context/informationContext";
 
 describe("Test About component", () => {
-  beforeAll(() => {
+  beforeEach(() => {
     document.body.innerHTML = `<noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div>`;
     render(
       <InformationContext.Provider value={{ medias, address }}>
@@ -37,7 +36,45 @@ describe("Test About component", () => {
       </InformationContext.Provider>
     );
   });
-  it("should render the component", () => {
+  it("Assert all section of about me are inside the component", () => {
     expect(screen.getByText("About")).toBeInTheDocument();
+    expect(
+      screen.getByText(/learning a language is not the the point/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Algorithm and Data Structure enthusiast/)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/I love writhing clean code,/)).toBeInTheDocument();
+    expect(screen.getByText("You can find me...")).toBeInTheDocument();
+    expect(screen.getByText("instagram")).toBeInTheDocument();
+    expect(screen.getByText("gitHub")).toBeInTheDocument();
+    expect(screen.getByText("twitter")).toBeInTheDocument();
+    expect(screen.getByText("linkedIn")).toBeInTheDocument();
   });
+
+  it("Assert find me cards have valid link", () => {
+    // console.log(screen.debug());
+    const socialMediaLinks = [
+      "https://www.linkedin.com/in/tadessedev",
+      "https://twitter.com/tadesseDev",
+      "http://github.com/tadessedev",
+      "https://www.instagram.com/tadessedev/",
+    ];
+
+    const instagram = screen.getByText("instagram");
+    const gitHub = screen.getByText("gitHub");
+    const twitter = screen.getByText("twitter");
+    const linkedin = screen.getByText("linkedIn");
+    expect(instagram.parentNode.querySelector("a").href).toBe(
+      socialMediaLinks[3]
+    );
+    expect(gitHub.parentNode.querySelector("a").href).toBe(socialMediaLinks[2]);
+    expect(twitter.parentNode.querySelector("a").href).toBe(
+      socialMediaLinks[1]
+    );
+    expect(linkedin.parentNode.querySelector("a").href).toBe(
+      socialMediaLinks[0]
+    );
+  });
+  it("Assert the find me card is visible", () => {});
 });
