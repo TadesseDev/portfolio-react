@@ -7,9 +7,11 @@ export const getSkills = () => (dispatch) => {
     localStorage.removeItem("technologies");
   sendGet("technologies")
     .then((result) => {
-      act(() => {
-        dispatch({ type: GET_ALL_SKILLS, payload: result.data });
-      });
+      if (process.env.NODE_ENV != "production")
+        act(() => {
+          dispatch({ type: GET_ALL_SKILLS, payload: result.data });
+        });
+      else dispatch({ type: GET_ALL_SKILLS, payload: result.data });
     })
     .catch((error) => console.error(error));
 };

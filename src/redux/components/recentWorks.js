@@ -6,10 +6,14 @@ export const getRecentWorks = () => (dispatch) => {
     localStorage.removeItem("recentWorks");
   sendGet("projects")
     .then((result) => {
-      act(() => { dispatch({ type: SET_ALL_RECENT_WORKS, payload: result.data });});
+      if (process.env.NODE_ENV != "production")
+        act(() => {
+          dispatch({ type: SET_ALL_RECENT_WORKS, payload: result.data });
+        });
+      else dispatch({ type: SET_ALL_RECENT_WORKS, payload: result.data });
     })
     .catch((error) => {
-       console.error(error);
+      console.error(error);
     });
 };
 

@@ -6,9 +6,11 @@ if (localStorage.getItem("certifications"))
 export const getCertifications = () => (dispatch) => {
   sendGet("certifications")
     .then((result) => {
-      act(() => {
-        dispatch({ type: SET_ALL_CERTIFICATIONS, payload: result.data });
-      });
+      if (process.env.NODE_ENV != "production")
+        act(() => {
+          dispatch({ type: SET_ALL_CERTIFICATIONS, payload: result.data });
+        });
+      else dispatch({ type: SET_ALL_CERTIFICATIONS, payload: result.data });
     })
     .catch((error) => console.error(error));
 };
