@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+API_SERVER=""
+
+REACT_APP_API_SERVER=http://localhost:4000/api/v1/
+REACT_APP_API_SERVER=https://portfolio.api.tadesse.dev/api/v1/
+.env*
