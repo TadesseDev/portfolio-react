@@ -6,7 +6,7 @@ if (localStorage.getItem("certifications"))
 export const getCertifications = () => (dispatch) => {
   sendGet("certifications")
     .then((result) => {
-      if (process.env.NODE_ENV != "production")
+      if (process.env.NODE_ENV !== "production")
         act(() => {
           dispatch({ type: SET_ALL_CERTIFICATIONS, payload: result.data });
         });

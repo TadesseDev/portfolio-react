@@ -76,5 +76,7 @@ describe("Test About component", () => {
       socialMediaLinks[0]
     );
   });
-  it("Assert the find me card is visible", () => {});
+  it("Assert the find me card is visible", () => {
+    
+  });
 });

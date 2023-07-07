@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import { Navbar } from "./styles/navbar.styled.js";
 import Direction from "./direction";
 import home from "../../icon/menu/home.png";
